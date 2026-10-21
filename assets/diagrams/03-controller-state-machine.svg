@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 840" width="100%" height="100%" style="background:#ffffff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 760" width="100%" height="100%" style="background:#ffffff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
   <defs>
-    <!-- Card Shadow Filters -->
+    <!-- Subtle Card Shadow -->
     <filter id="card-shadow" x="-4%" y="-4%" width="108%" height="112%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.05" />
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2.5" flood-color="#0f172a" flood-opacity="0.06" />
     </filter>
     <filter id="active-shadow" x="-6%" y="-6%" width="112%" height="116%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#2563eb" flood-opacity="0.10" />
+      <feDropShadow dx="0" dy="2.5" stdDeviation="3.5" flood-color="#2563eb" flood-opacity="0.10" />
     </filter>
 
     <!-- Arrow Markers -->
@@ -34,12 +34,12 @@
 
   <!-- Canvas Header -->
   <text x="35" y="30" font-size="16" font-weight="700" fill="#0f172a" letter-spacing="-0.3">DV-OGEC-RAG: Controller State Machine &amp; Execution Invariants</text>
-  <text x="690" y="30" font-size="13" font-weight="500" fill="#64748b">Typed Phase Transitions · Deterministic Decision Gates · Bounded Loops (≤1) · Explicit Failure Exits</text>
+  <text x="690" y="30" font-size="13" font-weight="500" fill="#64748b">Typed Phase Transitions · Deterministic Decision Gates · Bounded Loops (≤1) · Dedicated Failure Lane</text>
 
   <!-- ========================================================================= -->
   <!-- LEVEL 1: PLANNING, INITIAL RETRIEVAL & PRE-VERIFICATION LOOP              -->
   <!-- ========================================================================= -->
-  <rect x="25" y="48" width="985" height="320" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
+  <rect x="25" y="48" width="985" height="305" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
   <rect x="35" y="58" width="310" height="20" rx="4" fill="#e2e8f0" />
   <text x="42" y="72" font-size="11" font-weight="700" fill="#334155" letter-spacing="0.5">PHASES 1–3: PLANNING, RETRIEVAL &amp; PRE-VERIFICATION</text>
 
@@ -56,39 +56,36 @@
   <path d="M 180 127 L 210 127" fill="none" stroke="#2563eb" stroke-width="1.6" marker-end="url(#arrow-blue)" />
 
   <!-- State: PLANNING -->
-  <g transform="translate(210, 88)">
-    <rect width="165" height="80" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="60" height="16" rx="3" fill="#dbeafe" />
-    <text x="14" y="20" font-size="8.5" font-weight="700" fill="#1d4ed8">PLANNING</text>
-    <text x="8" y="42" font-size="11.5" font-weight="700" fill="#0f172a">PLAN_QUESTION</text>
-    <text x="8" y="58" font-size="9.5" font-weight="500" fill="#64748b">Predicts MaterialObligation[]</text>
-    <text x="8" y="72" font-size="9" font-weight="600" fill="#2563eb">AuthorityBindings frozen</text>
+  <g transform="translate(210, 90)">
+    <rect width="165" height="74" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="60" height="15" rx="2" fill="#dbeafe" />
+    <text x="12" y="19" font-size="8.5" font-weight="700" fill="#1d4ed8">PLANNING</text>
+    <text x="8" y="40" font-size="11.5" font-weight="700" fill="#0f172a">PLAN_QUESTION</text>
+    <text x="8" y="56" font-size="9" font-weight="500" fill="#64748b">Predicts MaterialObligations</text>
   </g>
 
   <!-- Connector: Plan -> Initial Retrieval -->
   <path d="M 375 127 L 405 127" fill="none" stroke="#2563eb" stroke-width="1.6" marker-end="url(#arrow-blue)" />
 
   <!-- State: INITIAL_RETRIEVAL -->
-  <g transform="translate(405, 88)">
-    <rect width="175" height="80" rx="8" fill="#ffffff" stroke="#059669" stroke-width="1.4" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="90" height="16" rx="3" fill="#d1fae5" />
-    <text x="14" y="20" font-size="8.5" font-weight="700" fill="#047857">ACQUISITION</text>
-    <text x="8" y="42" font-size="11.5" font-weight="700" fill="#0f172a">INITIAL_RETRIEVAL</text>
-    <text x="8" y="58" font-size="9.5" font-weight="500" fill="#64748b">MedCPT + FAISS (top-8)</text>
-    <text x="8" y="72" font-size="9" font-weight="600" fill="#059669">E0 stored (initial_used=1)</text>
+  <g transform="translate(405, 90)">
+    <rect width="175" height="74" rx="8" fill="#ffffff" stroke="#059669" stroke-width="1.4" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="90" height="15" rx="2" fill="#d1fae5" />
+    <text x="12" y="19" font-size="8.5" font-weight="700" fill="#047857">ACQUISITION</text>
+    <text x="8" y="40" font-size="11.5" font-weight="700" fill="#0f172a">INITIAL_RETRIEVAL</text>
+    <text x="8" y="56" font-size="9" font-weight="500" fill="#64748b">MedCPT top-8 → Stores E0</text>
   </g>
 
   <!-- Connector: Retrieval -> PRE 1 -->
   <path d="M 580 127 L 610 127" fill="none" stroke="#059669" stroke-width="1.6" marker-end="url(#arrow-green)" />
 
   <!-- State: PRE_VERIFICATION (Initial) -->
-  <g transform="translate(610, 88)">
-    <rect width="180" height="80" rx="8" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.5" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="70" height="16" rx="3" fill="#ede9fe" />
-    <text x="14" y="20" font-size="8.5" font-weight="700" fill="#6d28d9">PRE VERIFY</text>
-    <text x="8" y="42" font-size="11.5" font-weight="700" fill="#0f172a">OBLIGATION_VERIFY</text>
-    <text x="8" y="58" font-size="9.5" font-weight="500" fill="#64748b">Evaluates E0 against plan</text>
-    <text x="8" y="72" font-size="9" font-weight="600" fill="#7c3aed">Deterministic Reducer</text>
+  <g transform="translate(610, 90)">
+    <rect width="180" height="74" rx="8" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.5" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="70" height="15" rx="2" fill="#ede9fe" />
+    <text x="12" y="19" font-size="8.5" font-weight="700" fill="#6d28d9">PRE VERIFY</text>
+    <text x="8" y="40" font-size="11.5" font-weight="700" fill="#0f172a">OBLIGATION_VERIFY</text>
+    <text x="8" y="56" font-size="9" font-weight="500" fill="#64748b">Evaluates E0 against plan</text>
   </g>
 
   <!-- Connector: PRE 1 -> Diamond 1 -->
@@ -96,241 +93,238 @@
 
   <!-- Decision Diamond 1: Initial PRE Ready? -->
   <g transform="translate(870, 127)">
-    <polygon points="0,-32 40,0 0,32 -40,0" fill="#fffbeb" stroke="#d97706" stroke-width="1.8" filter="url(#card-shadow)" />
-    <text x="0" y="-4" font-size="10.5" font-weight="700" fill="#92400e" text-anchor="middle">Initial</text>
+    <polygon points="0,-30 40,0 0,30 -40,0" fill="#fffbeb" stroke="#d97706" stroke-width="1.8" filter="url(#card-shadow)" />
+    <text x="0" y="-3" font-size="10.5" font-weight="700" fill="#92400e" text-anchor="middle">Initial</text>
     <text x="0" y="10" font-size="10.5" font-weight="700" fill="#92400e" text-anchor="middle">Ready?</text>
   </g>
 
-  <!-- Branch 1A: Diamond 1 [No] -> Corrective Retrieval -->
-  <path d="M 870 159 L 870 215 L 795 215" fill="none" stroke="#ea580c" stroke-width="1.6" marker-end="url(#arrow-orange)" />
-  <rect x="815" y="180" width="75" height="15" rx="2" fill="#fff7ed" />
-  <text x="819" y="191" font-size="8.5" font-weight="700" fill="#ea580c">No (corr==0)</text>
+  <!-- Branch 1A: Diamond 1 [No & corr==0] -> Corrective Retrieval -->
+  <path d="M 870 157 L 870 210 L 795 210" fill="none" stroke="#ea580c" stroke-width="1.6" marker-end="url(#arrow-orange)" />
+  <rect x="815" y="175" width="75" height="15" rx="2" fill="#fff7ed" />
+  <text x="819" y="186" font-size="8.5" font-weight="700" fill="#ea580c">No (corr==0)</text>
 
   <!-- State: CORRECTIVE_RETRIEVAL -->
-  <g transform="translate(565, 185)">
-    <rect width="230" height="65" rx="8" fill="#ffffff" stroke="#ea580c" stroke-width="1.5" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="95" height="15" rx="2" fill="#ffedd5" />
-    <text x="12" y="19" font-size="8" font-weight="700" fill="#c2410c">CORRECTIVE (≤1)</text>
-    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f172a">CORRECTIVE_RETRIEVAL</text>
-    <text x="8" y="52" font-size="8.5" font-weight="500" fill="#64748b">Targeted query · E1 retrieved · Merged E0+E1</text>
+  <g transform="translate(565, 180)">
+    <rect width="230" height="60" rx="8" fill="#ffffff" stroke="#ea580c" stroke-width="1.5" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="95" height="14" rx="2" fill="#ffedd5" />
+    <text x="12" y="18" font-size="8" font-weight="700" fill="#c2410c">CORRECTIVE (≤1)</text>
+    <text x="8" y="36" font-size="11" font-weight="700" fill="#0f172a">CORRECTIVE_RETRIEVAL</text>
+    <text x="8" y="50" font-size="8.5" font-weight="500" fill="#64748b">Targeted query → Merges E0+E1</text>
   </g>
 
   <!-- Connector: Corrective -> PRE Recheck -->
-  <path d="M 565 217 L 515 217" fill="none" stroke="#ea580c" stroke-width="1.6" marker-end="url(#arrow-orange)" />
+  <path d="M 565 210 L 515 210" fill="none" stroke="#ea580c" stroke-width="1.6" marker-end="url(#arrow-orange)" />
 
   <!-- State: PRE_VERIFICATION [AFTER_CORRECTION] -->
-  <g transform="translate(290, 185)">
-    <rect width="225" height="65" rx="8" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.5" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="75" height="15" rx="2" fill="#ede9fe" />
-    <text x="12" y="19" font-size="8" font-weight="700" fill="#6d28d9">PRE RECHECK</text>
-    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f172a">REVERIFY_OBLIGATIONS</text>
-    <text x="8" y="52" font-size="8.5" font-weight="500" fill="#64748b">Mandatory recheck on merged E0+E1</text>
+  <g transform="translate(290, 180)">
+    <rect width="225" height="60" rx="8" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.5" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="75" height="14" rx="2" fill="#ede9fe" />
+    <text x="12" y="18" font-size="8" font-weight="700" fill="#6d28d9">PRE RECHECK</text>
+    <text x="8" y="36" font-size="11" font-weight="700" fill="#0f172a">REVERIFY_OBLIGATIONS</text>
+    <text x="8" y="50" font-size="8.5" font-weight="500" fill="#64748b">Rechecks merged memory E0+E1</text>
   </g>
 
   <!-- Bent Loop: PRE Recheck -> PRE Evidence Gate -->
-  <path d="M 290 217 L 245 217 L 245 285 L 830 285" fill="none" stroke="#8b5cf6" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#arrow-purple)" />
-  <rect x="420" y="277" width="165" height="16" rx="2" fill="#f5f3ff" />
-  <text x="425" y="289" font-size="8.5" font-weight="700" fill="#7c3aed">Recheck Result Feed to PRE Gate</text>
+  <path d="M 290 210 L 245 210 L 245 275 L 830 275" fill="none" stroke="#8b5cf6" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#arrow-purple)" />
+  <rect x="420" y="267" width="165" height="16" rx="2" fill="#f5f3ff" />
+  <text x="425" y="279" font-size="8.5" font-weight="700" fill="#7c3aed">Recheck Result Feed to PRE Gate</text>
 
   <!-- Branch 1B: Diamond 1 [Yes] -> PRE Evidence Gate -->
-  <path d="M 910 127 L 950 127 L 950 285 L 910 285" fill="none" stroke="#059669" stroke-width="1.6" marker-end="url(#arrow-green)" />
+  <path d="M 910 127 L 950 127 L 950 275 L 910 275" fill="none" stroke="#059669" stroke-width="1.6" marker-end="url(#arrow-green)" />
   <rect x="918" y="140" width="55" height="15" rx="2" fill="#d1fae5" />
   <text x="922" y="151" font-size="8.5" font-weight="700" fill="#065f46">Yes: READY</text>
 
   <!-- Decision Diamond 2: PRE_EVIDENCE_GATE -->
-  <g transform="translate(870, 285)">
-    <polygon points="0,-30 40,0 0,30 -40,0" fill="#fffbeb" stroke="#d97706" stroke-width="1.8" filter="url(#card-shadow)" />
-    <text x="0" y="-4" font-size="10" font-weight="700" fill="#92400e" text-anchor="middle">PRE</text>
+  <g transform="translate(870, 275)">
+    <polygon points="0,-28 40,0 0,28 -40,0" fill="#fffbeb" stroke="#d97706" stroke-width="1.8" filter="url(#card-shadow)" />
+    <text x="0" y="-3" font-size="10" font-weight="700" fill="#92400e" text-anchor="middle">PRE</text>
     <text x="0" y="10" font-size="10" font-weight="700" fill="#92400e" text-anchor="middle">Gate?</text>
   </g>
 
-  <!-- Branch 2A: PRE Gate [No / Fails] -> ABSTAIN -->
-  <path d="M 870 315 L 870 340 L 1025 340" fill="none" stroke="#d97706" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#arrow-amber)" />
-  <rect x="880" y="332" width="125" height="15" rx="2" fill="#fffbeb" />
-  <text x="885" y="343" font-size="8.5" font-weight="700" fill="#b45309">No → Authorize ABSTAIN</text>
+  <!-- Branch 2A: PRE Gate [No / Insufficient] -> ABSTAIN -->
+  <path d="M 870 303 L 870 330 L 1025 330" fill="none" stroke="#d97706" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#arrow-amber)" />
+  <rect x="880" y="322" width="125" height="15" rx="2" fill="#fffbeb" />
+  <text x="885" y="333" font-size="8.5" font-weight="700" fill="#b45309">No → Authorize ABSTAIN</text>
 
   <!-- ========================================================================= -->
   <!-- LEVEL 2: GENERATION, ATOMIC POST-VERIFICATION & REVISION LOOP             -->
   <!-- ========================================================================= -->
-  <rect x="25" y="385" width="985" height="350" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
-  <rect x="35" y="395" width="370" height="20" rx="4" fill="#e2e8f0" />
-  <text x="42" y="409" font-size="11" font-weight="700" fill="#334155" letter-spacing="0.5">PHASE 4: GENERATION, ATOMIC POST-VERIFICATION &amp; REVISION</text>
+  <rect x="25" y="365" width="985" height="305" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
+  <rect x="35" y="375" width="370" height="20" rx="4" fill="#e2e8f0" />
+  <text x="42" y="389" font-size="11" font-weight="700" fill="#334155" letter-spacing="0.5">PHASE 4: GENERATION, ATOMIC POST-VERIFICATION &amp; REVISION</text>
 
   <!-- Branch 2B: PRE Gate [Yes] -> Generation (Drop to Level 2) -->
-  <path d="M 830 285 L 120 285 L 120 440" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)" />
-  <rect x="360" y="358" width="165" height="16" rx="3" fill="#d1fae5" />
-  <text x="366" y="370" font-size="9" font-weight="700" fill="#047857">PRE READY → Progression to GENERATE</text>
+  <path d="M 830 275 L 120 275 L 120 415" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)" />
+  <rect x="360" y="348" width="165" height="16" rx="3" fill="#d1fae5" />
+  <text x="366" y="360" font-size="9" font-weight="700" fill="#047857">PRE READY → Progression Authorized</text>
 
   <!-- State: GENERATE -->
-  <g transform="translate(45, 440)">
-    <rect width="150" height="80" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="70" height="16" rx="3" fill="#dbeafe" />
-    <text x="14" y="20" font-size="8.5" font-weight="700" fill="#1d4ed8">GENERATION</text>
-    <text x="8" y="42" font-size="11.5" font-weight="700" fill="#0f172a">GENERATE</text>
-    <text x="8" y="58" font-size="9.5" font-weight="500" fill="#64748b">Synthesizes candidate</text>
-    <text x="8" y="72" font-size="9" font-weight="600" fill="#2563eb">Cites EvidenceMemory</text>
+  <g transform="translate(45, 415)">
+    <rect width="150" height="74" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="70" height="15" rx="2" fill="#dbeafe" />
+    <text x="12" y="19" font-size="8.5" font-weight="700" fill="#1d4ed8">GENERATION</text>
+    <text x="8" y="40" font-size="11.5" font-weight="700" fill="#0f172a">GENERATE</text>
+    <text x="8" y="56" font-size="9" font-weight="500" fill="#64748b">Synthesizes candidate</text>
   </g>
 
   <!-- Connector: Generate -> Decompose -->
-  <path d="M 195 480 L 225 480" fill="none" stroke="#3b82f6" stroke-width="1.6" marker-end="url(#arrow-blue)" />
+  <path d="M 195 452 L 225 452" fill="none" stroke="#3b82f6" stroke-width="1.6" marker-end="url(#arrow-blue)" />
 
   <!-- State: DECOMPOSE -->
-  <g transform="translate(225, 440)">
-    <rect width="165" height="80" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="70" height="16" rx="3" fill="#dbeafe" />
-    <text x="14" y="20" font-size="8.5" font-weight="700" fill="#1d4ed8">DECOMPOSER</text>
-    <text x="8" y="42" font-size="11.5" font-weight="700" fill="#0f172a">DECOMPOSE</text>
-    <text x="8" y="58" font-size="9.5" font-weight="500" fill="#64748b">Splits into AtomicClaim[]</text>
-    <text x="8" y="72" font-size="9" font-weight="600" fill="#2563eb">Closed Typed Units</text>
+  <g transform="translate(225, 415)">
+    <rect width="165" height="74" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="70" height="15" rx="2" fill="#dbeafe" />
+    <text x="12" y="19" font-size="8.5" font-weight="700" fill="#1d4ed8">DECOMPOSER</text>
+    <text x="8" y="40" font-size="11.5" font-weight="700" fill="#0f172a">DECOMPOSE</text>
+    <text x="8" y="56" font-size="9" font-weight="500" fill="#64748b">Splits into AtomicClaim[]</text>
   </g>
 
   <!-- Connector: Decompose -> Staged POST v4 -->
-  <path d="M 390 480 L 420 480" fill="none" stroke="#8b5cf6" stroke-width="1.6" marker-end="url(#arrow-purple)" />
+  <path d="M 390 452 L 420 452" fill="none" stroke="#8b5cf6" stroke-width="1.6" marker-end="url(#arrow-purple)" />
 
   <!-- State: ATOMIC_VERIFICATION (Staged POST v4) -->
-  <g transform="translate(420, 440)">
-    <rect width="205" height="80" rx="8" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.6" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="85" height="16" rx="3" fill="#ede9fe" />
-    <text x="14" y="20" font-size="8.5" font-weight="700" fill="#6d28d9">STAGED POST v4</text>
-    <text x="8" y="42" font-size="11.5" font-weight="700" fill="#0f172a">ATOMIC_VERIFY</text>
-    <text x="8" y="58" font-size="9.5" font-weight="500" fill="#64748b">pair → diagnosis → remedies</text>
-    <text x="8" y="72" font-size="9" font-weight="600" fill="#7c3aed">Canonical Validator Checks</text>
+  <g transform="translate(420, 415)">
+    <rect width="205" height="74" rx="8" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.6" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="85" height="15" rx="2" fill="#ede9fe" />
+    <text x="12" y="19" font-size="8.5" font-weight="700" fill="#6d28d9">STAGED POST v4</text>
+    <text x="8" y="40" font-size="11.5" font-weight="700" fill="#0f172a">ATOMIC_VERIFY</text>
+    <text x="8" y="56" font-size="9" font-weight="500" fill="#64748b">pair → diagnosis → remedies</text>
   </g>
 
   <!-- Connector: POST -> Diamond 3 -->
-  <path d="M 625 480 L 665 480" fill="none" stroke="#8b5cf6" stroke-width="1.6" marker-end="url(#arrow-purple)" />
+  <path d="M 625 452 L 665 452" fill="none" stroke="#8b5cf6" stroke-width="1.6" marker-end="url(#arrow-purple)" />
 
   <!-- Decision Diamond 3: Revision Cycle? -->
-  <g transform="translate(705, 480)">
-    <polygon points="0,-30 40,0 0,30 -40,0" fill="#fffbeb" stroke="#d97706" stroke-width="1.8" filter="url(#card-shadow)" />
-    <text x="0" y="-4" font-size="10" font-weight="700" fill="#92400e" text-anchor="middle">Revise</text>
+  <g transform="translate(705, 452)">
+    <polygon points="0,-28 40,0 0,28 -40,0" fill="#fffbeb" stroke="#d97706" stroke-width="1.8" filter="url(#card-shadow)" />
+    <text x="0" y="-3" font-size="10" font-weight="700" fill="#92400e" text-anchor="middle">Revise</text>
     <text x="0" y="10" font-size="10" font-weight="700" fill="#92400e" text-anchor="middle">Cycle?</text>
   </g>
 
   <!-- Branch 3A: Diamond 3 [Yes] -> REVISE -->
-  <path d="M 705 510 L 705 565 L 590 565" fill="none" stroke="#ea580c" stroke-width="1.6" marker-end="url(#arrow-orange)" />
-  <rect x="635" y="548" width="100" height="15" rx="2" fill="#fff7ed" />
-  <text x="639" y="559" font-size="8.5" font-weight="700" fill="#ea580c">NEEDS_REV (rev==0)</text>
+  <path d="M 705 480 L 705 535 L 590 535" fill="none" stroke="#ea580c" stroke-width="1.6" marker-end="url(#arrow-orange)" />
+  <rect x="635" y="518" width="100" height="15" rx="2" fill="#fff7ed" />
+  <text x="639" y="529" font-size="8.5" font-weight="700" fill="#ea580c">NEEDS_REV (rev==0)</text>
 
   <!-- State: REVISE -->
-  <g transform="translate(370, 535)">
-    <rect width="220" height="65" rx="8" fill="#ffffff" stroke="#ea580c" stroke-width="1.5" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="85" height="15" rx="2" fill="#ffedd5" />
-    <text x="12" y="19" font-size="8" font-weight="700" fill="#c2410c">REVISION (≤1)</text>
-    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f172a">REVISE_ANSWER</text>
-    <text x="8" y="52" font-size="8.5" font-weight="500" fill="#64748b">Existing memory only · Clears old claims &amp; POST</text>
+  <g transform="translate(370, 505)">
+    <rect width="220" height="60" rx="8" fill="#ffffff" stroke="#ea580c" stroke-width="1.5" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="85" height="14" rx="2" fill="#ffedd5" />
+    <text x="12" y="18" font-size="8" font-weight="700" fill="#c2410c">REVISION (≤1)</text>
+    <text x="8" y="36" font-size="11" font-weight="700" fill="#0f172a">REVISE_ANSWER</text>
+    <text x="8" y="50" font-size="8.5" font-weight="500" fill="#64748b">Existing memory only · Clears old claims</text>
   </g>
 
   <!-- Bent Loop: REVISE -> DECOMPOSE (Re-verification loop) -->
-  <path d="M 370 568 L 308 568 L 308 522" fill="none" stroke="#ea580c" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#arrow-orange)" />
-  <rect x="235" y="575" width="145" height="15" rx="2" fill="#fff7ed" />
-  <text x="240" y="586" font-size="8" font-weight="700" fill="#ea580c">Loops to Fresh Claim Decomp</text>
+  <path d="M 370 535 L 308 535 L 308 495" fill="none" stroke="#ea580c" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#arrow-orange)" />
+  <rect x="235" y="542" width="145" height="15" rx="2" fill="#fff7ed" />
+  <text x="240" y="553" font-size="8" font-weight="700" fill="#ea580c">Loops to Fresh Claim Decomp</text>
 
   <!-- Branch 3B: Diamond 3 [No] -> POST Evidence Gate -->
-  <path d="M 745 480 L 830 480" fill="none" stroke="#8b5cf6" stroke-width="1.6" marker-end="url(#arrow-purple)" />
-  <rect x="750" y="465" width="75" height="14" rx="2" fill="#ede9fe" />
-  <text x="754" y="475" font-size="8" font-weight="700" fill="#6d28d9">PASS / rev_used=1</text>
+  <path d="M 745 452 L 830 452" fill="none" stroke="#8b5cf6" stroke-width="1.6" marker-end="url(#arrow-purple)" />
+  <rect x="750" y="437" width="75" height="14" rx="2" fill="#ede9fe" />
+  <text x="754" y="447" font-size="8" font-weight="700" fill="#6d28d9">PASS / rev_used=1</text>
 
   <!-- Decision Diamond 4: POST_EVIDENCE_GATE -->
-  <g transform="translate(870, 480)">
-    <polygon points="0,-32 40,0 0,32 -40,0" fill="#fffbeb" stroke="#d97706" stroke-width="1.8" filter="url(#card-shadow)" />
-    <text x="0" y="-4" font-size="10" font-weight="700" fill="#92400e" text-anchor="middle">POST</text>
+  <g transform="translate(870, 452)">
+    <polygon points="0,-30 40,0 0,30 -40,0" fill="#fffbeb" stroke="#d97706" stroke-width="1.8" filter="url(#card-shadow)" />
+    <text x="0" y="-3" font-size="10" font-weight="700" fill="#92400e" text-anchor="middle">POST</text>
     <text x="0" y="10" font-size="10" font-weight="700" fill="#92400e" text-anchor="middle">Gate?</text>
   </g>
 
   <!-- Branch 4A: POST Gate [No / Unsupported] -> ABSTAIN -->
-  <path d="M 870 448 L 870 380 L 1025 380" fill="none" stroke="#d97706" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#arrow-amber)" />
-  <rect x="880" y="372" width="135" height="15" rx="2" fill="#fffbeb" />
-  <text x="885" y="383" font-size="8.5" font-weight="700" fill="#b45309">No → Authorize ABSTAIN</text>
+  <path d="M 870 422 L 870 370 L 1025 370" fill="none" stroke="#d97706" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#arrow-amber)" />
+  <rect x="880" y="362" width="135" height="15" rx="2" fill="#fffbeb" />
+  <text x="885" y="373" font-size="8.5" font-weight="700" fill="#b45309">No → Authorize ABSTAIN</text>
 
   <!-- Branch 4B: POST Gate [Yes] -> EMIT_ANSWER -->
-  <path d="M 910 480 L 945 480 L 945 640 L 730 640" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)" />
-  <rect x="860" y="605" width="135" height="15" rx="2" fill="#d1fae5" />
-  <text x="865" y="616" font-size="8.5" font-weight="700" fill="#047857">All Supported &amp; Zero Fails</text>
+  <path d="M 910 452 L 945 452 L 945 615 L 730 615" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)" />
+  <rect x="860" y="580" width="135" height="15" rx="2" fill="#d1fae5" />
+  <text x="865" y="591" font-size="8.5" font-weight="700" fill="#047857">All Supported &amp; Zero Fails</text>
 
   <!-- State: EMIT_ANSWER -->
-  <g transform="translate(520, 615)">
-    <rect width="210" height="65" rx="8" fill="#ffffff" stroke="#059669" stroke-width="1.6" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="75" height="15" rx="2" fill="#d1fae5" />
-    <text x="12" y="19" font-size="8" font-weight="700" fill="#047857">EMIT STEP</text>
-    <text x="8" y="38" font-size="11.5" font-weight="700" fill="#0f172a">EMIT_ANSWER</text>
-    <text x="8" y="52" font-size="8.5" font-weight="500" fill="#64748b">Policy proposes ACCEPT → Guard validates</text>
+  <g transform="translate(520, 590)">
+    <rect width="210" height="55" rx="8" fill="#ffffff" stroke="#059669" stroke-width="1.6" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="75" height="14" rx="2" fill="#d1fae5" />
+    <text x="12" y="18" font-size="8" font-weight="700" fill="#047857">EMIT STEP</text>
+    <text x="8" y="35" font-size="11.5" font-weight="700" fill="#0f172a">EMIT_ANSWER</text>
+    <text x="8" y="48" font-size="8.5" font-weight="500" fill="#64748b">Proposes ACCEPT → Guard validates</text>
   </g>
 
   <!-- Connector: EMIT -> PolicyGuard -->
-  <path d="M 730 648 L 1025 648" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)" />
+  <path d="M 730 618 L 1025 618" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)" />
 
   <!-- ========================================================================= -->
   <!-- CONTROL PLANE & TERMINAL EXITS (Right Column)                            -->
   <!-- ========================================================================= -->
-  <rect x="1025" y="48" width="390" height="687" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
+  <rect x="1025" y="48" width="390" height="622" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
   <rect x="1035" y="58" width="270" height="20" rx="4" fill="#e2e8f0" />
   <text x="1042" y="72" font-size="11" font-weight="700" fill="#334155" letter-spacing="0.5">DETERMINISTIC GUARDS &amp; TERMINALS</text>
 
   <!-- PolicyGuard Core -->
   <g transform="translate(1045, 95)">
-    <rect width="350" height="120" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="1.8" filter="url(#active-shadow)" />
-    <rect x="8" y="8" width="130" height="18" rx="3" fill="#e0f2fe" />
-    <text x="14" y="21" font-size="9" font-weight="700" fill="#0369a1">DETERMINISTIC GUARD</text>
-    <text x="8" y="44" font-size="12" font-weight="700" fill="#0f172a">PolicyGuard &amp; RulesPolicy</text>
-    <text x="8" y="62" font-size="9.5" font-weight="500" fill="#475569">• ValidActionSet restricts legal actions per phase</text>
-    <text x="8" y="78" font-size="9.5" font-weight="500" fill="#475569">• Enforces call limits (retrieval ≤1, corr ≤1, rev ≤1)</text>
-    <text x="8" y="94" font-size="9.5" font-weight="500" fill="#475569">• Enforces source unit scope &amp; provenance locks</text>
-    <text x="8" y="110" font-size="9" font-weight="700" fill="#0284c7">Hard Acceptance Pre-Check Before Emission</text>
+    <rect width="350" height="110" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="1.8" filter="url(#active-shadow)" />
+    <rect x="8" y="8" width="130" height="16" rx="2" fill="#e0f2fe" />
+    <text x="12" y="19" font-size="8.5" font-weight="700" fill="#0369a1">DETERMINISTIC GUARD</text>
+    <text x="8" y="40" font-size="12" font-weight="700" fill="#0f172a">PolicyGuard &amp; RulesPolicy</text>
+    <text x="8" y="58" font-size="9" font-weight="500" fill="#475569">• ValidActionSet restricts legal actions per phase</text>
+    <text x="8" y="74" font-size="9" font-weight="500" fill="#475569">• Enforces call limits (retrieval ≤1, corr ≤1, rev ≤1)</text>
+    <text x="8" y="90" font-size="9" font-weight="500" fill="#475569">• Enforces source scope &amp; unit provenance locks</text>
+    <text x="8" y="104" font-size="8.5" font-weight="700" fill="#0284c7">Hard Acceptance Pre-Check Before Emission</text>
   </g>
 
   <!-- Terminal 1: ABSTAIN -->
-  <g transform="translate(1045, 245)">
-    <rect width="350" height="85" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="2" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="125" height="16" rx="2" fill="#fde68a" />
-    <text x="12" y="20" font-size="8.5" font-weight="700" fill="#92400e">LEGITIMATE STOP</text>
-    <text x="8" y="42" font-size="14" font-weight="800" fill="#92400e">COMPLETED_ABSTAIN</text>
-    <text x="8" y="58" font-size="9.5" font-weight="600" fill="#b45309">Action: authorize(ABSTAIN)</text>
-    <text x="8" y="74" font-size="8.5" font-weight="500" fill="#78350f">Evidence insufficient at PRE, or unsupported claims at POST</text>
+  <g transform="translate(1045, 235)">
+    <rect width="350" height="78" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="2" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="125" height="15" rx="2" fill="#fde68a" />
+    <text x="12" y="19" font-size="8" font-weight="700" fill="#92400e">LEGITIMATE STOP</text>
+    <text x="8" y="38" font-size="13.5" font-weight="800" fill="#92400e">COMPLETED_ABSTAIN</text>
+    <text x="8" y="54" font-size="9" font-weight="600" fill="#b45309">Action: authorize(ABSTAIN)</text>
+    <text x="8" y="68" font-size="8.5" font-weight="500" fill="#78350f">Evidence insufficient at PRE, or unsupported claims at POST</text>
   </g>
 
   <!-- Terminal 2: ACCEPT -->
-  <g transform="translate(1045, 360)">
-    <rect width="350" height="85" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="2.2" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="105" height="16" rx="2" fill="#a7f3d0" />
-    <text x="12" y="20" font-size="8.5" font-weight="700" fill="#065f46">OFFICIAL EMIT</text>
-    <text x="8" y="42" font-size="14" font-weight="800" fill="#065f46">COMPLETED_ANSWER</text>
-    <text x="8" y="58" font-size="9.5" font-weight="600" fill="#047857">Action: authorize(ACCEPT) &amp; Guard Passes</text>
-    <text x="8" y="74" font-size="8.5" font-weight="500" fill="#064e3b">Fully grounded, cited, verified atomic claims</text>
+  <g transform="translate(1045, 345)">
+    <rect width="350" height="78" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="2.2" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="105" height="15" rx="2" fill="#a7f3d0" />
+    <text x="12" y="19" font-size="8" font-weight="700" fill="#065f46">OFFICIAL EMIT</text>
+    <text x="8" y="38" font-size="13.5" font-weight="800" fill="#065f46">COMPLETED_ANSWER</text>
+    <text x="8" y="54" font-size="9" font-weight="600" fill="#047857">Action: authorize(ACCEPT) &amp; Guard Passes</text>
+    <text x="8" y="68" font-size="8.5" font-weight="500" fill="#064e3b">Fully grounded, cited, verified atomic claims</text>
   </g>
 
-  <!-- Terminal 3: TECHNICAL FAILURE -->
-  <g transform="translate(1045, 475)">
-    <rect width="350" height="105" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="95" height="16" rx="2" fill="#fecdd3" />
-    <text x="12" y="20" font-size="8.5" font-weight="700" fill="#9f1239">SYSTEM HALT</text>
-    <text x="8" y="42" font-size="14" font-weight="800" fill="#9f1239">TECHNICAL FAILURE</text>
-    <text x="8" y="58" font-size="9" font-weight="700" fill="#be123c">FAILED_CONTRACT · FAILED_PROVIDER · FAILED_RETRIEVAL</text>
-    <text x="8" y="74" font-size="8.5" font-weight="500" fill="#881337">• PolicyGuard rejection (e.g. proposed action illegal for phase)</text>
-    <text x="8" y="88" font-size="8.5" font-weight="500" fill="#881337">• Schema mismatch, empty claims, or provider API crash</text>
-    <text x="8" y="100" font-size="8.5" font-weight="700" fill="#be123c">CRITICAL: Rejection is NEVER converted to ABSTAIN</text>
+  <!-- ========================================================================= -->
+  <!-- DEDICATED TECHNICAL FAILURE LANE                                         -->
+  <!-- ========================================================================= -->
+  <g transform="translate(1045, 455)">
+    <rect width="350" height="100" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="145" height="15" rx="2" fill="#fecdd3" />
+    <text x="12" y="19" font-size="8" font-weight="700" fill="#9f1239">TECHNICAL FAILURE LANE</text>
+    <text x="8" y="38" font-size="13" font-weight="800" fill="#9f1239">FAILED_* (SYSTEM HALT)</text>
+    <text x="8" y="54" font-size="8.5" font-weight="700" fill="#be123c">FAILED_CONTRACT · FAILED_PROVIDER · FAILED_RETRIEVAL</text>
+    <text x="8" y="70" font-size="8.5" font-weight="500" fill="#881337">• PolicyGuard rejection (action illegal for phase or budget exceeded)</text>
+    <text x="8" y="84" font-size="8.5" font-weight="500" fill="#881337">• Schema mismatch, empty claims, or provider API crash</text>
+    <text x="8" y="96" font-size="8.5" font-weight="700" fill="#be123c">Consolidated Failure Lane: Distinct from Abstention</text>
   </g>
 
-  <!-- Technical Failure Routing Arrows (Dashed Red) -->
-  <path d="M 1220 215 L 1220 472" fill="none" stroke="#e11d48" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#arrow-red)" />
-  <rect x="1225" y="335" width="85" height="14" rx="2" fill="#fff1f2" />
-  <text x="1228" y="345" font-size="8" font-weight="700" fill="#be123c">Guard Reject</text>
+  <!-- Single Clean Connector from PolicyGuard into Failure Lane -->
+  <path d="M 1220 205 L 1220 450" fill="none" stroke="#e11d48" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#arrow-red)" />
+  <rect x="1225" y="300" width="85" height="14" rx="2" fill="#fff1f2" />
+  <text x="1228" y="310" font-size="8" font-weight="700" fill="#be123c">Guard Reject</text>
 
-  <!-- Execution Invariant Callout -->
-  <g transform="translate(1045, 600)">
-    <rect width="350" height="115" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1" />
-    <text x="10" y="20" font-size="9.5" font-weight="700" fill="#1e40af">EXECUTION BOUNDS &amp; INVARIANTS:</text>
-    <text x="10" y="36" font-size="8.5" font-weight="500" fill="#1e3a8a">• Initial retrieval ≤ 1</text>
-    <text x="10" y="50" font-size="8.5" font-weight="500" fill="#1e3a8a">• Corrective retrieval ≤ 1</text>
-    <text x="10" y="64" font-size="8.5" font-weight="500" fill="#1e3a8a">• Grounded revision ≤ 1 (existing memory only)</text>
-    <text x="10" y="78" font-size="8.5" font-weight="500" fill="#1e3a8a">• Physical model calls ≤ 34/arm (+1 shared Planner)</text>
-    <text x="10" y="92" font-size="8.5" font-weight="600" fill="#1e40af">• Zero gold leakage into runtime</text>
-    <text x="10" y="106" font-size="8.5" font-weight="700" fill="#b91c1c">• Non-recoverable guard error → FAILED_CONTRACT</text>
+  <!-- Bounds summary box in control column -->
+  <g transform="translate(1045, 575)">
+    <rect width="350" height="85" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1" />
+    <text x="10" y="18" font-size="9" font-weight="700" fill="#1e40af">SCIENTIFIC EXECUTION BOUNDS:</text>
+    <text x="10" y="34" font-size="8.5" font-weight="500" fill="#1e3a8a">• Initial retrieval ≤ 1 · Corrective retrieval ≤ 1</text>
+    <text x="10" y="48" font-size="8.5" font-weight="500" fill="#1e3a8a">• Grounded revision ≤ 1 (existing memory only)</text>
+    <text x="10" y="62" font-size="8.5" font-weight="500" fill="#1e3a8a">• Physical model calls ≤ 34/arm (+1 shared Planner)</text>
+    <text x="10" y="76" font-size="8.5" font-weight="700" fill="#b91c1c">• Non-recoverable guard error → FAILED_CONTRACT</text>
   </g>
 
   <!-- Footer Banner -->
-  <rect x="25" y="750" width="1390" height="32" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" />
-  <text x="40" y="771" font-size="11" font-weight="700" fill="#0f172a">SCIENTIFIC GUARANTEE:</text>
-  <text x="200" y="771" font-size="10.5" font-weight="500" fill="#334155">Every phase transition is mediated by typed contracts and deterministically governed. Bounded loops prevent infinite execution cycles.</text>
+  <rect x="25" y="685" width="1390" height="26" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="0.8" />
+  <text x="35" y="702" font-size="10" font-weight="700" fill="#0f172a">CONTROL INTEGRITY:</text>
+  <text x="175" y="702" font-size="9.5" font-weight="500" fill="#334155">Every phase transition is governed by typed contracts. Technical failures are consolidated into a dedicated failure lane.</text>
 
 </svg>

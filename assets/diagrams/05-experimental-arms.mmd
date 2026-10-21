@@ -1,8 +1,8 @@
 %%{init: {'theme': 'base', 'themeVariables': {'background': '#ffffff', 'primaryColor': '#f8fafc', 'primaryTextColor': '#0f172a', 'primaryBorderColor': '#475569', 'lineColor': '#334155', 'fontFamily': 'Inter, Segoe UI, Arial, sans-serif', 'fontSize': '13px'}, 'flowchart': {'curve': 'basis', 'nodeSpacing': 30, 'rankSpacing': 42, 'padding': 12}}}%%
 flowchart TD
-  POP["Study Population & Design (Protocol: e1-v2.refined-full-primary.v2) KOA-GuidelineBench rc0.2.0 Task C Recovery DEV: 16 questions x 3 replicates = 48 shared preparations x 3 arms = 144 cells Dispatched via 6 rotating arm-order permutations (8 blocks per permutation; 16 appearances per position per arm)"]
+  POP["Study Population: 16 DEV Questions x 3 Replicates = 48 Matched Preparations x 3 Arms = 144 Cells (Protocol: e1-v2.refined-full-primary.v2; 6 rotating arm permutations)"]
 
-  subgraph SHARED["Shared Block Preparation (Executed Once per Question x Replicate Block)"]
+  subgraph SHARED["Matched Block Preparation (Provides Identical Initial Inputs Across Arms)"]
     direction LR
     S_Q["Locked RuntimeQuestion (question_id, question_text, locked_source_scope)"]
     S_P["Shared Obligation Planner Call Produces frozen Plan (hash-pinned)"]

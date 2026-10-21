@@ -19,7 +19,7 @@ This document specifies the prospective experimental design registered in **`doc
 
 ![E1-v2 Experimental Arms](../assets/diagrams/05-experimental-arms.svg)
 
-*Figure 5: Three-arm experimental design (`A0`, `A1`, `G`) under protocol `e1-v2.refined-full-primary.v2`, showing shared `(question_id, replicate)` preparation, arm-specific PRE contracts and corrective query builders, matched downstream `v4` execution, and the three registered comparisons ([Mermaid source](../assets/diagrams/05-experimental-arms.mmd)).*
+*Figure 5: Three-arm experimental design (`A0`, `A1`, `G`) under protocol `e1-v2.refined-full-primary.v2`, showing matched `(question_id, replicate)` preparation, arm-specific PRE contracts and conditional corrective query builders, matched downstream `v4` execution, and the three registered comparisons ([Mermaid source](../assets/diagrams/05-experimental-arms.mmd)).*
 
 ### 2.1 Arm Definitions and Intervention Boundaries
 

@@ -52,18 +52,12 @@ flowchart TD
 
   G_POST -->|"Yes"| S_EMIT
   G_POST -->|"No (authorize ABSTAIN)"| T_ABSTAIN
-  S_EMIT -->|"Guard passes"| T_ACCEPT
+  subgraph FAIL_LANE["Dedicated Technical Failure Lane"]
+    T_FAIL(["TERMINAL: TECHNICAL FAILURE (FAILED_*)\nFAILED_CONTRACT | FAILED_PROVIDER | FAILED_RETRIEVAL\nConsolidated failure lane: contract error, API crash, or PolicyGuard rejection"])
+  end
 
-  S_PLAN -.->|"Empty/invalid plan or provider error"| T_FAIL
-  S_INIT_RET -.->|"Query/retrieval error or guard reject"| T_FAIL
-  S_PRE1 -.->|"Malformed PRE output or schema error"| T_FAIL
-  S_CORR_RET -.->|"Missing gap, query error or budget exceeded"| T_FAIL
-  S_PRE2 -.->|"Malformed recheck output"| T_FAIL
-  S_GEN -.->|"Invalid citation IDs or guard reject"| T_FAIL
-  S_DEC -.->|"Empty/non-atomic claims"| T_FAIL
-  S_POST -.->|"Unresolved pair/alias/span contract error"| T_FAIL
-  S_REV -.->|"Invalid revision reference or guard reject"| T_FAIL
-  S_EMIT -.->|"Acceptance hard guard rejected"| T_FAIL
+  S_EMIT -->|"Guard passes"| T_ACCEPT
+  S_EMIT -.->|"Guard rejects proposal"| T_FAIL
 
   classDef stateBox fill:#f8fafc,stroke:#334155,stroke-width:1.6px,color:#0f172a;
   classDef gateBox fill:#fefce8,stroke:#b45309,stroke-width:1.8px,color:#0f172a;
