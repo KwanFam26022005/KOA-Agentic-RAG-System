@@ -1,239 +1,239 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 760" width="100%" height="100%" style="background:#ffffff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 750" width="100%" height="100%" style="background:#ffffff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
   <defs>
-    <!-- Subtle Card Shadow -->
-    <filter id="card-shadow" x="-4%" y="-4%" width="108%" height="112%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="1.5" stdDeviation="2.5" flood-color="#0f172a" flood-opacity="0.06" />
+    <!-- Medical Shadow Filter -->
+    <filter id="med-shadow" x="-4%" y="-4%" width="108%" height="112%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2.5" flood-color="#0f2942" flood-opacity="0.06" />
     </filter>
     <filter id="active-shadow" x="-6%" y="-6%" width="112%" height="116%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="2.5" stdDeviation="3.5" flood-color="#2563eb" flood-opacity="0.10" />
+      <feDropShadow dx="0" dy="2.5" stdDeviation="3.5" flood-color="#0d9488" flood-opacity="0.10" />
     </filter>
     <filter id="firewall-shadow" x="-4%" y="-4%" width="108%" height="114%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#e11d48" flood-opacity="0.08" />
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="#be123c" flood-opacity="0.08" />
     </filter>
 
-    <!-- Arrow Markers -->
+    <!-- Medical Arrow Markers -->
     <marker id="arrow-default" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569" />
     </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0d9488" />
+    </marker>
     <marker id="arrow-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb" />
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0284c7" />
     </marker>
-    <marker id="arrow-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#059669" />
+    <marker id="arrow-cyan" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0891b2" />
     </marker>
-    <marker id="arrow-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#7c3aed" />
-    </marker>
-    <marker id="arrow-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626" />
+    <marker id="arrow-crimson" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#be123c" />
     </marker>
   </defs>
 
   <!-- Canvas Header -->
-  <text x="35" y="30" font-size="16" font-weight="700" fill="#0f172a" letter-spacing="-0.3">KOA-GuidelineBench × DV-OGEC-RAG: Research Framework &amp; Sovereign Boundaries</text>
-  <text x="760" y="30" font-size="13" font-weight="500" fill="#64748b">Guideline Provenance · Benchmark Governance · Agentic Dual-Verification Runtime · Sealed Evaluation</text>
+  <text x="35" y="30" font-size="16" font-weight="700" fill="#0f2942" letter-spacing="-0.3">KOA-GuidelineBench × DV-OGEC-RAG: Research Framework &amp; Sovereign Boundaries</text>
+  <text x="760" y="30" font-size="12.5" font-weight="500" fill="#475569">Guideline Provenance · Benchmark Governance · Agentic Dual-Verification Runtime · Sealed Evaluation</text>
 
   <!-- ========================================================================= -->
   <!-- LEVEL 1 LEFT: 1. Curated Guideline Sources (5 Authorities)                 -->
   <!-- ========================================================================= -->
-  <rect x="25" y="48" width="530" height="190" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
-  <rect x="35" y="58" width="310" height="20" rx="4" fill="#e2e8f0" />
-  <text x="42" y="72" font-size="11" font-weight="700" fill="#334155" letter-spacing="0.5">1. CURATED GUIDELINE SOURCES (5 AUTHORITIES)</text>
+  <rect x="25" y="48" width="530" height="190" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2" />
+  <rect x="35" y="58" width="310" height="20" rx="4" fill="#ccfbf1" />
+  <text x="42" y="72" font-size="10.5" font-weight="700" fill="#0f766e" letter-spacing="0.5">1. CURATED GUIDELINE SOURCES (5 AUTHORITIES)</text>
 
   <!-- 5 Guideline Cards Grid -->
   <g transform="translate(40, 88)">
-    <rect width="150" height="52" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" filter="url(#card-shadow)" />
-    <text x="8" y="22" font-size="10.5" font-weight="700" fill="#0f172a">ACSQHC (2024)</text>
+    <rect width="150" height="52" rx="6" fill="#ffffff" stroke="#5eead4" stroke-width="1.2" filter="url(#med-shadow)" />
+    <text x="8" y="22" font-size="10.5" font-weight="700" fill="#0f2942">ACSQHC (2024)</text>
     <text x="8" y="38" font-size="8.5" font-weight="500" fill="#64748b">Australia · 32 units · Current</text>
   </g>
 
   <g transform="translate(200, 88)">
-    <rect width="150" height="52" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" filter="url(#card-shadow)" />
-    <text x="8" y="22" font-size="10.5" font-weight="700" fill="#0f172a">BYT (2014)</text>
+    <rect width="150" height="52" rx="6" fill="#ffffff" stroke="#5eead4" stroke-width="1.2" filter="url(#med-shadow)" />
+    <text x="8" y="22" font-size="10.5" font-weight="700" fill="#0f2942">BYT (2014)</text>
     <text x="8" y="38" font-size="8.5" font-weight="500" fill="#64748b">Vietnam · 39 units · Historical</text>
   </g>
 
   <g transform="translate(360, 88)">
-    <rect width="180" height="52" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" filter="url(#card-shadow)" />
-    <text x="8" y="22" font-size="10.5" font-weight="700" fill="#0f172a">EULAR (2023)</text>
+    <rect width="180" height="52" rx="6" fill="#ffffff" stroke="#5eead4" stroke-width="1.2" filter="url(#med-shadow)" />
+    <text x="8" y="22" font-size="10.5" font-weight="700" fill="#0f2942">EULAR (2023)</text>
     <text x="8" y="38" font-size="8.5" font-weight="500" fill="#64748b">Europe · 24 units · Current</text>
   </g>
 
   <g transform="translate(40, 148)">
-    <rect width="230" height="52" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" filter="url(#card-shadow)" />
-    <text x="8" y="22" font-size="10.5" font-weight="700" fill="#0f172a">NICE NG226 (2022)</text>
+    <rect width="230" height="52" rx="6" fill="#ffffff" stroke="#5eead4" stroke-width="1.2" filter="url(#med-shadow)" />
+    <text x="8" y="22" font-size="10.5" font-weight="700" fill="#0f2942">NICE NG226 (2022)</text>
     <text x="8" y="38" font-size="8.5" font-weight="500" fill="#64748b">United Kingdom · 84 units · Current</text>
   </g>
 
   <g transform="translate(280, 148)">
-    <rect width="260" height="52" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" filter="url(#card-shadow)" />
-    <text x="8" y="22" font-size="10.5" font-weight="700" fill="#0f172a">VA/DoD (2026)</text>
+    <rect width="260" height="52" rx="6" fill="#ffffff" stroke="#5eead4" stroke-width="1.2" filter="url(#med-shadow)" />
+    <text x="8" y="22" font-size="10.5" font-weight="700" fill="#0f2942">VA/DoD (2026)</text>
     <text x="8" y="38" font-size="8.5" font-weight="500" fill="#64748b">United States · 97 units · Current</text>
   </g>
 
-  <rect x="40" y="208" width="500" height="20" rx="3" fill="#f1f5f9" />
-  <text x="48" y="222" font-size="9" font-weight="600" fill="#475569">Total Corpus: 276 Pinned EvidenceUnits · Canonical PDF SHA-256 Provenance</text>
+  <rect x="40" y="208" width="500" height="20" rx="3" fill="#ccfbf1" />
+  <text x="48" y="222" font-size="8.5" font-weight="600" fill="#0f766e">Total Corpus: 276 Pinned EvidenceUnits · Canonical PDF SHA-256 Provenance</text>
 
   <!-- Connector: Sources -> Benchmark -->
-  <path d="M 555 143 L 585 143" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)" />
+  <path d="M 555 143 L 585 143" fill="none" stroke="#0d9488" stroke-width="1.8" marker-end="url(#arrow-teal)" />
 
   <!-- ========================================================================= -->
   <!-- LEVEL 1 RIGHT: 2. KOA-GuidelineBench Construction & Governance             -->
   <!-- ========================================================================= -->
-  <rect x="585" y="48" width="830" height="190" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2" />
-  <rect x="595" y="58" width="375" height="20" rx="4" fill="#dbeafe" />
-  <text x="602" y="72" font-size="11" font-weight="700" fill="#1e40af" letter-spacing="0.5">2. KOA-GUIDELINEBENCH (rc0.2.0) — BENCHMARK GOVERNANCE</text>
+  <rect x="585" y="48" width="830" height="190" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.2" />
+  <rect x="595" y="58" width="375" height="20" rx="4" fill="#e0f2fe" />
+  <text x="602" y="72" font-size="10.5" font-weight="700" fill="#0369a1" letter-spacing="0.5">2. KOA-GUIDELINEBENCH (rc0.2.0) — BENCHMARK GOVERNANCE</text>
 
   <!-- Box 2.1: Structuring -->
   <g transform="translate(600, 88)">
-    <rect width="245" height="110" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="85" height="15" rx="2" fill="#eff6ff" />
-    <text x="12" y="19" font-size="8" font-weight="700" fill="#1d4ed8">STRUCTURING</text>
-    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f172a">Units &amp; Intents</text>
-    <text x="8" y="54" font-size="9" font-weight="500" fill="#475569">• 276 Native EvidenceUnits</text>
-    <text x="8" y="68" font-size="9" font-weight="500" fill="#475569">• 170 SemanticIntents</text>
-    <text x="8" y="82" font-size="9" font-weight="500" fill="#475569">• Page &amp; section locators</text>
-    <text x="8" y="98" font-size="8.5" font-weight="600" fill="#2563eb">Document SHA-256 Provenance</text>
+    <rect width="245" height="110" rx="6" fill="#ffffff" stroke="#7dd3fc" stroke-width="1.2" filter="url(#med-shadow)" />
+    <rect x="8" y="7" width="85" height="15" rx="2" fill="#e0f2fe" />
+    <text x="12" y="18" font-size="8" font-weight="700" fill="#0369a1">STRUCTURING</text>
+    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f2942">Units &amp; Intents</text>
+    <text x="8" y="54" font-size="8.5" font-weight="500" fill="#475569">• 276 Native EvidenceUnits</text>
+    <text x="8" y="68" font-size="8.5" font-weight="500" fill="#475569">• 170 SemanticIntents</text>
+    <text x="8" y="82" font-size="8.5" font-weight="500" fill="#475569">• Page &amp; section locators</text>
+    <text x="8" y="98" font-size="8" font-weight="600" fill="#0284c7">Document SHA-256 Provenance</text>
   </g>
 
   <!-- Box 2.2: Dual Tasks -->
   <g transform="translate(860, 88)">
-    <rect width="260" height="110" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="85" height="15" rx="2" fill="#eff6ff" />
-    <text x="12" y="19" font-size="8" font-weight="700" fill="#1d4ed8">TASK CONTRACTS</text>
-    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f172a">Dual Benchmark Tasks</text>
-    <text x="8" y="54" font-size="9" font-weight="600" fill="#1e3a8a">Task B: Displayed Sufficiency</text>
+    <rect width="260" height="110" rx="6" fill="#ffffff" stroke="#7dd3fc" stroke-width="1.2" filter="url(#med-shadow)" />
+    <rect x="8" y="7" width="85" height="15" rx="2" fill="#e0f2fe" />
+    <text x="12" y="18" font-size="8" font-weight="700" fill="#0369a1">TASK CONTRACTS</text>
+    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f2942">Dual Benchmark Tasks</text>
+    <text x="8" y="54" font-size="9" font-weight="600" fill="#0369a1">Task B: Displayed Sufficiency</text>
     <text x="8" y="68" font-size="8.5" font-weight="500" fill="#64748b">5 DEV pairs · 9 unique bundles</text>
-    <text x="8" y="84" font-size="9" font-weight="600" fill="#1e3a8a">Task C: Dynamic Recovery &amp; Gating</text>
+    <text x="8" y="84" font-size="9" font-weight="600" fill="#0369a1">Task C: Dynamic Recovery &amp; Gating</text>
     <text x="8" y="98" font-size="8.5" font-weight="500" fill="#64748b">16 English DEV questions (E1-v2)</text>
   </g>
 
   <!-- Box 2.3: Adjudication -->
   <g transform="translate(1135, 88)">
-    <rect width="265" height="110" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.4" filter="url(#active-shadow)" />
-    <rect x="8" y="8" width="100" height="15" rx="2" fill="#dbeafe" />
-    <text x="12" y="19" font-size="8" font-weight="700" fill="#1e40af">BA1-D1 / BA1-D2</text>
-    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f172a">Exposure Adjudication</text>
+    <rect width="265" height="110" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1.4" filter="url(#active-shadow)" />
+    <rect x="8" y="7" width="100" height="15" rx="2" fill="#e0f2fe" />
+    <text x="12" y="18" font-size="8" font-weight="700" fill="#0369a1">BA1-D1 / BA1-D2</text>
+    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f2942">Exposure Adjudication</text>
     <text x="8" y="54" font-size="9" font-weight="600" fill="#059669">RUNTIME_EXPOSURE_CONTRACT</text>
     <text x="8" y="70" font-size="8.5" font-weight="500" fill="#475569">• RUNTIME_VISIBLE (Allowlist)</text>
-    <text x="8" y="84" font-size="8.5" font-weight="700" fill="#dc2626">• EVALUATOR_ONLY (Sealed Gold)</text>
-    <text x="8" y="98" font-size="8.5" font-weight="600" fill="#7c3aed">• REVIEWER_AUDIT_ONLY (Provenance)</text>
+    <text x="8" y="84" font-size="8.5" font-weight="700" fill="#be123c">• EVALUATOR_ONLY (Sealed Gold)</text>
+    <text x="8" y="98" font-size="8.5" font-weight="600" fill="#64748b">• REVIEWER_AUDIT_ONLY (Provenance)</text>
   </g>
 
-  <rect x="600" y="208" width="800" height="20" rx="3" fill="#dbeafe" />
-  <text x="608" y="222" font-size="9" font-weight="700" fill="#1e40af">Task Contract Isolation: Task B displayed bundle labels NEVER transfer as gold for Task C dynamic retrieval</text>
+  <rect x="600" y="208" width="800" height="20" rx="3" fill="#e0f2fe" />
+  <text x="608" y="222" font-size="8.5" font-weight="700" fill="#0369a1">Task Contract Isolation: Task B displayed bundle labels NEVER transfer as gold for Task C dynamic retrieval</text>
 
-  <!-- Connector: Benchmark Governance -> Runtime Inputs -->
-  <path d="M 1267 198 L 1267 265 L 115 265 L 115 295" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)" />
-  <rect x="520" y="257" width="220" height="16" rx="3" fill="#d1fae5" />
-  <text x="525" y="269" font-size="9" font-weight="700" fill="#065f46">Authorized RUNTIME_VISIBLE Fields Only (Zero Gold)</text>
+  <!-- Connector: Benchmark Governance -> Runtime Inputs (Runs cleanly in empty 50px corridor at y=255) -->
+  <path d="M 1267 198 L 1267 255 L 135 255 L 135 285" fill="none" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow-blue)" />
+  <rect x="520" y="247" width="220" height="16" rx="3" fill="#e0f2fe" stroke="#bae6fd" stroke-width="0.8" />
+  <text x="525" y="259" font-size="8.5" font-weight="700" fill="#0369a1">Authorized RUNTIME_VISIBLE Fields Only (Zero Gold)</text>
 
   <!-- ========================================================================= -->
   <!-- LEVEL 2: 3. DV-OGEC-RAG Method Runtime Architecture                        -->
   <!-- ========================================================================= -->
-  <rect x="25" y="295" width="1390" height="235" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
-  <rect x="35" y="305" width="375" height="20" rx="4" fill="#e2e8f0" />
-  <text x="42" y="319" font-size="11" font-weight="700" fill="#334155" letter-spacing="0.5">3. DV-OGEC-RAG — AGENTIC METHOD RUNTIME ARCHITECTURE</text>
+  <rect x="25" y="285" width="1390" height="235" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+  <rect x="35" y="295" width="375" height="20" rx="4" fill="#e2e8f0" />
+  <text x="42" y="309" font-size="10.5" font-weight="700" fill="#1e293b" letter-spacing="0.5">3. DV-OGEC-RAG — AGENTIC METHOD RUNTIME ARCHITECTURE</text>
 
   <!-- 3A: Input Allowlist Card -->
-  <g transform="translate(45, 335)">
-    <rect width="180" height="135" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.4" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="85" height="15" rx="2" fill="#dcfce7" />
-    <text x="12" y="19" font-size="8" font-weight="700" fill="#15803d">INPUT ALLOWLIST</text>
-    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f172a">RecoveryInput</text>
+  <g transform="translate(45, 325)">
+    <rect width="180" height="135" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1.4" filter="url(#med-shadow)" />
+    <rect x="8" y="7" width="85" height="15" rx="2" fill="#e0f2fe" />
+    <text x="12" y="18" font-size="8" font-weight="700" fill="#0369a1">INPUT ALLOWLIST</text>
+    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f2942">RecoveryInput</text>
     <text x="8" y="54" font-size="8.5" font-weight="500" fill="#475569">• Case ID &amp; fixed question text</text>
     <text x="8" y="68" font-size="8.5" font-weight="500" fill="#475569">• Locked guideline source scope</text>
     <text x="8" y="82" font-size="8.5" font-weight="500" fill="#475569">• 276 Native EvidenceUnits</text>
     <text x="8" y="96" font-size="8.5" font-weight="500" fill="#475569">• Safe citation locators</text>
     <text x="8" y="112" font-size="8.5" font-weight="600" fill="#0284c7">MedCPT FAISS IndexFlatIP</text>
-    <text x="8" y="126" font-size="8" font-weight="700" fill="#15803d">Zero Gold Labels Included</text>
+    <text x="8" y="126" font-size="8" font-weight="700" fill="#0284c7">Zero Gold Labels Included</text>
   </g>
 
   <!-- Connector: Input -> Planner -->
-  <path d="M 225 402 L 255 402" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)" />
+  <path d="M 225 392 L 255 392" fill="none" stroke="#0284c7" stroke-width="1.8" marker-end="url(#arrow-blue)" />
 
   <!-- 3B: DV-OGEC-RAG Pipeline -->
   <!-- Planner -->
-  <g transform="translate(255, 345)">
-    <rect width="125" height="115" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.4" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="55" height="15" rx="2" fill="#dbeafe" />
-    <text x="12" y="19" font-size="8" font-weight="700" fill="#1d4ed8">PLANNER</text>
-    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f172a">Obligation</text>
-    <text x="8" y="52" font-size="11" font-weight="700" fill="#0f172a">Planner</text>
+  <g transform="translate(255, 335)">
+    <rect width="125" height="115" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1.4" filter="url(#med-shadow)" />
+    <rect x="8" y="7" width="55" height="15" rx="2" fill="#e0f2fe" />
+    <text x="12" y="18" font-size="8" font-weight="700" fill="#0369a1">PLANNER</text>
+    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f2942">Obligation</text>
+    <text x="8" y="52" font-size="11" font-weight="700" fill="#0f2942">Planner</text>
     <text x="8" y="70" font-size="8.5" font-weight="500" fill="#64748b">LLM role call</text>
-    <text x="8" y="85" font-size="8.5" font-weight="600" fill="#2563eb">Material Obligations</text>
+    <text x="8" y="85" font-size="8.5" font-weight="600" fill="#0284c7">Material Obligations</text>
     <text x="8" y="100" font-size="8" font-weight="500" fill="#475569">Frozen hash-pinned</text>
   </g>
 
   <!-- Connector: Planner -> Initial Retrieval -->
-  <path d="M 380 402 L 405 402" fill="none" stroke="#2563eb" stroke-width="1.6" marker-end="url(#arrow-blue)" />
+  <path d="M 380 392 L 405 392" fill="none" stroke="#0284c7" stroke-width="1.6" marker-end="url(#arrow-blue)" />
 
   <!-- Initial Retrieval -->
-  <g transform="translate(405, 345)">
-    <rect width="130" height="115" rx="8" fill="#ffffff" stroke="#059669" stroke-width="1.4" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="90" height="15" rx="2" fill="#d1fae5" />
-    <text x="12" y="19" font-size="8" font-weight="700" fill="#047857">LOCAL RETRIEVAL</text>
-    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f172a">Initial</text>
-    <text x="8" y="52" font-size="11" font-weight="700" fill="#0f172a">Retrieval (E0)</text>
+  <g transform="translate(405, 335)">
+    <rect width="130" height="115" rx="6" fill="#ffffff" stroke="#0d9488" stroke-width="1.4" filter="url(#med-shadow)" />
+    <rect x="8" y="7" width="90" height="15" rx="2" fill="#ccfbf1" />
+    <text x="12" y="18" font-size="8" font-weight="700" fill="#0f766e">LOCAL RETRIEVAL</text>
+    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f2942">Initial</text>
+    <text x="8" y="52" font-size="11" font-weight="700" fill="#0f2942">Retrieval (E0)</text>
     <text x="8" y="70" font-size="8.5" font-weight="500" fill="#64748b">MedCPT top-8</text>
-    <text x="8" y="85" font-size="8.5" font-weight="600" fill="#059669">EvidenceStore E0</text>
+    <text x="8" y="85" font-size="8.5" font-weight="600" fill="#0d9488">EvidenceStore E0</text>
     <text x="8" y="100" font-size="8" font-weight="500" fill="#475569">Pre-filtered by scope</text>
   </g>
 
   <!-- Connector: Retrieval -> PRE -->
-  <path d="M 535 402 L 565 402" fill="none" stroke="#059669" stroke-width="1.6" marker-end="url(#arrow-green)" />
+  <path d="M 535 392 L 565 392" fill="none" stroke="#0d9488" stroke-width="1.6" marker-end="url(#arrow-teal)" />
 
   <!-- PRE & Corrective Loop Container -->
-  <rect x="565, 335" width="180" height="135" rx="8" fill="#faf5ff" stroke="#8b5cf6" stroke-width="1.4" />
-  <rect x="573" y="343" width="85" height="15" rx="2" fill="#ede9fe" />
-  <text x="578" y="354" font-size="8" font-weight="700" fill="#6d28d9">PRE VERIFY</text>
-  <text x="573" y="374" font-size="11" font-weight="700" fill="#0f172a">PRE Verifier</text>
-  <text x="573" y="388" font-size="8.5" font-weight="500" fill="#64748b">A0/A1 or Matched Generic</text>
-  <path d="M 655 395 L 655 408" fill="none" stroke="#ea580c" stroke-width="1.4" marker-end="url(#arrow-orange)" />
-  <rect x="573" y="412" width="164" height="34" rx="4" fill="#fff7ed" stroke="#ea580c" stroke-width="0.8" />
-  <text x="578" y="424" font-size="8" font-weight="700" fill="#c2410c">Conditional Correction (≤1)</text>
-  <text x="578" y="437" font-size="7.5" font-weight="500" fill="#9a3412">Targeted query · E0+E1 recheck</text>
-  <text x="573" y="460" font-size="8" font-weight="700" fill="#7c3aed">Deterministic Sufficiency Gate</text>
+  <rect x="565" y="325" width="180" height="135" rx="6" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.4" />
+  <rect x="573" y="333" width="85" height="15" rx="2" fill="#ccfbf1" />
+  <text x="578" y="344" font-size="8" font-weight="700" fill="#0f766e">PRE VERIFY</text>
+  <text x="573" y="364" font-size="11" font-weight="700" fill="#0f2942">PRE Verifier</text>
+  <text x="573" y="378" font-size="8.5" font-weight="500" fill="#64748b">A0/A1 or Matched Generic</text>
+  <path d="M 655 385 L 655 398" fill="none" stroke="#d97706" stroke-width="1.4" marker-end="url(#arrow-ochre)" />
+  <rect x="573" y="402" width="164" height="34" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.8" />
+  <text x="578" y="414" font-size="8" font-weight="700" fill="#c2410c">Conditional Correction (≤1)</text>
+  <text x="578" y="427" font-size="7.5" font-weight="500" fill="#9a3412">Targeted query · E0+E1 recheck</text>
+  <text x="573" y="450" font-size="8" font-weight="700" fill="#0f766e">Deterministic Sufficiency Gate</text>
 
   <!-- Connector: PRE -> Generator -->
-  <path d="M 745 402 L 775 402" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)" />
+  <path d="M 745 392 L 775 392" fill="none" stroke="#0284c7" stroke-width="1.8" marker-end="url(#arrow-blue)" />
 
   <!-- Answer Generator -->
-  <g transform="translate(775, 345)">
-    <rect width="125" height="115" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.4" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="55" height="15" rx="2" fill="#dbeafe" />
-    <text x="12" y="19" font-size="8" font-weight="700" fill="#1d4ed8">LLM ROLE</text>
-    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f172a">Answer</text>
-    <text x="8" y="52" font-size="11" font-weight="700" fill="#0f172a">Generator</text>
+  <g transform="translate(775, 335)">
+    <rect width="125" height="115" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1.4" filter="url(#med-shadow)" />
+    <rect x="8" y="7" width="55" height="15" rx="2" fill="#e0f2fe" />
+    <text x="12" y="18" font-size="8" font-weight="700" fill="#0369a1">LLM ROLE</text>
+    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f2942">Answer</text>
+    <text x="8" y="52" font-size="11" font-weight="700" fill="#0f2942">Generator</text>
     <text x="8" y="70" font-size="8.5" font-weight="500" fill="#64748b">Candidate draft</text>
-    <text x="8" y="85" font-size="8.5" font-weight="600" fill="#2563eb">Evidence Citing</text>
+    <text x="8" y="85" font-size="8.5" font-weight="600" fill="#0284c7">Evidence Citing</text>
     <text x="8" y="100" font-size="8" font-weight="500" fill="#475569">Memory-bound</text>
   </g>
 
   <!-- Connector: Generator -> Decomposer -->
-  <path d="M 900 402 L 925 402" fill="none" stroke="#3b82f6" stroke-width="1.6" marker-end="url(#arrow-blue)" />
+  <path d="M 900 392 L 925 392" fill="none" stroke="#0284c7" stroke-width="1.6" marker-end="url(#arrow-blue)" />
 
   <!-- POST & Revision Loop Container -->
-  <rect x="925, 335" width="200" height="135" rx="8" fill="#faf5ff" stroke="#8b5cf6" stroke-width="1.4" />
-  <rect x="933" y="343" width="95" height="15" rx="2" fill="#ede9fe" />
-  <text x="938" y="354" font-size="8" font-weight="700" fill="#6d28d9">STAGED POST v4</text>
-  <text x="933" y="374" font-size="11" font-weight="700" fill="#0f172a">Decomposer + POST</text>
-  <text x="933" y="388" font-size="8.5" font-weight="500" fill="#64748b">AtomicClaim[] · pair-diag-remedies</text>
-  <path d="M 1025 395 L 1025 408" fill="none" stroke="#ea580c" stroke-width="1.4" marker-end="url(#arrow-orange)" />
-  <rect x="933" y="412" width="184" height="34" rx="4" fill="#fff7ed" stroke="#ea580c" stroke-width="0.8" />
-  <text x="938" y="424" font-size="8" font-weight="700" fill="#c2410c">Conditional Revision (≤1)</text>
-  <text x="938" y="437" font-size="7.5" font-weight="500" fill="#9a3412">Existing memory only · fresh POST</text>
-  <text x="933" y="460" font-size="8" font-weight="700" fill="#7c3aed">Canonical Validator Checks</text>
+  <rect x="925" y="325" width="200" height="135" rx="6" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.4" />
+  <rect x="933" y="333" width="95" height="15" rx="2" fill="#e0f2fe" />
+  <text x="938" y="344" font-size="8" font-weight="700" fill="#0369a1">STAGED POST v4</text>
+  <text x="933" y="364" font-size="11" font-weight="700" fill="#0f2942">Decomposer + POST</text>
+  <text x="933" y="378" font-size="8.5" font-weight="500" fill="#64748b">AtomicClaim[] · pair-diag-remedies</text>
+  <path d="M 1025 385 L 1025 398" fill="none" stroke="#d97706" stroke-width="1.4" marker-end="url(#arrow-ochre)" />
+  <rect x="933" y="402" width="184" height="34" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.8" />
+  <text x="938" y="414" font-size="8" font-weight="700" fill="#c2410c">Conditional Revision (≤1)</text>
+  <text x="938" y="427" font-size="7.5" font-weight="500" fill="#9a3412">Existing memory only · fresh POST</text>
+  <text x="933" y="450" font-size="8" font-weight="700" fill="#0369a1">Canonical Validator Checks</text>
 
   <!-- Connector: POST -> PolicyGuard -->
-  <path d="M 1125 402 L 1150 402" fill="none" stroke="#0284c7" stroke-width="1.8" marker-end="url(#arrow-blue)" />
+  <path d="M 1125 392 L 1150 392" fill="none" stroke="#0284c7" stroke-width="1.8" marker-end="url(#arrow-blue)" />
 
   <!-- Deterministic PolicyGuard -->
-  <g transform="translate(1150, 335)">
-    <rect width="125" height="135" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="1.6" filter="url(#active-shadow)" />
-    <rect x="6" y="8" width="112" height="15" rx="2" fill="#e0f2fe" />
-    <text x="10" y="19" font-size="8" font-weight="700" fill="#0369a1">ACTION-CONTROL</text>
-    <text x="6" y="38" font-size="11" font-weight="700" fill="#0f172a">PolicyGuard</text>
+  <g transform="translate(1150, 325)">
+    <rect width="125" height="135" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1.6" filter="url(#active-shadow)" />
+    <rect x="6" y="7" width="112" height="15" rx="2" fill="#e0f2fe" />
+    <text x="10" y="18" font-size="7.5" font-weight="700" fill="#0369a1">ACTION-CONTROL</text>
+    <text x="6" y="38" font-size="11" font-weight="700" fill="#0f2942">PolicyGuard</text>
     <text x="6" y="54" font-size="8" font-weight="500" fill="#475569">• Phase legality</text>
     <text x="6" y="68" font-size="8" font-weight="500" fill="#475569">• Token budget</text>
     <text x="6" y="82" font-size="8" font-weight="500" fill="#475569">• Provenance locks</text>
@@ -243,57 +243,57 @@
   </g>
 
   <!-- Connector: PolicyGuard -> Outputs -->
-  <path d="M 1275 402 L 1300 402" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow-default)" />
+  <path d="M 1275 392 L 1300 392" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow-default)" />
 
   <!-- 3C: RunStore Outputs -->
-  <g transform="translate(1300, 335)">
-    <rect width="105" height="135" rx="8" fill="#ffffff" stroke="#7e22ce" stroke-width="1.4" filter="url(#card-shadow)" />
-    <rect x="6" y="8" width="92" height="15" rx="2" fill="#f3e8ff" />
-    <text x="10" y="19" font-size="8" font-weight="700" fill="#7e22ce">RUNSTORE</text>
-    <text x="6" y="38" font-size="11" font-weight="700" fill="#0f172a">Outputs</text>
+  <g transform="translate(1300, 325)">
+    <rect width="105" height="135" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.4" filter="url(#med-shadow)" />
+    <rect x="6" y="7" width="92" height="15" rx="2" fill="#f1f5f9" />
+    <text x="10" y="18" font-size="8" font-weight="700" fill="#475569">RUNSTORE</text>
+    <text x="6" y="38" font-size="11" font-weight="700" fill="#0f2942">Outputs</text>
     <text x="6" y="56" font-size="8" font-weight="700" fill="#059669">ACCEPT</text>
     <text x="6" y="70" font-size="8" font-weight="700" fill="#d97706">ABSTAIN</text>
-    <text x="6" y="84" font-size="8" font-weight="700" fill="#dc2626">FAILED_*</text>
+    <text x="6" y="84" font-size="8" font-weight="700" fill="#be123c">FAILED_*</text>
     <text x="6" y="100" font-size="7.5" font-weight="500" fill="#475569">Traces &amp; hashes</text>
     <text x="6" y="114" font-size="7.5" font-weight="500" fill="#475569">Budget ledger</text>
-    <text x="6" y="128" font-size="8" font-weight="600" fill="#7e22ce">Immutable</text>
+    <text x="6" y="128" font-size="8" font-weight="600" fill="#475569">Immutable</text>
   </g>
 
   <!-- Execution Invariants Banner -->
-  <rect x="45" y="485" width="1360" height="24" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="0.8" />
-  <text x="55" y="501" font-size="9.5" font-weight="700" fill="#1e293b">RUNTIME INVARIANTS:</text>
-  <text x="195" y="501" font-size="9" font-weight="500" fill="#334155">Initial Retrieval ≤ 1 · Corrective Retrieval ≤ 1 · Grounded Revision ≤ 1 · Non-recoverable guard error → FAILED_CONTRACT (never converted to ABSTAIN)</text>
+  <rect x="45" y="475" width="1360" height="24" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="0.8" />
+  <text x="55" y="491" font-size="9" font-weight="700" fill="#1e293b">RUNTIME INVARIANTS:</text>
+  <text x="195" y="491" font-size="8.5" font-weight="500" fill="#334155">Initial Retrieval ≤ 1 · Corrective Retrieval ≤ 1 · Grounded Revision ≤ 1 · Non-recoverable guard error → FAILED_CONTRACT (never converted to ABSTAIN)</text>
 
-  <!-- Connector: RunStore -> Independent Evaluation Boundary (Read-Only) -->
-  <path d="M 1352 470 L 1352 585 L 940 585" fill="none" stroke="#7e22ce" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#arrow-purple)" />
-  <rect x="1080" y="575" width="220" height="16" rx="3" fill="#f3e8ff" />
-  <text x="1086" y="587" font-size="8.5" font-weight="700" fill="#7e22ce">Read-Only Predictions &amp; Trajectory Hashes</text>
+  <!-- Connector: RunStore -> Independent Evaluation Boundary (Read-Only, Runs in 30px corridor at y=525) -->
+  <path d="M 1352 460 L 1352 525 L 940 525 L 940 575" fill="none" stroke="#be123c" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#arrow-crimson)" />
+  <rect x="1080" y="517" width="220" height="16" rx="3" fill="#fff1f2" stroke="#fecdd3" stroke-width="0.8" />
+  <text x="1086" y="529" font-size="8" font-weight="700" fill="#be123c">Read-Only Predictions &amp; Trajectory Hashes</text>
 
   <!-- ========================================================================= -->
   <!-- LEVEL 3: 4. Independent Evaluation Boundary (Owner-Separated)              -->
   <!-- ========================================================================= -->
-  <rect x="25" y="545" width="1390" height="175" rx="12" fill="#fff1f2" stroke="#f43f5e" stroke-width="1.4" filter="url(#firewall-shadow)" />
-  <rect x="35" y="555" width="410" height="20" rx="4" fill="#ffe4e6" />
-  <text x="42" y="569" font-size="11" font-weight="700" fill="#9f1239" letter-spacing="0.5">4. INDEPENDENT EVALUATION BOUNDARY (OWNER-SEPARATED)</text>
+  <rect x="25" y="540" width="1390" height="175" rx="10" fill="#fff1f2" stroke="#fecdd3" stroke-width="1.4" filter="url(#firewall-shadow)" />
+  <rect x="35" y="550" width="410" height="20" rx="4" fill="#ffe4e6" />
+  <text x="42" y="564" font-size="10.5" font-weight="700" fill="#9f1239" letter-spacing="0.5">4. INDEPENDENT EVALUATION BOUNDARY (OWNER-SEPARATED)</text>
 
   <!-- Box 4.1: Owner-Held References -->
-  <g transform="translate(45, 585)">
-    <rect width="380" height="120" rx="8" fill="#ffffff" stroke="#fb7185" stroke-width="1.2" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="150" height="15" rx="2" fill="#ffe4e6" />
-    <text x="12" y="19" font-size="8" font-weight="700" fill="#9f1239">SEALED REFERENCES</text>
-    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f172a">Owner-Held Assets (evaluator/)</text>
+  <g transform="translate(45, 580)">
+    <rect width="380" height="120" rx="6" fill="#ffffff" stroke="#f43f5e" stroke-width="1.2" filter="url(#med-shadow)" />
+    <rect x="8" y="7" width="150" height="15" rx="2" fill="#ffe4e6" />
+    <text x="12" y="18" font-size="8" font-weight="700" fill="#9f1239">SEALED REFERENCES</text>
+    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f2942">Owner-Held Assets (evaluator/)</text>
     <text x="8" y="54" font-size="8.5" font-weight="500" fill="#475569">• Canonical Material Obligations &amp; Propositions</text>
     <text x="8" y="68" font-size="8.5" font-weight="500" fill="#475569">• Accepted EvidencePaths &amp; supporting_evidence_ref_ids</text>
     <text x="8" y="82" font-size="8.5" font-weight="500" fill="#475569">• Gold Dispositions, Expected Answers &amp; TEST Split</text>
-    <text x="8" y="100" font-size="8.5" font-weight="700" fill="#dc2626">Strictly Sealed: Zero Leakage into Inference Runtime</text>
+    <text x="8" y="100" font-size="8.5" font-weight="700" fill="#be123c">Strictly Sealed: Zero Leakage into Inference Runtime</text>
   </g>
 
   <!-- Box 4.2: Reconciliation Harness -->
-  <g transform="translate(450, 585)">
-    <rect width="410" height="120" rx="8" fill="#ffffff" stroke="#fb7185" stroke-width="1.2" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="150" height="15" rx="2" fill="#ffe4e6" />
-    <text x="12" y="19" font-size="8" font-weight="700" fill="#9f1239">RECONCILIATION</text>
-    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f172a">Reconciliation Scorer</text>
+  <g transform="translate(450, 580)">
+    <rect width="410" height="120" rx="6" fill="#ffffff" stroke="#f43f5e" stroke-width="1.2" filter="url(#med-shadow)" />
+    <rect x="8" y="7" width="150" height="15" rx="2" fill="#ffe4e6" />
+    <text x="12" y="18" font-size="8" font-weight="700" fill="#9f1239">RECONCILIATION</text>
+    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f2942">Reconciliation Scorer</text>
     <text x="8" y="54" font-size="8.5" font-weight="500" fill="#475569">• Verifies release SHA-256 (5aa87228b...) &amp; split pins</text>
     <text x="8" y="68" font-size="8.5" font-weight="500" fill="#475569">• Validates eligible denominator projection</text>
     <text x="8" y="82" font-size="8.5" font-weight="500" fill="#475569">• Rejects self-supplied scores or fabricated runs</text>
@@ -301,26 +301,26 @@
   </g>
 
   <!-- Connector: Sealed References -> Scorer -->
-  <path d="M 425 645 L 450 645" fill="none" stroke="#be123c" stroke-width="1.8" marker-end="url(#arrow-red)" />
+  <path d="M 425 640 L 450 640" fill="none" stroke="#be123c" stroke-width="1.8" marker-end="url(#arrow-crimson)" />
 
   <!-- Box 4.3: Official Scientific Endpoints -->
-  <g transform="translate(885, 585)">
-    <rect width="510" height="120" rx="8" fill="#ffffff" stroke="#e11d48" stroke-width="1.6" filter="url(#active-shadow)" />
-    <rect x="8" y="8" width="155" height="15" rx="2" fill="#ffe4e6" />
-    <text x="12" y="19" font-size="8" font-weight="700" fill="#9f1239">OFFICIAL METRICS</text>
-    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f172a">Registered Evaluation Endpoints</text>
+  <g transform="translate(885, 580)">
+    <rect width="510" height="120" rx="6" fill="#ffffff" stroke="#be123c" stroke-width="1.6" filter="url(#active-shadow)" />
+    <rect x="8" y="7" width="155" height="15" rx="2" fill="#ffe4e6" />
+    <text x="12" y="18" font-size="8" font-weight="700" fill="#9f1239">OFFICIAL METRICS</text>
+    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f2942">Registered Evaluation Endpoints</text>
     <text x="8" y="54" font-size="8.5" font-weight="500" fill="#475569">• Grounded Correctness, Support, Completeness, FAR</text>
-    <rect x="8" y="64" width="494" height="42" rx="4" fill="#fff1f2" stroke="#f43f5e" stroke-width="0.8" />
-    <text x="14" y="80" font-size="10" font-weight="800" fill="#9f1239">CURRENT E1-v2 QUALITY STATUS: NOT_EVALUABLE</text>
+    <rect x="8" y="64" width="494" height="42" rx="4" fill="#fff1f2" stroke="#be123c" stroke-width="0.8" />
+    <text x="14" y="80" font-size="10" font-weight="800" fill="#be123c">CURRENT E1-v2 QUALITY STATUS: NOT_EVALUABLE</text>
     <text x="14" y="96" font-size="8.5" font-weight="600" fill="#be123c">0/16 Cases Evaluated in Public Scope · Scoring Blocked by Owner Reference</text>
   </g>
 
   <!-- Connector: Scorer -> Endpoints -->
-  <path d="M 860 645 L 885 645" fill="none" stroke="#be123c" stroke-width="1.8" marker-end="url(#arrow-red)" />
+  <path d="M 860 640 L 885 640" fill="none" stroke="#be123c" stroke-width="1.8" marker-end="url(#arrow-crimson)" />
 
   <!-- Footer Banner -->
-  <rect x="25" y="730" width="1390" height="24" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="0.8" />
-  <text x="35" y="746" font-size="9.5" font-weight="700" fill="#334155">SOVEREIGNTY:</text>
-  <text x="135" y="746" font-size="9" font-weight="500" fill="#475569">Clinical Guidelines provide evidence units; Benchmark governs task exposure; Method runs gold-free; Owner executes independent evaluation.</text>
+  <rect x="25" y="722" width="1390" height="24" rx="4" fill="#f0fdfa" stroke="#ccfbf1" stroke-width="0.8" />
+  <text x="35" y="738" font-size="9" font-weight="700" fill="#0f766e">SOVEREIGNTY:</text>
+  <text x="135" y="738" font-size="8.5" font-weight="500" fill="#134e4a">Clinical Guidelines provide evidence units; Benchmark governs task exposure; Method runs gold-free; Owner executes independent evaluation.</text>
 
 </svg>

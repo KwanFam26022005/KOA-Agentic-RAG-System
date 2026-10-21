@@ -1,113 +1,116 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 780" width="100%" height="100%" style="background:#ffffff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
   <defs>
-    <!-- Subtle Card Shadow -->
-    <filter id="card-shadow" x="-4%" y="-4%" width="108%" height="112%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="1.5" stdDeviation="2.5" flood-color="#0f172a" flood-opacity="0.06" />
+    <!-- Medical Shadow Filter -->
+    <filter id="med-shadow" x="-4%" y="-4%" width="108%" height="112%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="2.5" flood-color="#0f2942" flood-opacity="0.06" />
     </filter>
     <filter id="active-shadow" x="-6%" y="-6%" width="112%" height="116%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="2.5" stdDeviation="3.5" flood-color="#2563eb" flood-opacity="0.10" />
+      <feDropShadow dx="0" dy="2.5" stdDeviation="3.5" flood-color="#0d9488" flood-opacity="0.12" />
     </filter>
 
-    <!-- Arrow Markers -->
+    <!-- Medical Arrow Markers -->
     <marker id="arrow-default" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569" />
     </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0d9488" />
+    </marker>
     <marker id="arrow-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb" />
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#0284c7" />
     </marker>
-    <marker id="arrow-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#059669" />
+    <marker id="arrow-slate" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#334155" />
     </marker>
-    <marker id="arrow-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#7c3aed" />
-    </marker>
-    <marker id="arrow-amber" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <marker id="arrow-ochre" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#d97706" />
+    </marker>
+    <marker id="arrow-sage" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#059669" />
     </marker>
   </defs>
 
   <!-- Canvas Header -->
-  <text x="35" y="30" font-size="16" font-weight="700" fill="#0f172a" letter-spacing="-0.3">E1-v2 Protocol: Three-Arm Architecture &amp; Comparative Verification</text>
-  <text x="690" y="30" font-size="13" font-weight="500" fill="#64748b">Matched Block Preparation · Divergent PRE Arms · Unified Downstream Runtime · Controlled Policy Contrasts</text>
+  <text x="35" y="30" font-size="16" font-weight="700" fill="#0f2942" letter-spacing="-0.3">E1-v2 Protocol: Three-Arm Architecture &amp; Comparative Verification</text>
+  <text x="690" y="30" font-size="12.5" font-weight="500" fill="#475569">Matched Block Preparation · Divergent PRE Arms · Unified Downstream Runtime · Controlled Policy Contrasts</text>
 
   <!-- ========================================================================= -->
   <!-- LEVEL 1: STUDY DESIGN & MATCHED BLOCK PREPARATION                         -->
   <!-- ========================================================================= -->
-  <rect x="25" y="48" width="1390" height="135" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="1.2" />
-  <rect x="35" y="58" width="415" height="20" rx="4" fill="#dcfce7" />
-  <text x="42" y="72" font-size="11" font-weight="700" fill="#15803d" letter-spacing="0.5">LEVEL 1: STUDY POPULATION &amp; MATCHED BLOCK PREPARATION</text>
+  <rect x="25" y="48" width="1390" height="135" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2" />
+  <rect x="35" y="58" width="415" height="20" rx="4" fill="#ccfbf1" />
+  <text x="42" y="72" font-size="10.5" font-weight="700" fill="#0f766e" letter-spacing="0.5">LEVEL 1: STUDY POPULATION &amp; MATCHED BLOCK PREPARATION</text>
 
   <!-- Protocol summary card -->
   <g transform="translate(45, 88)">
-    <rect width="360" height="82" rx="8" fill="#ffffff" stroke="#86efac" stroke-width="1.2" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="125" height="15" rx="2" fill="#dcfce7" />
-    <text x="12" y="19" font-size="8.5" font-weight="700" fill="#15803d">PROTOCOL e1-v2</text>
-    <text x="8" y="38" font-size="11.5" font-weight="700" fill="#0f172a">16 Questions × 3 Replicates</text>
+    <rect width="360" height="82" rx="6" fill="#ffffff" stroke="#5eead4" stroke-width="1.2" filter="url(#med-shadow)" />
+    <rect x="8" y="7" width="125" height="15" rx="2" fill="#ccfbf1" />
+    <text x="12" y="18" font-size="8" font-weight="700" fill="#0f766e">PROTOCOL e1-v2</text>
+    <text x="8" y="38" font-size="11.5" font-weight="700" fill="#0f2942">16 Questions × 3 Replicates</text>
     <text x="8" y="54" font-size="8.5" font-weight="500" fill="#475569">• 48 Matched preparations × 3 arms = 144 cells</text>
     <text x="8" y="68" font-size="8.5" font-weight="500" fill="#475569">• 6 Latin-square arm permutations (16 appearances/arm/pos)</text>
   </g>
 
   <!-- Connector: Protocol -> Input -->
-  <path d="M 405 129 L 435 129" fill="none" stroke="#059669" stroke-width="1.8" marker-end="url(#arrow-green)" />
+  <path d="M 405 129 L 435 129" fill="none" stroke="#0d9488" stroke-width="1.8" marker-end="url(#arrow-teal)" />
 
   <!-- Shared Step 1: Locked Question -->
   <g transform="translate(435, 88)">
-    <rect width="270" height="82" rx="8" fill="#ffffff" stroke="#86efac" stroke-width="1.2" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="105" height="15" rx="2" fill="#dcfce7" />
-    <text x="12" y="19" font-size="8.5" font-weight="700" fill="#15803d">MATCHED INPUT</text>
-    <text x="8" y="38" font-size="11.5" font-weight="700" fill="#0f172a">Locked RuntimeQuestion</text>
+    <rect width="270" height="82" rx="6" fill="#ffffff" stroke="#5eead4" stroke-width="1.2" filter="url(#med-shadow)" />
+    <rect x="8" y="7" width="105" height="15" rx="2" fill="#ccfbf1" />
+    <text x="12" y="18" font-size="8" font-weight="700" fill="#0f766e">MATCHED INPUT</text>
+    <text x="8" y="38" font-size="11.5" font-weight="700" fill="#0f2942">Locked RuntimeQuestion</text>
     <text x="8" y="54" font-size="8.5" font-weight="500" fill="#475569">• Fixed question text &amp; case ID</text>
-    <text x="8" y="68" font-size="8.5" font-weight="600" fill="#059669">• Locked guideline source scope (Zero Gold)</text>
+    <text x="8" y="68" font-size="8.5" font-weight="600" fill="#0d9488">• Locked guideline source scope (Zero Gold)</text>
   </g>
 
   <!-- Connector: Step 1 -> Step 2 -->
-  <path d="M 705 129 L 735 129" fill="none" stroke="#059669" stroke-width="1.8" marker-end="url(#arrow-green)" />
+  <path d="M 705 129 L 735 129" fill="none" stroke="#0d9488" stroke-width="1.8" marker-end="url(#arrow-teal)" />
 
   <!-- Shared Step 2: Shared Planner -->
   <g transform="translate(735, 88)">
-    <rect width="320" height="82" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.4" filter="url(#active-shadow)" />
-    <rect x="8" y="8" width="115" height="15" rx="2" fill="#dbeafe" />
-    <text x="12" y="19" font-size="8.5" font-weight="700" fill="#1d4ed8">SHARED PLANNER</text>
-    <text x="8" y="38" font-size="11.5" font-weight="700" fill="#0f172a">Shared Planner LLM Call</text>
+    <rect width="320" height="82" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1.4" filter="url(#active-shadow)" />
+    <rect x="8" y="7" width="115" height="15" rx="2" fill="#e0f2fe" />
+    <text x="12" y="18" font-size="8" font-weight="700" fill="#0369a1">SHARED PLANNER</text>
+    <text x="8" y="38" font-size="11.5" font-weight="700" fill="#0f2942">Shared Planner LLM Call</text>
     <text x="8" y="54" font-size="8.5" font-weight="500" fill="#475569">• Executed once per question x replicate block</text>
-    <text x="8" y="68" font-size="8.5" font-weight="600" fill="#2563eb">• Produces frozen, hash-pinned MaterialObligations</text>
+    <text x="8" y="68" font-size="8.5" font-weight="600" fill="#0284c7">• Produces frozen, hash-pinned MaterialObligations</text>
   </g>
 
   <!-- Connector: Step 2 -> Step 3 -->
-  <path d="M 1055 129 L 1085 129" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)" />
+  <path d="M 1055 129 L 1085 129" fill="none" stroke="#0284c7" stroke-width="1.8" marker-end="url(#arrow-blue)" />
 
   <!-- Shared Step 3: Shared Retrieval -->
   <g transform="translate(1085, 88)">
-    <rect width="315" height="82" rx="8" fill="#ffffff" stroke="#059669" stroke-width="1.4" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="110" height="15" rx="2" fill="#d1fae5" />
-    <text x="12" y="19" font-size="8.5" font-weight="700" fill="#047857">SHARED RETRIEVAL</text>
-    <text x="8" y="38" font-size="11.5" font-weight="700" fill="#0f172a">Initial Retrieval (E0)</text>
+    <rect width="315" height="82" rx="6" fill="#ffffff" stroke="#0d9488" stroke-width="1.4" filter="url(#med-shadow)" />
+    <rect x="8" y="7" width="110" height="15" rx="2" fill="#ccfbf1" />
+    <text x="12" y="18" font-size="8" font-weight="700" fill="#0f766e">SHARED RETRIEVAL</text>
+    <text x="8" y="38" font-size="11.5" font-weight="700" fill="#0f2942">Initial Retrieval (E0)</text>
     <text x="8" y="54" font-size="8.5" font-weight="500" fill="#475569">• MedCPT + FAISS IndexFlatIP (top-8)</text>
-    <text x="8" y="68" font-size="8.5" font-weight="600" fill="#059669">• Produces frozen, hash-pinned initial evidence E0</text>
+    <text x="8" y="68" font-size="8.5" font-weight="600" fill="#0d9488">• Produces frozen, hash-pinned initial evidence E0</text>
   </g>
 
   <!-- ========================================================================= -->
   <!-- LEVEL 2: THREE DIVERGENT EXPERIMENTAL ARMS (PRE & CORRECTIVE)             -->
   <!-- ========================================================================= -->
-  <rect x="25" y="195" width="1390" height="235" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
+  <rect x="25" y="195" width="1390" height="235" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
   <rect x="35" y="205" width="440" height="20" rx="4" fill="#e2e8f0" />
-  <text x="42" y="219" font-size="11" font-weight="700" fill="#334155" letter-spacing="0.5">LEVEL 2: THREE DIVERGENT ARMS (DIVERGE AT PRE &amp; CORRECTIVE QUERY)</text>
+  <text x="42" y="219" font-size="10.5" font-weight="700" fill="#1e293b" letter-spacing="0.5">LEVEL 2: THREE DIVERGENT ARMS (DIVERGE AT PRE &amp; CORRECTIVE QUERY)</text>
 
-  <!-- Diverging Connectors from Shared Retrieval E0 -->
-  <path d="M 1242 170 L 1242 188 L 235 188 L 235 235" fill="none" stroke="#2563eb" stroke-width="1.6" marker-end="url(#arrow-blue)" />
-  <path d="M 720 188 L 720 235" fill="none" stroke="#4338ca" stroke-width="1.8" marker-end="url(#arrow-purple)" />
-  <path d="M 1205 188 L 1205 235" fill="none" stroke="#d97706" stroke-width="1.6" marker-end="url(#arrow-amber)" />
+  <!-- Diverging Clean Bus from Shared Retrieval E0 (Routed in clear whitespace, zero collisions!) -->
+  <path d="M 1242 170 L 1242 190 L 255 190 L 255 233" fill="none" stroke="#334155" stroke-width="1.6" marker-end="url(#arrow-slate)" />
+  <path d="M 720 190 L 720 233" fill="none" stroke="#0d9488" stroke-width="1.8" marker-end="url(#arrow-teal)" />
+  <path d="M 1185 190 L 1185 233" fill="none" stroke="#d97706" stroke-width="1.6" marker-end="url(#arrow-ochre)" />
 
-  <!-- ARM A0 Card -->
+  <!-- ARM A0 Card (Clinical Slate Blue) -->
   <g transform="translate(45, 235)">
-    <rect width="420" height="180" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.5" filter="url(#card-shadow)" />
-    <rect x="10" y="8" width="165" height="16" rx="2" fill="#dbeafe" />
-    <text x="16" y="20" font-size="8.5" font-weight="700" fill="#1d4ed8">ARM A0 (E1V2:A0)</text>
-    <text x="10" y="42" font-size="12" font-weight="700" fill="#0f172a">Original FULL PRE Policy</text>
+    <rect width="420" height="180" rx="8" fill="#ffffff" stroke="#64748b" stroke-width="1.4" filter="url(#med-shadow)" />
+    <rect x="10" y="8" width="165" height="16" rx="2" fill="#f1f5f9" />
+    <text x="16" y="20" font-size="8.5" font-weight="700" fill="#334155">ARM A0 (E1V2:A0)</text>
+    <text x="10" y="42" font-size="12" font-weight="700" fill="#0f2942">Original FULL PRE Policy</text>
     
-    <rect x="10" y="52" width="400" height="32" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="0.8" />
-    <text x="14" y="66" font-size="8.5" font-weight="700" fill="#1e40af">PRE Input Contract:</text>
-    <text x="14" y="78" font-size="8" font-weight="500" fill="#1e3a8a">Shared Plan + Eligible E0 (Question text hidden at PRE)</text>
+    <rect x="10" y="52" width="400" height="32" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="0.8" />
+    <text x="14" y="66" font-size="8.5" font-weight="700" fill="#334155">PRE Input Contract:</text>
+    <text x="14" y="78" font-size="8" font-weight="500" fill="#475569">Shared Plan + Eligible E0 (Question text hidden at PRE)</text>
 
     <text x="10" y="100" font-size="8.5" font-weight="600" fill="#334155">Sufficiency Gate: All-obligation deterministic readiness</text>
 
@@ -115,41 +118,41 @@
     <text x="14" y="125" font-size="8.5" font-weight="700" fill="#c2410c">Conditional Correction (≤1):</text>
     <text x="14" y="138" font-size="8" font-weight="500" fill="#9a3412">Obligation-targeted query formulation → E0 + E1 → PRE recheck</text>
 
-    <text x="10" y="165" font-size="8" font-weight="600" fill="#2563eb">Role: Legacy policy baseline on common prospective v4 runtime</text>
+    <text x="10" y="165" font-size="8" font-weight="600" fill="#475569">Role: Legacy policy baseline on common prospective v4 runtime</text>
   </g>
 
-  <!-- ARM A1 Card (Primary Focal Arm) -->
+  <!-- ARM A1 Card (Primary Focal Arm - Clinical Teal) -->
   <g transform="translate(510, 235)">
-    <rect width="420" height="180" rx="10" fill="#ffffff" stroke="#4338ca" stroke-width="2" filter="url(#active-shadow)" />
-    <rect x="10" y="8" width="195" height="16" rx="2" fill="#e0e7ff" />
-    <text x="16" y="20" font-size="8.5" font-weight="700" fill="#3730a3">ARM A1 (E1V2:A1) — PRIMARY</text>
-    <text x="10" y="42" font-size="12" font-weight="800" fill="#0f172a">Revised FULL PRE Policy</text>
+    <rect width="420" height="180" rx="8" fill="#ffffff" stroke="#0d9488" stroke-width="2" filter="url(#active-shadow)" />
+    <rect x="10" y="8" width="195" height="16" rx="2" fill="#ccfbf1" />
+    <text x="16" y="20" font-size="8.5" font-weight="700" fill="#0f766e">ARM A1 (E1V2:A1) — PRIMARY</text>
+    <text x="10" y="42" font-size="12" font-weight="800" fill="#0f2942">Revised FULL PRE Policy</text>
     
-    <rect x="10" y="52" width="400" height="32" rx="3" fill="#eef2ff" stroke="#c7d2fe" stroke-width="0.8" />
-    <text x="14" y="66" font-size="8.5" font-weight="700" fill="#312e81">PRE Input Contract (e1-v2.pre.v1):</text>
-    <text x="14" y="78" font-size="8" font-weight="600" fill="#3730a3">Question + Shared Plan + Eligible E0 (Contextualized)</text>
+    <rect x="10" y="52" width="400" height="32" rx="3" fill="#f0fdfa" stroke="#99f6e4" stroke-width="0.8" />
+    <text x="14" y="66" font-size="8.5" font-weight="700" fill="#0f766e">PRE Input Contract (e1-v2.pre.v1):</text>
+    <text x="14" y="78" font-size="8" font-weight="600" fill="#115e59">Question + Shared Plan + Eligible E0 (Contextualized)</text>
 
-    <text x="10" y="100" font-size="8.5" font-weight="600" fill="#334155">Sufficiency Gate: All-obligation readiness (Cannot drop obligations)</text>
+    <text x="10" y="100" font-size="8.5" font-weight="600" fill="#0f766e">Sufficiency Gate: All-obligation readiness (Cannot drop obligations)</text>
 
     <rect x="10" y="112" width="400" height="34" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.8" />
     <text x="14" y="125" font-size="8.5" font-weight="700" fill="#c2410c">Conditional Correction (≤1):</text>
     <text x="14" y="138" font-size="8" font-weight="500" fill="#9a3412">Obligation-targeted query formulation → E0 + E1 → PRE recheck</text>
 
-    <text x="10" y="165" font-size="8" font-weight="700" fill="#4338ca">Focal Method: Refined obligation-guided policy bundle</text>
+    <text x="10" y="165" font-size="8" font-weight="700" fill="#0d9488">Focal Method: Refined obligation-guided policy bundle</text>
   </g>
 
-  <!-- ARM G Card (Matched Generic Baseline) -->
+  <!-- ARM G Card (Matched Generic Baseline - Clinical Ochre) -->
   <g transform="translate(975, 235)">
-    <rect width="420" height="180" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="1.5" filter="url(#card-shadow)" />
+    <rect width="420" height="180" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="1.5" filter="url(#med-shadow)" />
     <rect x="10" y="8" width="185" height="16" rx="2" fill="#fef3c7" />
     <text x="16" y="20" font-size="8.5" font-weight="700" fill="#92400e">ARM G (E1V2:G) — BASELINE</text>
-    <text x="10" y="42" font-size="12" font-weight="700" fill="#0f172a">Matched Generic Baseline</text>
+    <text x="10" y="42" font-size="12" font-weight="700" fill="#0f2942">Matched Generic Baseline</text>
     
     <rect x="10" y="52" width="400" height="32" rx="3" fill="#fffbeb" stroke="#fde68a" stroke-width="0.8" />
     <text x="14" y="66" font-size="8.5" font-weight="700" fill="#78350f">PRE Input Contract (Generic):</text>
     <text x="14" y="78" font-size="8" font-weight="500" fill="#92400e">Question + E0 + Source Scope + Gaps (No Plan in PRE)</text>
 
-    <text x="10" y="100" font-size="8.5" font-weight="600" fill="#334155">Sufficiency Gate: Generic sufficiency boolean + missing_information</text>
+    <text x="10" y="100" font-size="8.5" font-weight="600" fill="#92400e">Sufficiency Gate: Generic sufficiency boolean + missing_information</text>
 
     <rect x="10" y="112" width="400" height="34" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.8" />
     <text x="14" y="125" font-size="8.5" font-weight="700" fill="#c2410c">Conditional Correction (≤1):</text>
@@ -161,49 +164,49 @@
   <!-- ========================================================================= -->
   <!-- LEVEL 3: MATCHED COMMON DOWNSTREAM RUNTIME (phase4.common-minimal-ready)  -->
   <!-- ========================================================================= -->
-  <rect x="25" y="442" width="1390" height="105" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2" />
-  <rect x="35" y="452" width="530" height="20" rx="4" fill="#dbeafe" />
-  <text x="42" y="466" font-size="11" font-weight="700" fill="#1e40af" letter-spacing="0.5">LEVEL 3: MATCHED COMMON DOWNSTREAM RUNTIME (STAGED POST v4 + POLICYGUARD)</text>
+  <rect x="25" y="442" width="1390" height="105" rx="10" fill="#f0fdfa" stroke="#99f6e4" stroke-width="1.2" />
+  <rect x="35" y="452" width="530" height="20" rx="4" fill="#ccfbf1" />
+  <text x="42" y="466" font-size="10.5" font-weight="700" fill="#0f766e" letter-spacing="0.5">LEVEL 3: MATCHED COMMON DOWNSTREAM RUNTIME (STAGED POST v4 + POLICYGUARD)</text>
 
-  <!-- Converging Connectors from Arms A0, A1, G -->
-  <path d="M 255 415 L 255 480 L 360 480" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)" />
-  <path d="M 720 415 L 720 480 L 750 480" fill="none" stroke="#4338ca" stroke-width="2" marker-end="url(#arrow-purple)" />
-  <path d="M 1185 415 L 1185 480 L 1090 480" fill="none" stroke="#d97706" stroke-width="1.8" marker-end="url(#arrow-amber)" />
+  <!-- 3 Pure Parallel Vertical Connectors dropping into Downstream Card (ZERO crossings!) -->
+  <path d="M 255 415 L 255 474" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow-slate)" />
+  <path d="M 720 415 L 720 474" fill="none" stroke="#0d9488" stroke-width="2" marker-end="url(#arrow-teal)" />
+  <path d="M 1185 415 L 1185 474" fill="none" stroke="#d97706" stroke-width="1.8" marker-end="url(#arrow-ochre)" />
 
   <!-- Common Downstream Pipeline Card -->
   <g transform="translate(45, 477)">
-    <rect width="1350" height="58" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#card-shadow)" />
+    <rect width="1350" height="58" rx="6" fill="#ffffff" stroke="#5eead4" stroke-width="1.2" filter="url(#med-shadow)" />
     
-    <text x="15" y="22" font-size="11" font-weight="700" fill="#0f172a">Unified Downstream Progression (Identical Across Arms A0, A1, and G):</text>
+    <text x="15" y="22" font-size="11" font-weight="700" fill="#0f2942">Unified Downstream Progression (Identical Across Arms A0, A1, and G):</text>
     
-    <text x="15" y="42" font-size="9.5" font-weight="500" fill="#1e3a8a">
+    <text x="15" y="42" font-size="9.5" font-weight="500" fill="#0f766e">
       Shared Plan Restored → Grounded Generation → Closed Claim Decomposer → Staged POST v4 → Conditional Revision (≤1) → PolicyGuard
     </text>
 
     <!-- Outcome badges -->
-    <rect x="1100" y="10" width="70" height="18" rx="3" fill="#dcfce7" stroke="#15803d" stroke-width="0.8" />
-    <text x="1112" y="23" font-size="8.5" font-weight="700" fill="#15803d">ACCEPT</text>
+    <rect x="1100" y="10" width="70" height="18" rx="3" fill="#ecfdf5" stroke="#10b981" stroke-width="0.8" />
+    <text x="1112" y="23" font-size="8.5" font-weight="700" fill="#047857">ACCEPT</text>
 
-    <rect x="1180" y="10" width="75" height="18" rx="3" fill="#fef3c7" stroke="#b45309" stroke-width="0.8" />
-    <text x="1190" y="23" font-size="8.5" font-weight="700" fill="#b45309">ABSTAIN</text>
+    <rect x="1180" y="10" width="75" height="18" rx="3" fill="#fffbeb" stroke="#f59e0b" stroke-width="0.8" />
+    <text x="1190" y="23" font-size="8.5" font-weight="700" fill="#92400e">ABSTAIN</text>
 
-    <rect x="1265" y="10" width="75" height="18" rx="3" fill="#ffe4e6" stroke="#be123c" stroke-width="0.8" />
+    <rect x="1265" y="10" width="75" height="18" rx="3" fill="#fff1f2" stroke="#f43f5e" stroke-width="0.8" />
     <text x="1272" y="23" font-size="8.5" font-weight="700" fill="#be123c">FAILED_*</text>
   </g>
 
   <!-- ========================================================================= -->
   <!-- LEVEL 4: REGISTERED SCIENTIFIC COMPARISONS & CAVEATS                       -->
   <!-- ========================================================================= -->
-  <rect x="25" y="560" width="1390" height="150" rx="12" fill="#fdf2f8" stroke="#fbcfe8" stroke-width="1.2" />
-  <rect x="35" y="570" width="460" height="20" rx="4" fill="#fce7f3" />
-  <text x="42" y="584" font-size="11" font-weight="700" fill="#9d174d" letter-spacing="0.5">LEVEL 4: REGISTERED SCIENTIFIC COMPARISONS &amp; INTERPRETIVE BOUNDARIES</text>
+  <rect x="25" y="560" width="1390" height="150" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+  <rect x="35" y="570" width="460" height="20" rx="4" fill="#e2e8f0" />
+  <text x="42" y="584" font-size="10.5" font-weight="700" fill="#1e293b" letter-spacing="0.5">LEVEL 4: REGISTERED SCIENTIFIC COMPARISONS &amp; INTERPRETIVE BOUNDARIES</text>
 
   <!-- Card 4.1: Primary Comparison (A1 vs G) -->
   <g transform="translate(45, 600)">
-    <rect width="420" height="98" rx="8" fill="#ffffff" stroke="#f472b6" stroke-width="1.4" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="165" height="15" rx="2" fill="#fce7f3" />
-    <text x="12" y="19" font-size="8" font-weight="700" fill="#9d174d">PRIMARY CONTRAST</text>
-    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f172a">A1 vs G: Obligation vs Generic</text>
+    <rect width="420" height="98" rx="6" fill="#ffffff" stroke="#0d9488" stroke-width="1.4" filter="url(#med-shadow)" />
+    <rect x="8" y="8" width="165" height="15" rx="2" fill="#ccfbf1" />
+    <text x="12" y="19" font-size="8" font-weight="700" fill="#0f766e">PRIMARY CONTRAST</text>
+    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f2942">A1 vs G: Obligation vs Generic</text>
     <text x="8" y="52" font-size="8.5" font-weight="500" fill="#475569">Compares refined obligation PRE bundle vs matched generic PRE.</text>
     
     <rect x="8" y="60" width="404" height="30" rx="3" fill="#fff1f2" stroke="#fecdd3" stroke-width="0.8" />
@@ -213,23 +216,23 @@
 
   <!-- Card 4.2: Mechanistic Ablation (A1 vs A0) -->
   <g transform="translate(510, 600)">
-    <rect width="420" height="98" rx="8" fill="#ffffff" stroke="#f472b6" stroke-width="1.4" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="170" height="15" rx="2" fill="#fce7f3" />
-    <text x="12" y="19" font-size="8" font-weight="700" fill="#9d174d">MECHANISTIC ABLATION</text>
-    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f172a">A1 vs A0: Question Contextualization</text>
+    <rect width="420" height="98" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1.4" filter="url(#med-shadow)" />
+    <rect x="8" y="8" width="170" height="15" rx="2" fill="#e0f2fe" />
+    <text x="12" y="19" font-size="8" font-weight="700" fill="#0369a1">MECHANISTIC ABLATION</text>
+    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f2942">A1 vs A0: Question Contextualization</text>
     <text x="8" y="52" font-size="8.5" font-weight="500" fill="#475569">Tests effect of question text visibility in PRE verification.</text>
     
-    <rect x="8" y="60" width="404" height="30" rx="3" fill="#fdf2f8" stroke="#fbcfe8" stroke-width="0.8" />
-    <text x="12" y="72" font-size="8" font-weight="700" fill="#831843">METHODOLOGICAL CONTROL:</text>
-    <text x="12" y="84" font-size="7.5" font-weight="500" fill="#701a75">Identical obligation policy, verifier instructions, and output schema.</text>
+    <rect x="8" y="60" width="404" height="30" rx="3" fill="#f0fdfa" stroke="#ccfbf1" stroke-width="0.8" />
+    <text x="12" y="72" font-size="8" font-weight="700" fill="#0f766e">METHODOLOGICAL CONTROL:</text>
+    <text x="12" y="84" font-size="7.5" font-weight="500" fill="#115e59">Identical obligation policy, verifier instructions, and output schema.</text>
   </g>
 
   <!-- Card 4.3: Supporting Comparison (A0 vs G) -->
   <g transform="translate(975, 600)">
-    <rect width="420" height="98" rx="8" fill="#ffffff" stroke="#f472b6" stroke-width="1.4" filter="url(#card-shadow)" />
-    <rect x="8" y="8" width="175" height="15" rx="2" fill="#fce7f3" />
-    <text x="12" y="19" font-size="8" font-weight="700" fill="#9d174d">SUPPORTING CONTRAST</text>
-    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f172a">A0 vs G: Legacy Bundle Contrast</text>
+    <rect width="420" height="98" rx="6" fill="#ffffff" stroke="#64748b" stroke-width="1.4" filter="url(#med-shadow)" />
+    <rect x="8" y="8" width="175" height="15" rx="2" fill="#f1f5f9" />
+    <text x="12" y="19" font-size="8" font-weight="700" fill="#334155">SUPPORTING CONTRAST</text>
+    <text x="8" y="38" font-size="11" font-weight="700" fill="#0f2942">A0 vs G: Legacy Bundle Contrast</text>
     <text x="8" y="52" font-size="8.5" font-weight="500" fill="#475569">Evaluates legacy obligation bundle against generic baseline.</text>
     
     <rect x="8" y="60" width="404" height="30" rx="3" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.8" />
@@ -238,8 +241,8 @@
   </g>
 
   <!-- Footer Banner -->
-  <rect x="25" y="722" width="1390" height="24" rx="4" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="0.8" />
-  <text x="35" y="738" font-size="9.5" font-weight="700" fill="#334155">SCIENTIFIC RIGOR:</text>
-  <text x="155" y="738" font-size="9" font-weight="500" fill="#475569">Shared block preparations provide identical initial inputs across arms within each block, controlling for input variance. Latin-square rotation controls for arm-order position bias.</text>
+  <rect x="25" y="722" width="1390" height="24" rx="4" fill="#f0fdfa" stroke="#ccfbf1" stroke-width="0.8" />
+  <text x="35" y="738" font-size="9.5" font-weight="700" fill="#0f766e">SCIENTIFIC RIGOR:</text>
+  <text x="155" y="738" font-size="9" font-weight="500" fill="#134e4a">Shared block preparations provide identical initial inputs across arms within each block, controlling for input variance. Latin-square rotation controls for arm-order position bias.</text>
 
 </svg>
