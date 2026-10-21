@@ -294,7 +294,7 @@
     <rect x="8" y="7" width="150" height="15" rx="2" fill="#ffe4e6" />
     <text x="12" y="18" font-size="8" font-weight="700" fill="#9f1239">RECONCILIATION</text>
     <text x="8" y="38" font-size="11" font-weight="700" fill="#0f2942">Reconciliation Scorer</text>
-    <text x="8" y="54" font-size="8.5" font-weight="500" fill="#475569">• Verifies release SHA-256 (5aa87228b...) &amp; split pins</text>
+    <text x="8" y="54" font-size="8.5" font-weight="500" fill="#475569">• Verifies release SHA-256 (eda0e26c...) &amp; split pins</text>
     <text x="8" y="68" font-size="8.5" font-weight="500" fill="#475569">• Validates eligible denominator projection</text>
     <text x="8" y="82" font-size="8.5" font-weight="500" fill="#475569">• Rejects self-supplied scores or fabricated runs</text>
     <text x="8" y="100" font-size="8.5" font-weight="700" fill="#be123c">Deterministic Verification Before Reporting</text>

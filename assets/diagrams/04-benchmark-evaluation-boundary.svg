@@ -54,7 +54,7 @@
     <rect width="375" height="120" rx="6" fill="#ffffff" stroke="#5eead4" stroke-width="1.2" filter="url(#med-shadow)" />
     <rect x="8" y="7" width="165" height="15" rx="2" fill="#ccfbf1" />
     <text x="12" y="18" font-size="8" font-weight="700" fill="#0f766e">BENCHMARK IDENTITY</text>
-    <text x="8" y="38" font-size="11.5" font-weight="700" fill="#0f2942">Release rc0.2.0 (Commit 5aa8722...)</text>
+    <text x="8" y="38" font-size="11.5" font-weight="700" fill="#0f2942">Release rc0.2.0 (SHA-256 eda0e26c...)</text>
     <text x="8" y="54" font-size="9" font-weight="600" fill="#0f766e">276 Units · 170 Semantic Intents</text>
     <text x="8" y="70" font-size="8.5" font-weight="500" fill="#475569">• Task B: Displayed Sufficiency (5 DEV pairs)</text>
     <text x="8" y="84" font-size="8.5" font-weight="500" fill="#475569">• Task C: Dynamic Recovery &amp; Gating (16 DEV cases)</text>
@@ -142,7 +142,7 @@
     <rect x="8" y="7" width="135" height="15" rx="2" fill="#e0f2fe" />
     <text x="12" y="18" font-size="8" font-weight="700" fill="#0369a1">IMMUTABLE ARTIFACTS</text>
     <text x="8" y="38" font-size="11.5" font-weight="700" fill="#0f2942">RunStore Predictions &amp; Traces</text>
-    <text x="8" y="54" font-size="8.5" font-weight="500" fill="#475569">• Terminal Status: ACCEPT | COMPLETED_ABSTAIN | FAILED_*</text>
+    <text x="8" y="54" font-size="8.5" font-weight="500" fill="#475569">• Terminal: COMPLETED_ANSWER | COMPLETED_ABSTAIN | FAILED_*</text>
     <text x="8" y="68" font-size="8.5" font-weight="500" fill="#475569">• Emitted Answer text &amp; citation provenance IDs</text>
     <text x="8" y="82" font-size="8.5" font-weight="500" fill="#475569">• Full execution trajectory, state hashes &amp; plan_identity</text>
     <text x="8" y="96" font-size="8.5" font-weight="500" fill="#475569">• Physical provider call receipts &amp; token budget ledger</text>
@@ -154,7 +154,7 @@
   <!-- ========================================================================= -->
   <g transform="translate(930, 48)">
     <rect width="36" height="630" rx="6" fill="#fff1f2" stroke="#be123c" stroke-width="1.4" stroke-dasharray="6,4" />
-    <text transform="rotate(-90 18 315)" x="-140" y="23" font-size="10.5" font-weight="800" fill="#be123c" letter-spacing="1.5">HARD CONTRACTUAL AIR-GAP (BA1-D1/D2)</text>
+    <text transform="rotate(-90 18 220)" x="18" y="220" text-anchor="middle" dominant-baseline="middle" font-size="10.5" font-weight="800" fill="#be123c" letter-spacing="1.5">HARD CONTRACTUAL AIR-GAP (BA1-D1/D2)</text>
   </g>
 
   <!-- ========================================================================= -->
@@ -188,7 +188,7 @@
     <rect x="8" y="7" width="165" height="15" rx="2" fill="#ffe4e6" />
     <text x="12" y="18" font-size="8" font-weight="700" fill="#9f1239">RECONCILIATION HARNESS</text>
     <text x="8" y="38" font-size="11.5" font-weight="700" fill="#0f2942">EvaluationContext Validator</text>
-    <text x="8" y="54" font-size="8.5" font-weight="500" fill="#475569">• Verifies release SHA-256 (5aa87228b...) &amp; split pins</text>
+    <text x="8" y="54" font-size="8.5" font-weight="500" fill="#475569">• Verifies release SHA-256 (eda0e26c...) &amp; split pins</text>
     <text x="8" y="68" font-size="8.5" font-weight="500" fill="#475569">• Enforces eligible denominator projections</text>
     <text x="8" y="82" font-size="8.5" font-weight="500" fill="#475569">• Verifies candidate plan hashes against frozen plans</text>
     <text x="8" y="96" font-size="8.5" font-weight="500" fill="#475569">• Rejects self-supplied scores or untrusted candidate artifacts</text>

@@ -229,8 +229,8 @@
 
   <!-- Bent Feedback Loop: Reviser -> Decomposer (Re-verification loop, zero crossings!) -->
   <path d="M 365 535 L 305 535 L 305 482" fill="none" stroke="#d97706" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-ochre)" />
-  <rect x="230" y="542" width="155" height="15" rx="2" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.8" />
-  <text x="235" y="553" font-size="8" font-weight="700" fill="#c2410c">Fresh Decomposition &amp; POST Recheck</text>
+  <rect x="200" y="542" width="155" height="15" rx="2" fill="#fff7ed" stroke="#fed7aa" stroke-width="0.8" />
+  <text x="205" y="553" font-size="8" font-weight="700" fill="#c2410c">Fresh Decomposition &amp; POST Recheck</text>
 
   <!-- Branch 2B (North): Diamond 2 [Fail / Unsatisfied] -> ABSTAIN -->
   <path d="M 715 417 L 715 365 L 1025 365 L 1025 240 L 1055 240" fill="none" stroke="#d97706" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#arrow-ochre)" />

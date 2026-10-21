@@ -3,7 +3,7 @@ flowchart LR
   subgraph ZONE1["Zone 1: Benchmark Construction & Governance (KOA-GuidelineBench rc0.2.0)"]
     direction TB
     Z1_G["5 Guideline Sources: ACSQHC (32) | BYT (39) | EULAR (24) | NICE (84) | VA/DoD (97) - PDF Source Document SHA-256 (distinct from benchmark release identity)"]
-    Z1_EU["276 Native EvidenceUnits & 170 SemanticIntents - Benchmark Release Identity: rc0.2.0 (commit 5aa8722...)"]
+    Z1_EU["276 Native EvidenceUnits & 170 SemanticIntents - Benchmark Release Identity: rc0.2.0 (manifest SHA-256 eda0e26c...)"]
     Z1_TASKS["Benchmark Tasks - Task B (Sufficiency): 5 DEV pairs, 9 unique displayed bundles - Task C (Dynamic Recovery & Gating): 16 English DEV cases"]
     Z1_ADJ["Researcher Adjudication (BA1-D1 / BA1-D2) RUNTIME_EXPOSURE_CONTRACT.json Enforces strict 3-tier partitioning"]
     Z1_G --> Z1_EU --> Z1_TASKS --> Z1_ADJ
@@ -14,7 +14,7 @@ flowchart LR
     Z2_ALLOW["Authorized Runtime Allowlist (runtime/ only) - RecoveryInput: case_id, question, locked_source_scope - EvidenceUnit: native quotations & citation locators - Frozen MedCPT + FAISS Index (276 units)"]
     Z2_NOTE["Task Contract Isolation - Method predicts its own MaterialObligation[] - Task B displayed-bundle labels NEVER transfer as gold for E1-v2 E0/E1 retrieval snapshots"]
     Z2_EXEC["DV-OGEC-RAG Execution (A0 / A1 / G) Shared Planner + E0 -> PRE -> Correction (<= 1) -> Generation -> Staged POST v4 -> Revision (<= 1) -> PolicyGuard"]
-    Z2_STORE["Immutable RunStore Outputs Predictions (ACCEPT | ABSTAIN | FAILED_*), trajectories, citations, budget & provider receipts"]
+    Z2_STORE["Immutable RunStore Outputs TerminalStatus (COMPLETED_ANSWER | COMPLETED_ABSTAIN | FAILED_*), trajectories, citations, budget & provider receipts"]
     Z2_ALLOW --> Z2_NOTE --> Z2_EXEC --> Z2_STORE
   end
 

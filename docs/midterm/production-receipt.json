@@ -1,0 +1,542 @@
+{
+  "created_utc": "2026-10-21T17:10:19.788928+00:00",
+  "status": "PASS",
+  "scientific_baseline": "ac4ade796e56377882b8069d0fb7a14809e8180b",
+  "artifact_validation": {
+    "status": "PASS",
+    "scope": "Artifact integrity and required-fact presence; not a substitute for visual/scientific review",
+    "checks": [
+      {
+        "check": "report_source: present and nonempty",
+        "passed": true
+      },
+      {
+        "check": "report_pdf: present and nonempty",
+        "passed": true
+      },
+      {
+        "check": "presentation_source: present and nonempty",
+        "passed": true
+      },
+      {
+        "check": "presentation_pdf: present and nonempty",
+        "passed": true
+      },
+      {
+        "check": "speaker_notes: present and nonempty",
+        "passed": true
+      },
+      {
+        "check": "deck: 15 editable slides",
+        "passed": true
+      },
+      {
+        "check": "deck: 16:9 canvas",
+        "passed": true
+      },
+      {
+        "check": "deck PDF: 15 pages",
+        "passed": true
+      },
+      {
+        "check": "deck: presenter notes embedded",
+        "passed": true
+      },
+      {
+        "check": "deck: native editable evidence tables",
+        "passed": true
+      },
+      {
+        "check": "report: substantive page inventory",
+        "passed": true
+      },
+      {
+        "check": "report: 25–35 main content pages",
+        "passed": true
+      },
+      {
+        "check": "report: editable text",
+        "passed": true
+      },
+      {
+        "check": "report: table of contents field",
+        "passed": true
+      },
+      {
+        "check": "report: native evidence tables",
+        "passed": true
+      },
+      {
+        "check": "packages: no macros or embedded documents",
+        "passed": true
+      },
+      {
+        "check": "report DOCX: corpus 276",
+        "passed": true
+      },
+      {
+        "check": "report DOCX: corpus intents 170",
+        "passed": true
+      },
+      {
+        "check": "report DOCX: MOCK pilot 9/9",
+        "passed": true
+      },
+      {
+        "check": "report DOCX: MOCK full 144/144",
+        "passed": true
+      },
+      {
+        "check": "report DOCX: critical 129/129",
+        "passed": true
+      },
+      {
+        "check": "report DOCX: regression 103/109",
+        "passed": true
+      },
+      {
+        "check": "report DOCX: provider pending",
+        "passed": true
+      },
+      {
+        "check": "report DOCX: scoring pending",
+        "passed": true
+      },
+      {
+        "check": "report DOCX: eligible 0/16",
+        "passed": true
+      },
+      {
+        "check": "report DOCX: author Khoa",
+        "passed": true
+      },
+      {
+        "check": "report DOCX: author Khang",
+        "passed": true
+      },
+      {
+        "check": "report DOCX: Vietnamese replacement glyphs absent",
+        "passed": true
+      },
+      {
+        "check": "report DOCX: unrelated template metadata absent",
+        "passed": true
+      },
+      {
+        "check": "report PDF: corpus 276",
+        "passed": true
+      },
+      {
+        "check": "report PDF: corpus intents 170",
+        "passed": true
+      },
+      {
+        "check": "report PDF: MOCK pilot 9/9",
+        "passed": true
+      },
+      {
+        "check": "report PDF: MOCK full 144/144",
+        "passed": true
+      },
+      {
+        "check": "report PDF: critical 129/129",
+        "passed": true
+      },
+      {
+        "check": "report PDF: regression 103/109",
+        "passed": true
+      },
+      {
+        "check": "report PDF: provider pending",
+        "passed": true
+      },
+      {
+        "check": "report PDF: scoring pending",
+        "passed": true
+      },
+      {
+        "check": "report PDF: eligible 0/16",
+        "passed": true
+      },
+      {
+        "check": "report PDF: author Khoa",
+        "passed": true
+      },
+      {
+        "check": "report PDF: author Khang",
+        "passed": true
+      },
+      {
+        "check": "report PDF: Vietnamese replacement glyphs absent",
+        "passed": true
+      },
+      {
+        "check": "report PDF: unrelated template metadata absent",
+        "passed": true
+      },
+      {
+        "check": "deck PPTX: corpus 276",
+        "passed": true
+      },
+      {
+        "check": "deck PPTX: corpus intents 170",
+        "passed": true
+      },
+      {
+        "check": "deck PPTX: MOCK pilot 9/9",
+        "passed": true
+      },
+      {
+        "check": "deck PPTX: MOCK full 144/144",
+        "passed": true
+      },
+      {
+        "check": "deck PPTX: critical 129/129",
+        "passed": true
+      },
+      {
+        "check": "deck PPTX: regression 103/109",
+        "passed": true
+      },
+      {
+        "check": "deck PPTX: provider pending",
+        "passed": true
+      },
+      {
+        "check": "deck PPTX: scoring pending",
+        "passed": true
+      },
+      {
+        "check": "deck PPTX: eligible 0/16",
+        "passed": true
+      },
+      {
+        "check": "deck PPTX: author Khoa",
+        "passed": true
+      },
+      {
+        "check": "deck PPTX: author Khang",
+        "passed": true
+      },
+      {
+        "check": "deck PPTX: Vietnamese replacement glyphs absent",
+        "passed": true
+      },
+      {
+        "check": "deck PPTX: unrelated template metadata absent",
+        "passed": true
+      },
+      {
+        "check": "deck PDF: corpus 276",
+        "passed": true
+      },
+      {
+        "check": "deck PDF: corpus intents 170",
+        "passed": true
+      },
+      {
+        "check": "deck PDF: MOCK pilot 9/9",
+        "passed": true
+      },
+      {
+        "check": "deck PDF: MOCK full 144/144",
+        "passed": true
+      },
+      {
+        "check": "deck PDF: critical 129/129",
+        "passed": true
+      },
+      {
+        "check": "deck PDF: regression 103/109",
+        "passed": true
+      },
+      {
+        "check": "deck PDF: provider pending",
+        "passed": true
+      },
+      {
+        "check": "deck PDF: scoring pending",
+        "passed": true
+      },
+      {
+        "check": "deck PDF: eligible 0/16",
+        "passed": true
+      },
+      {
+        "check": "deck PDF: author Khoa",
+        "passed": true
+      },
+      {
+        "check": "deck PDF: author Khang",
+        "passed": true
+      },
+      {
+        "check": "deck PDF: Vietnamese replacement glyphs absent",
+        "passed": true
+      },
+      {
+        "check": "deck PDF: unrelated template metadata absent",
+        "passed": true
+      },
+      {
+        "check": "report: credential-pattern scan",
+        "passed": true
+      },
+      {
+        "check": "deck: credential-pattern scan",
+        "passed": true
+      },
+      {
+        "check": "notes: credential-pattern scan",
+        "passed": true
+      }
+    ],
+    "failures": [],
+    "files": {
+      "report_source": {
+        "path": "report/midterm/KOA_Midterm_Report_TDTU.docx",
+        "bytes": 2010257,
+        "sha256": "362c547b492f812664ffe0e7e18b8f62ea6290b464e27f22f5995657a504f8f0"
+      },
+      "report_pdf": {
+        "path": "report/midterm/KOA_Midterm_Report_TDTU.pdf",
+        "bytes": 2675742,
+        "sha256": "4fbb660e00f3a5ce6f6ee4a2edcf16b26d0e33deab55956bdc6e84c1882be827"
+      },
+      "presentation_source": {
+        "path": "slides/midterm/KOA_Midterm_Presentation_TDTU.pptx",
+        "bytes": 210347,
+        "sha256": "840ea23e7ca0bb32f59e224ea2416f3a64d93551ab5b6a65714f1be1cc9f71e4"
+      },
+      "presentation_pdf": {
+        "path": "slides/midterm/KOA_Midterm_Presentation_TDTU.pdf",
+        "bytes": 193476,
+        "sha256": "6f710226d2012891e2ceae15ce054d5f6314add4d16ee9da4e6e28fbcf114567"
+      },
+      "speaker_notes": {
+        "path": "slides/midterm/speaker-notes.md",
+        "bytes": 20778,
+        "sha256": "b315f8275a36f82dacde83f95c596ee3de6d4143f9a3f2cb0d9c93ef81f95002"
+      }
+    },
+    "report_ooxml": {
+      "xml_parts_parsed": 19,
+      "embedded_files": [],
+      "media_count": 9,
+      "macro_parts": [],
+      "toc_field_present": true,
+      "table_count": 9
+    },
+    "report_pdf": {
+      "pages": 42,
+      "main_content_pages": 31,
+      "dimensions_pt": [
+        [
+          595.3,
+          841.9
+        ],
+        [
+          841.9,
+          595.3
+        ]
+      ],
+      "page_text_lengths": [
+        353,
+        1852,
+        4232,
+        3947,
+        1653,
+        1092,
+        2025,
+        1917,
+        429,
+        1938,
+        2092,
+        2040,
+        1699,
+        1436,
+        2250,
+        1796,
+        412,
+        345,
+        2232,
+        2199,
+        2189,
+        2200,
+        2274,
+        1405,
+        421,
+        441,
+        438,
+        2135,
+        397,
+        1999,
+        1960,
+        1734,
+        2198,
+        2087,
+        1732,
+        2245,
+        1975,
+        1780,
+        2355,
+        1867,
+        2088,
+        540
+      ],
+      "fonts": [
+        "AUWCNV+TimesNewRomanPSMT",
+        "ESHXQI+TimesNewRomanPS-BoldMT"
+      ],
+      "replacement_glyphs": 0
+    },
+    "presentation_ooxml": {
+      "xml_parts_parsed": 160,
+      "embedded_files": [],
+      "media_count": 1,
+      "macro_parts": [],
+      "slide_size_emu": [
+        12192000,
+        6858000
+      ],
+      "slide_count": 15,
+      "slide_text_lengths": [
+        315,
+        360,
+        475,
+        511,
+        458,
+        478,
+        441,
+        513,
+        399,
+        524,
+        604,
+        561,
+        676,
+        498,
+        302
+      ],
+      "notes_count": 15,
+      "native_tables": 5
+    },
+    "presentation_pdf": {
+      "pages": 15,
+      "main_content_pages": null,
+      "dimensions_pt": [
+        [
+          960.0,
+          540.0
+        ]
+      ],
+      "page_text_lengths": [
+        316,
+        361,
+        476,
+        513,
+        459,
+        479,
+        436,
+        518,
+        401,
+        525,
+        606,
+        559,
+        677,
+        495,
+        303
+      ],
+      "fonts": [
+        "CJDFQY+MS-UIGothic",
+        "CWLLTB+Arial-BoldMT",
+        "OFPWHO+MS-PGothic",
+        "VMBCQV+ArialMT"
+      ],
+      "replacement_glyphs": 0
+    }
+  },
+  "presentation_helpers": {
+    "package_integrity": {
+      "chart_count": 0,
+      "claim_boundary": "Structural package checks only; no slide text, notes, formulas, chart values, or native PowerPoint execution were inspected.",
+      "finding_count": 0,
+      "findings": [],
+      "notes_parts_skipped": 15,
+      "relationship_part_count": 45,
+      "slide_count": 15,
+      "status": "pass"
+    },
+    "layout_geometry": {
+      "finding_count": 0,
+      "findings": [],
+      "slide_count": 15,
+      "slide_size_in": [
+        13.3333,
+        7.5
+      ],
+      "warning_count": 0,
+      "warnings": []
+    }
+  },
+  "native_powerpoint_check": {
+    "slide_count": 15,
+    "width_pt": 960.0,
+    "height_pt": 540.0,
+    "native_powerpoint_reopen": true,
+    "prior_presentations_count": 1
+  },
+  "additional_checks": {
+    "four_python_sources_compiled": true,
+    "svg_xml_valid": 5,
+    "office_media_match_expected_figures_and_logo": true,
+    "pptx_verified_authors_metadata": true
+  },
+  "public_release_checks": {
+    "status": "PASS_SCOPED_CONTENT_REVIEW",
+    "reviewed_files": [
+      "assets/diagrams/01-research-framework.svg",
+      "assets/diagrams/02-agentic-rag-architecture.svg",
+      "assets/diagrams/04-benchmark-evaluation-boundary.mmd",
+      "assets/diagrams/04-benchmark-evaluation-boundary.svg",
+      "docs/midterm/.gitignore",
+      "docs/midterm/README.md",
+      "docs/midterm/content-contract.md",
+      "docs/midterm/production-plan.md",
+      "docs/midterm/production-receipt.json",
+      "docs/midterm/science-review.md",
+      "docs/midterm/source-verification.md",
+      "docs/midterm/validate_deliverables.py",
+      "docs/midterm/visual-qa.md",
+      "report/midterm/.gitignore",
+      "report/midterm/KOA_Midterm_Report_TDTU.docx",
+      "report/midterm/KOA_Midterm_Report_TDTU.pdf",
+      "report/midterm/README.md",
+      "report/midterm/build_report.py",
+      "report/midterm/export_report.py",
+      "report/midterm/report-content.md",
+      "slides/midterm/.gitignore",
+      "slides/midterm/KOA_Midterm_Presentation_TDTU.pdf",
+      "slides/midterm/KOA_Midterm_Presentation_TDTU.pptx",
+      "slides/midterm/README.md",
+      "slides/midterm/assets/tdtu-footer-official.png",
+      "slides/midterm/assets/tdtu-logo-provenance.json",
+      "slides/midterm/build_presentation.py",
+      "slides/midterm/speaker-notes.md"
+    ],
+    "credential_pattern_findings": 0,
+    "external_file_relationships": 0,
+    "office_macros_or_embedded_documents": false,
+    "included_media": "Report: 5 project diagrams, 3 detail views, official logo. Deck: official logo only; other figures/tables/text native.",
+    "excluded": "Original university formatting PDF; guideline full text; benchmark gold; owner references; private source; runtime traces; API credentials; temporary renders and caches.",
+    "rights_scope": "Own authored research descriptions and sanitized aggregates; existing public project diagrams; unaltered official website identity logo with provenance. Does not change UNVERIFIED corpus redistribution rights or claim university endorsement."
+  },
+  "visual_review": "docs/midterm/visual-qa.md",
+  "scientific_review": "docs/midterm/science-review.md",
+  "not_executed": [
+    "Native runtime tests or regression rerun",
+    "Real-provider experiments or paid inference",
+    "Independent clinical-quality scoring",
+    "Corpus redistribution/license validation"
+  ],
+  "original_research_workspace": "Read-only baseline source inspection; no task-authored mutation or experiment execution."
+}
