@@ -1,0 +1,47 @@
+# Operating system and editor metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Secrets and local environment files (never commit)
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*credentials*
+*secret*
+
+# Node / Mermaid rendering transient artifacts (never commit)
+node_modules/
+package.json
+package-lock.json
+.npm/
+.cache/
+puppeteer_profile*/
+
+# Python / runtime / data / logs (never commit in public documentation repository)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.log
+*.tmp
+*.bak
+*.sqlite
+*.db
+*.faiss
+*.npy
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.pdf
+*.zip
+*.tar
+*.tar.gz

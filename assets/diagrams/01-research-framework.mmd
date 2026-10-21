@@ -1,0 +1,67 @@
+%%{init: {'theme': 'base', 'themeVariables': {'background': '#ffffff', 'primaryColor': '#f8fafc', 'primaryTextColor': '#0f172a', 'primaryBorderColor': '#475569', 'lineColor': '#334155', 'secondaryColor': '#f1f5f9', 'tertiaryColor': '#ffffff', 'fontFamily': 'Inter, Segoe UI, Arial, sans-serif', 'fontSize': '13px'}, 'flowchart': {'curve': 'basis', 'nodeSpacing': 36, 'rankSpacing': 46, 'padding': 14}}}%%
+flowchart TD
+  subgraph SRC["1. Clinical Guideline Sources (5 Curated Authorities)"]
+    direction LR
+    G1["ACSQHC (2024) | EN | CURRENT | 32 units"]
+    G2["BYT Vietnam (2014) | VI | HISTORICAL | 39 units"]
+    G3["EULAR (2023) | EN | CURRENT | 24 units"]
+    G4["NICE NG226 (2022) | EN | CURRENT | 84 units"]
+    G5["VA/DoD (2026) | EN | CURRENT | 97 units"]
+  end
+
+  subgraph BENCH["2. KOA-GuidelineBench (rc0.2.0) — Benchmark Construction & Governance"]
+    direction TB
+    B_ORG["Evidence & Intent Organization: 276 EvidenceUnits + 170 SemanticIntents + Document SHA-256 & Page/Section Locators"]
+    B_TASKS["Task Contracts: Task B (Displayed-Bundle Sufficiency: 5 DEV pairs, 9 unique bundles) | Task C (Recovery & Evidence Gating: 16 DEV cases)"]
+    B_GOV["Exposure Adjudication (BA1-D1 / BA1-D2): Partitions RUNTIME_VISIBLE vs EVALUATOR_ONLY vs REVIEWER_AUDIT_ONLY"]
+    B_ORG --> B_TASKS --> B_GOV
+  end
+
+  subgraph INPUT["3. Authorized DEV Runtime Inputs (Gold-Free Allowlist)"]
+    direction TB
+    R_IN["runtime/ Exposure Layer Only: Fixed Question Text, Case ID, Locked Source Scope, Native EvidenceUnits, Safe Citation Locators"]
+    R_IDX["Frozen Local Retrieval Assets: MedCPT Query/Article Encoders + FAISS IndexFlatIP (276 vectors, dim 768, top-k = 8)"]
+  end
+
+  subgraph METHOD["4. DV-OGEC-RAG — Agentic Method Runtime"]
+    direction TB
+    M_PLAN["Obligation Planner (LLM) -> Predicted MaterialObligation Set & Source Constraints"]
+    M_PRE["Initial MedCPT Retrieval (E0) -> PRE Sufficiency Verification -> Conditional Corrective Retrieval (<= 1, E0 + E1) -> PRE Recheck & Gate"]
+    M_POST["Candidate Generation (LLM) -> Atomic Claim Decomposition -> Member-Bound Staged POST v4 -> Grounded Revision (<= 1) & POST Gate"]
+    M_GUARD["Deterministic Control Plane: ValidActionSet -> DeterministicRulesPolicy -> PolicyGuard -> WorkflowActionExecutor"]
+    M_PLAN --> M_PRE --> M_POST --> M_GUARD
+  end
+
+  subgraph OUT["5. Predictions, Traces & Accounting Receipts"]
+    direction TB
+    P_OUT["Immutable RunStore Artifacts: Terminal Status (COMPLETED_ANSWER | COMPLETED_ABSTAIN | FAILED_*), Citations, Trajectory Hash, Budget Ledger"]
+  end
+
+  subgraph EVAL["6. Independent Evaluation Boundary (Owner-Separated)"]
+    direction TB
+    E_REF["Owner-Held References (evaluator/ & audit_provenance/): Canonical MOs, Accepted EvidencePaths, Gold Dispositions, Expected Answers"]
+    E_SCORER["Qualified Reconciliation & Scorer: Verifies Release/Split/Plan Hashes & Denominators -> Official Scientific Metrics (Current E1-v2 Status: NOT_EVALUABLE)"]
+    E_REF --> E_SCORER
+  end
+
+  SRC --> B_ORG
+  B_GOV -->|"RUNTIME_VISIBLE fields only"| R_IN
+  R_IN --> M_PLAN
+  R_IDX -.->|"Local dense retrieval"| M_PRE
+  M_GUARD --> P_OUT
+  P_OUT -->|"Read-only candidate predictions & traces"| E_SCORER
+  B_GOV -.->|"EVALUATOR_ONLY & REVIEWER_AUDIT_ONLY (sealed from runtime)"| E_REF
+
+  classDef sourceBox fill:#f8fafc,stroke:#64748b,stroke-width:1.5px,color:#0f172a;
+  classDef benchBox fill:#eff6ff,stroke:#2563eb,stroke-width:1.5px,color:#0f172a;
+  classDef inputBox fill:#f0fdf4,stroke:#16a34a,stroke-width:1.5px,color:#0f172a;
+  classDef methodBox fill:#fefce8,stroke:#ca8a04,stroke-width:1.5px,color:#0f172a;
+  classDef outBox fill:#f3e8ff,stroke:#7e22ce,stroke-width:1.5px,color:#0f172a;
+  classDef evalBox fill:#fff1f2,stroke:#e11d48,stroke-width:2px,color:#0f172a;
+
+  class G1,G2,G3,G4,G5 sourceBox;
+  class B_ORG,B_TASKS,B_GOV benchBox;
+  class R_IN,R_IDX inputBox;
+  class M_PLAN,M_PRE,M_POST,M_GUARD methodBox;
+  class P_OUT outBox;
+  class E_REF,E_SCORER evalBox;

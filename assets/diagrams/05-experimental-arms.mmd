@@ -1,0 +1,74 @@
+%%{init: {'theme': 'base', 'themeVariables': {'background': '#ffffff', 'primaryColor': '#f8fafc', 'primaryTextColor': '#0f172a', 'primaryBorderColor': '#475569', 'lineColor': '#334155', 'fontFamily': 'Inter, Segoe UI, Arial, sans-serif', 'fontSize': '13px'}, 'flowchart': {'curve': 'basis', 'nodeSpacing': 30, 'rankSpacing': 42, 'padding': 12}}}%%
+flowchart TD
+  POP["Study Population & Design (Protocol: e1-v2.refined-full-primary.v2) KOA-GuidelineBench rc0.2.0 Task C Recovery DEV: 16 questions x 3 replicates = 48 shared preparations x 3 arms = 144 cells Dispatched via 6 rotating arm-order permutations (8 blocks per permutation; 16 appearances per position per arm)"]
+
+  subgraph SHARED["Shared Block Preparation (Executed Once per Question x Replicate Block)"]
+    direction LR
+    S_Q["Locked RuntimeQuestion (question_id, question_text, locked_source_scope)"]
+    S_P["Shared Obligation Planner Call Produces frozen Plan (hash-pinned)"]
+    S_E0["Shared Initial Retrieval (MedCPT + FAISS, top-k = 8) Produces frozen Initial Evidence E0 (hash-pinned)"]
+    S_Q --> S_P --> S_E0
+  end
+
+  subgraph ARMS["Three Experimental Arms (Diverge at PRE Verification & Corrective Query Formulation)"]
+    direction LR
+
+    subgraph ARM_A0["Arm A0 (E1V2:A0) — Original FULL PRE"]
+      direction TB
+      A0_IN["PRE Input Contract: original Shared Plan + Eligible E0 (Original question text hidden at PRE)"]
+      A0_GATE["Readiness & Gate: All-obligation deterministic readiness"]
+      A0_CORR["Conditional Correction (<= 1): Obligation-targeted query -> E0 + E1 -> A0 PRE recheck"]
+      A0_IN --> A0_GATE --> A0_CORR
+    end
+
+    subgraph ARM_A1["Arm A1 (E1V2:A1) — Revised FULL PRE"]
+      direction TB
+      A1_IN["PRE Input Contract: e1-v2.pre.question-plan-evidence.v1 Original Question + Shared Plan + Eligible E0 (Same instructions & output schema as A0)"]
+      A1_GATE["Readiness & Gate: All-obligation deterministic readiness (Question contextualizes; cannot drop obligations)"]
+      A1_CORR["Conditional Correction (<= 1): Obligation-targeted query -> E0 + E1 -> A1 PRE recheck"]
+      A1_IN --> A1_GATE --> A1_CORR
+    end
+
+    subgraph ARM_G["Arm G (E1V2:G) — Matched Generic Baseline"]
+      direction TB
+      G_IN["PRE Input: MATCHED_GENERIC_PRESTATE Original Question + E0 + Public Source Policy + Previous Gaps (No Plan provided in PRE)"]
+      G_GATE["Readiness & Gate: Generic sufficiency boolean + free-text missing_information"]
+      G_CORR["Conditional Correction (<= 1): MatchedGenericQueryBuilder from free-text gap -> E0 + E1 -> G PRE recheck"]
+      G_IN --> G_GATE --> G_CORR
+    end
+  end
+
+  subgraph DOWN["Matched Downstream Runtime (phase4.common-minimal-ready.v1 + e1.member-bound-staged-post.v4)"]
+    direction LR
+    D_PIPE["Shared Plan available downstream for all arms -> Candidate Generation -> Atomic Claim Decomposition -> Member-Bound Staged POST v4 -> Grounded Revision (<= 1) -> Deterministic PolicyGuard -> ACCEPT | ABSTAIN | FAILED_*"]
+  end
+
+  subgraph COMP["Registered Scientific Comparisons & Interpretive Boundaries"]
+    direction LR
+    C_PRI["Primary Comparison: A1 vs G Compares refined obligation-guided PRE policy bundle vs matched generic PRE policy bundle. Caveat: Bundled policy contrast (prompt, representation, history & obligation differences); does not isolate a single causal factor."]
+    C_ABL["Mechanistic Ablation: A1 vs A0 Tests original-question visibility in PRE under identical obligation policy, instructions, and output schema."]
+    C_SUP["Supporting Comparison: A0 vs G Evaluates legacy policy bundles on the common prospective v4 runtime (not a byte reproduction of historical v3)."]
+  end
+
+  POP --> SHARED
+  S_E0 --> A0_IN
+  S_E0 --> A1_IN
+  S_E0 --> G_IN
+  A0_CORR --> D_PIPE
+  A1_CORR --> D_PIPE
+  G_CORR --> D_PIPE
+  D_PIPE --> COMP
+
+  classDef sharedBox fill:#f0fdf4,stroke:#15803d,stroke-width:1.6px,color:#0f172a;
+  classDef a0Box fill:#eff6ff,stroke:#1d4ed8,stroke-width:1.6px,color:#0f172a;
+  classDef a1Box fill:#eef2ff,stroke:#4338ca,stroke-width:2px,color:#0f172a;
+  classDef gBox fill:#fefce8,stroke:#b45309,stroke-width:1.6px,color:#0f172a;
+  classDef downBox fill:#f8fafc,stroke:#334155,stroke-width:1.6px,color:#0f172a;
+  classDef compBox fill:#fdf2f8,stroke:#be185d,stroke-width:1.6px,color:#0f172a;
+
+  class POP,S_Q,S_P,S_E0 sharedBox;
+  class A0_IN,A0_GATE,A0_CORR a0Box;
+  class A1_IN,A1_GATE,A1_CORR a1Box;
+  class G_IN,G_GATE,G_CORR gBox;
+  class D_PIPE downBox;
+  class C_PRI,C_ABL,C_SUP compBox;

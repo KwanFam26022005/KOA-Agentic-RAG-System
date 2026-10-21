@@ -1,0 +1,40 @@
+%%{init: {'theme': 'base', 'themeVariables': {'background': '#ffffff', 'primaryColor': '#f8fafc', 'primaryTextColor': '#0f172a', 'primaryBorderColor': '#475569', 'lineColor': '#334155', 'fontFamily': 'Inter, Segoe UI, Arial, sans-serif', 'fontSize': '13px'}, 'flowchart': {'curve': 'basis', 'nodeSpacing': 30, 'rankSpacing': 44, 'padding': 12}}}%%
+flowchart LR
+  subgraph ZONE1["Zone 1: Benchmark Construction & Governance (KOA-GuidelineBench rc0.2.0)"]
+    direction TB
+    Z1_G["5 Guideline Sources ACSQHC (32) | BYT (39) | EULAR (24) | NICE (84) | VA/DoD (97) Document SHA-256 & Provenance URIs"]
+    Z1_EU["276 Native EvidenceUnits & 170 SemanticIntents Page/section/block locators & bilingual query strings"]
+    Z1_TASKS["Benchmark Tasks - Task B (Sufficiency): 5 DEV pairs, 9 unique displayed bundles, 4 intents - Task C (Recovery & Gating): 16 English DEV cases"]
+    Z1_ADJ["Researcher Adjudication (BA1-D1 / BA1-D2) RUNTIME_EXPOSURE_CONTRACT.json Enforces strict 3-layer field partitioning"]
+    Z1_G --> Z1_EU --> Z1_TASKS --> Z1_ADJ
+  end
+
+  subgraph ZONE2["Zone 2: Method Runtime Boundary (DV-OGEC-RAG Inference)"]
+    direction TB
+    Z2_ALLOW["Authorized Runtime Allowlist (runtime/ only) - RecoveryInput: case_id, question, locked_source_scope - EvidenceUnit: native quotations & citation locators - Frozen MedCPT + FAISS Index (276 units)"]
+    Z2_NOTE["Task Contract Isolation - Method predicts its own MaterialObligation[] - Task B displayed-bundle labels NEVER transfer as gold for E1-v2 E0/E1 retrieval snapshots"]
+    Z2_EXEC["DV-OGEC-RAG Execution (A0 / A1 / G) Shared Planner + E0 -> PRE -> Correction (<= 1) -> Generation -> Staged POST v4 -> Revision (<= 1) -> PolicyGuard"]
+    Z2_STORE["Immutable RunStore Outputs Predictions (ACCEPT | ABSTAIN | FAILED_*), trajectories, citations, budget & provider receipts"]
+    Z2_ALLOW --> Z2_NOTE --> Z2_EXEC --> Z2_STORE
+  end
+
+  subgraph ZONE3["Zone 3: Owner-Side Independent Evaluation (evaluator/ & audit_provenance/)"]
+    direction TB
+    Z3_HOLD["Owner-Held Sealed References (EVALUATOR_ONLY & REVIEWER_AUDIT_ONLY) - Canonical Material Obligations & propositions - Accepted EvidencePaths & supporting_evidence_ref_ids - Gold dispositions, expected answers & TEST split"]
+    Z3_RECON["Trusted EvaluationContext & Reconciliation Validator Verifies release SHA, split, plan hash, record projection & eligible denominator; rejects self-supplied candidate hashes"]
+    Z3_METRICS["Official Scientific Endpoints - Verified answer correctness, grounded support, completeness, FAR - Current E1-v2 Quality Status: NOT_EVALUABLE (0/16 eligible in public scope; SCORING_BLOCKED_BY_OWNER_REFERENCE)"]
+    Z3_HOLD --> Z3_RECON --> Z3_METRICS
+  end
+
+  Z1_ADJ -->|"Exposes RUNTIME_VISIBLE fields only"| Z2_ALLOW
+  Z1_ADJ -->|"Seals EVALUATOR_ONLY & REVIEWER_AUDIT_ONLY fields"| Z3_HOLD
+  Z2_STORE -->|"Read-only candidate predictions & trace hashes"| Z3_RECON
+  Z3_HOLD -.->|"FORBIDDEN: Zero gold, canonical MO, or evaluator leakage into runtime"| Z2_EXEC
+
+  classDef z1 fill:#eff6ff,stroke:#1d4ed8,stroke-width:1.6px,color:#0f172a;
+  classDef z2 fill:#f0fdf4,stroke:#15803d,stroke-width:1.6px,color:#0f172a;
+  classDef z3 fill:#fff1f2,stroke:#be123c,stroke-width:1.8px,color:#0f172a;
+
+  class Z1_G,Z1_EU,Z1_TASKS,Z1_ADJ z1;
+  class Z2_ALLOW,Z2_NOTE,Z2_EXEC,Z2_STORE z2;
+  class Z3_HOLD,Z3_RECON,Z3_METRICS z3;

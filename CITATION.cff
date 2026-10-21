@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+title: "KOA Agentic-RAG System: Evidence-Grounded Agentic Retrieval-Augmented Generation for Knee Osteoarthritis Clinical Guidelines"
+message: "If you reference this research repository, architecture specification, or experimental protocol, please cite the metadata below. Note that KOA-GuidelineBench (rc0.2.0) is an independently governed benchmark release candidate and is attributed separately from the DV-OGEC-RAG method."
+type: software
+version: "0.1.0-research-docs"
+date-released: "2026-10-21"
+url: "https://github.com/KwanFam26022005/KOA-Agentic-RAG-System"
+repository-code: "https://github.com/KwanFam26022005/KOA-Agentic-RAG-System"
+authors:
+  - family-names: "Phạm"
+    given-names: "Hồng Đăng Khoa"
+    alias: "KwanFam26022005"
+  - family-names: "Nguyễn"
+    given-names: "Hoàng Khang"
+keywords:
+  - "retrieval-augmented generation"
+  - "agentic RAG"
+  - "clinical practice guidelines"
+  - "knee osteoarthritis"
+  - "evidence sufficiency verification"
+  - "atomic claim verification"
+  - "selective prediction"
+  - "deterministic policy guard"
+abstract: >-
+  Research documentation, source-aligned architecture specifications, and
+  experimental design protocols for the KOA Agentic-RAG System, connecting the
+  KOA-GuidelineBench (rc0.2.0) clinical guideline benchmark with the DV-OGEC-RAG
+  (Dual-Verification Obligation-Guided Evidence-Controlled RAG) method. This
+  repository presents the research framework, agentic execution lifecycle,
+  controller state machine, benchmark-to-evaluator separation boundary, and
+  prospective E1-v2 three-arm experimental protocol without redistributing
+  licensed clinical guideline text, private runtime source code, or sealed
+  evaluator references.

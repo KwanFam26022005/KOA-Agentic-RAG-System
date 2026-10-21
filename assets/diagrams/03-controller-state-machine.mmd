@@ -1,0 +1,80 @@
+%%{init: {'theme': 'base', 'themeVariables': {'background': '#ffffff', 'primaryColor': '#f8fafc', 'primaryTextColor': '#0f172a', 'primaryBorderColor': '#475569', 'lineColor': '#334155', 'fontFamily': 'Inter, Segoe UI, Arial, sans-serif', 'fontSize': '13px'}, 'flowchart': {'curve': 'basis', 'nodeSpacing': 32, 'rankSpacing': 42, 'padding': 12}}}%%
+flowchart TD
+  START(["START: Sample Initialized (RuntimeQuestion, BudgetState, Empty EvidenceMemory)"])
+
+  S_PLAN["Phase: PLANNING Step: PLAN_QUESTION_ONLY Planner predicts MaterialObligation[]; AuthorityBindings frozen"]
+  S_INIT_RET["Phase: EVIDENCE_ACQUISITION Step: INITIAL_RETRIEVAL Policy proposes RETRIEVE -> PolicyGuard checks -> MedCPT retrieves E0 (initial_used = 1)"]
+  S_PRE1["Phase: PRE_VERIFICATION Step: OBLIGATION_VERIFICATION / GENERIC_SUFFICIENCY Evaluates E0; deterministic reducer computes readiness"]
+
+  D_PRE1{"Initial PRE Sufficient? (All planned obligations READY)"}
+
+  S_CORR_RET["Phase: PRE_VERIFICATION Step: CORRECTIVE_RETRIEVAL Policy proposes RETRIEVE -> PolicyGuard checks corrective_used < 1 -> Retrieves E1 & merges E0 + E1 (corrective_used = 1)"]
+  S_PRE2["Phase: PRE_VERIFICATION Step: OBLIGATION_VERIFICATION / GENERIC_SUFFICIENCY [AFTER_CORRECTION] Re-verifies merged E0 + E1"]
+
+  G_PRE{"Step: PRE_EVIDENCE_GATE Is sufficient() == true?"}
+
+  S_GEN["Phase: GENERATION Step: GENERATE Policy proposes GENERATE -> PolicyGuard checks pre_ready & provenance -> Candidate AnswerObservation"]
+  S_DEC["Phase: GENERATION Step: DECOMPOSE Decomposes candidate answer into closed typed AtomicClaim[]"]
+  S_POST["Phase: POST_VERIFICATION Step: ATOMIC_VERIFICATION Staged POST v4 (pair -> diagnosis -> remedies) + canonical validator"]
+
+  D_REV{"Step: REVISION_CYCLE Condition status == NEEDS_REVISION & revision_possible & revision_used < 1?"}
+
+  S_REV["Phase: GENERATION (Revision Sub-Cycle) Step: REVISE Policy proposes REVISE -> PolicyGuard checks -> Reviser uses existing E0/E1 only (revision_used = 1); clears old claims/POST"]
+
+  G_POST{"Step: POST_EVIDENCE_GATE All claims SUPPORTED, all obligations ADDRESSED, zero hard failures?"}
+
+  S_EMIT["Step: EMIT_ANSWER DecisionPolicy proposes ACCEPT -> PolicyGuard revalidates hard acceptance guard -> ActionExecutor emits answer"]
+
+  T_ACCEPT(["TERMINAL: COMPLETED_ANSWER (ACCEPT)"])
+  T_ABSTAIN(["TERMINAL: COMPLETED_ABSTAIN (Valid Abstention via authorize(ABSTAIN))"])
+  T_FAIL(["TERMINAL: TECHNICAL FAILURE (FAILED_CONTRACT | FAILED_PROVIDER | FAILED_RETRIEVAL | FAILED_QUERY_*)"])
+
+  INV["Scientific Execution Bounds (Upper Bounds, Not Mandatory Steps) - Initial retrieval <= 1 - Corrective retrieval <= 1 - Grounded revision <= 1 - Physical model calls <= 34 per arm (+1 shared Planner) - PolicyGuard rejection -> FAILED_CONTRACT (never counted as ABSTAIN)"]
+
+  START --> S_PLAN
+  S_PLAN -->|"Valid non-empty Plan"| S_INIT_RET
+  S_INIT_RET -->|"E0 stored in EvidenceMemory"| S_PRE1
+  S_PRE1 --> D_PRE1
+
+  D_PRE1 -->|"Yes (READY)"| G_PRE
+  D_PRE1 -->|"No (INSUFFICIENT & corrective_used == 0)"| S_CORR_RET
+  S_CORR_RET --> S_PRE2
+  S_PRE2 --> G_PRE
+
+  G_PRE -->|"Yes (authorize GENERATE)"| S_GEN
+  G_PRE -->|"No (authorize ABSTAIN)"| T_ABSTAIN
+
+  S_GEN --> S_DEC --> S_POST --> D_REV
+
+  D_REV -->|"Yes (authorize REVISE)"| S_REV
+  S_REV -->|"Loops to fresh decomposition & POST"| S_DEC
+  D_REV -->|"No (PASS, unfixable, or revision_used == 1)"| G_POST
+
+  G_POST -->|"Yes"| S_EMIT
+  G_POST -->|"No (authorize ABSTAIN)"| T_ABSTAIN
+  S_EMIT -->|"Guard passes"| T_ACCEPT
+
+  S_PLAN -.->|"Empty/invalid plan or provider error"| T_FAIL
+  S_INIT_RET -.->|"Query/retrieval error or guard reject"| T_FAIL
+  S_PRE1 -.->|"Malformed PRE output or schema error"| T_FAIL
+  S_CORR_RET -.->|"Missing gap, query error or budget exceeded"| T_FAIL
+  S_PRE2 -.->|"Malformed recheck output"| T_FAIL
+  S_GEN -.->|"Invalid citation IDs or guard reject"| T_FAIL
+  S_DEC -.->|"Empty/non-atomic claims"| T_FAIL
+  S_POST -.->|"Unresolved pair/alias/span contract error"| T_FAIL
+  S_REV -.->|"Invalid revision reference or guard reject"| T_FAIL
+  S_EMIT -.->|"Acceptance hard guard rejected"| T_FAIL
+
+  classDef stateBox fill:#f8fafc,stroke:#334155,stroke-width:1.6px,color:#0f172a;
+  classDef gateBox fill:#fefce8,stroke:#b45309,stroke-width:1.8px,color:#0f172a;
+  classDef acceptBox fill:#dcfce7,stroke:#15803d,stroke-width:2.2px,color:#052e16;
+  classDef abstainBox fill:#fef3c7,stroke:#b45309,stroke-width:2.2px,color:#451a03;
+  classDef failBox fill:#ffe4e6,stroke:#be123c,stroke-width:2.2px,color:#4c0519;
+  classDef invBox fill:#eff6ff,stroke:#1d4ed8,stroke-width:1.5px,color:#0f172a;
+
+  class S_PLAN,S_INIT_RET,S_PRE1,S_CORR_RET,S_PRE2,S_GEN,S_DEC,S_POST,S_REV,S_EMIT stateBox;
+  class D_PRE1,G_PRE,D_REV,G_POST gateBox;
+  class T_ACCEPT acceptBox;
+  class T_ABSTAIN abstainBox;
+  class T_FAIL failBox;
+  class INV,START invBox;

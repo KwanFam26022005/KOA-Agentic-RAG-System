@@ -1,0 +1,96 @@
+%%{init: {'theme': 'base', 'themeVariables': {'background': '#ffffff', 'primaryColor': '#f8fafc', 'primaryTextColor': '#0f172a', 'primaryBorderColor': '#475569', 'lineColor': '#334155', 'secondaryColor': '#f1f5f9', 'tertiaryColor': '#ffffff', 'fontFamily': 'Inter, Segoe UI, Arial, sans-serif', 'fontSize': '13px'}, 'flowchart': {'curve': 'basis', 'nodeSpacing': 30, 'rankSpacing': 42, 'padding': 12}}}%%
+flowchart TD
+  Q["1. Clinical Question (RuntimeQuestion: sample_id, question_text, locked_source_scope; zero gold fields)"]
+
+  subgraph PREP["Shared Preparation (Executed Once per Question x Replicate)"]
+    direction TB
+    PLAN["2. Obligation Planner [LLM Role: planner] Predicts Plan with MaterialObligation[] & source constraints; frozen plan_identity"]
+    AUTH["Deterministic Authority Binding: Maps obligation source constraints to SourcePolicy & registry"]
+    IRET["3. Initial Retrieval [Local Dense Retrieval: initial <= 1] MedCPT encoders + FAISS IndexFlatIP (276 units, top-k = 8, source filter before scoring)"]
+    PLAN --> AUTH --> IRET
+  end
+
+  MEM[("4. Evidence Memory Stores E0 initially, then merged E0 + E1 with provenance & page/section locators")]
+
+  subgraph PRE_STAGE["Pre-Generation Verification & Bounded Corrective Retrieval"]
+    direction TB
+    PRE_LLM["5. PRE Sufficiency Assessment [LLM Role: pre_verifier (A0/A1) or generic_judge (G)] Evaluates obligation coverage, source validity & discrepancies"]
+    PRE_RED{"6. Deterministic Readiness Reducer All planned obligations READY & zero unresolved discrepancies?"}
+    CORR_PLAN["Deterministic Query Builder Obligation-targeted query (A0/A1) or generic-gap query (G)"]
+    CRET["7. Conditional Corrective Retrieval [Local Dense Retrieval: corrective <= 1] MedCPT + FAISS over locked source scope"]
+    PRE_RECHECK["PRE Recheck [LLM Role + Deterministic Reducer] Re-evaluates merged Evidence Memory (E0 + E1)"]
+    PRE_GATE{"Deterministic PRE_EVIDENCE_GATE Is sufficient() == true?"}
+  end
+
+  subgraph POST_STAGE["Candidate Generation, Atomic POST Verification & Bounded Revision"]
+    direction TB
+    GEN["8. Candidate Answer Generation [LLM Role: generator] Synthesizes AnswerObservation with citation_evidence_ids from Evidence Memory"]
+    DEC["9. Atomic Claim Decomposition [LLM Role: decomposer] Decomposes candidate answer into closed typed AtomicClaim[]"]
+    POST_LLM["10. Atomic POST Verification [LLM Role: post_verifier (Staged POST v4)] Executes pair, diagnosis & remedies passes with code-owned identity aliases"]
+    POST_VAL{"Deterministic Canonical POST Check Status: PASS | NEEDS_REVISION | FAIL"}
+    REV["Grounded Answer Revision [LLM Role: reviser, revision <= 1] Revises using existing Evidence Memory only (no retrieval); invalidates old claims & POST"]
+    POST_GATE{"Deterministic POST_EVIDENCE_GATE All claims SUPPORTED, all obligations ADDRESSED, zero hard failures?"}
+  end
+
+  subgraph CTRL["11. Deterministic Control Plane (Guards Every Effectful Action)"]
+    direction LR
+    VAS["ValidActionSet.compute(state) Deterministic legal actions"]
+    POL["DeterministicRulesPolicy.propose(view) Proposes RETRIEVE | GENERATE | REVISE | ACCEPT | ABSTAIN (not an LLM)"]
+    GUARD["PolicyGuard.check(state, proposal) Verifies phase, plan, budgets, provenance, source scope & hard acceptance rules"]
+    EXEC["WorkflowActionExecutor Dispatches authorized step"]
+    VAS --> POL --> GUARD --> EXEC
+  end
+
+  subgraph TERM["12. Terminal Run Outcomes"]
+    direction LR
+    OUT_ACC(["ACCEPT (COMPLETED_ANSWER) Grounded answer emitted"])
+    OUT_ABS(["ABSTAIN (COMPLETED_ABSTAIN) Legitimate terminal abstention"])
+    OUT_FAIL(["TECHNICAL FAILURE (FAILED_*) Contract, provider, retrieval or PolicyGuard rejection"])
+  end
+
+  Q --> PLAN
+  IRET -.->|"Writes initial evidence E0"| MEM
+  IRET --> PRE_LLM
+  MEM -.->|"Provides E0"| PRE_LLM
+  PRE_LLM --> PRE_RED
+
+  PRE_RED -->|"Yes (READY on E0)"| PRE_GATE
+  PRE_RED -->|"No (INSUFFICIENT & corrective_used == 0)"| CORR_PLAN
+  CORR_PLAN --> CRET
+  CRET -.->|"Merges E1 into E0 + E1"| MEM
+  CRET --> PRE_RECHECK
+  MEM -.->|"Provides merged E0 + E1"| PRE_RECHECK
+  PRE_RECHECK --> PRE_GATE
+
+  PRE_GATE -->|"Pass (authorize GENERATE)"| GEN
+  PRE_GATE -->|"Fail (authorize ABSTAIN)"| OUT_ABS
+
+  MEM -.->|"Provides eligible evidence"| GEN
+  GEN --> DEC --> POST_LLM --> POST_VAL
+
+  POST_VAL -->|"NEEDS_REVISION & revision_possible & revision_used == 0 (authorize REVISE)"| REV
+  MEM -.->|"Existing memory only (no retrieval)"| REV
+  REV -->|"Re-decompose & re-verify (<= 1)"| DEC
+
+  POST_VAL -->|"PASS or revision unavailable"| POST_GATE
+  POST_GATE -->|"Pass (authorize ACCEPT)"| OUT_ACC
+  POST_GATE -->|"Fail (authorize ABSTAIN)"| OUT_ABS
+
+  GUARD -.->|"Authorizes RETRIEVE / GENERATE / REVISE / ACCEPT / ABSTAIN"| EXEC
+  GUARD -->|"Rejects illegal proposal or contract/provider error"| OUT_FAIL
+
+  classDef llmNode fill:#eff6ff,stroke:#1d4ed8,stroke-width:1.8px,color:#0f172a;
+  classDef retNode fill:#ecfdf5,stroke:#047857,stroke-width:1.8px,color:#0f172a;
+  classDef detNode fill:#fefce8,stroke:#b45309,stroke-width:1.8px,color:#0f172a;
+  classDef memNode fill:#f5f3ff,stroke:#6d28d9,stroke-width:1.8px,color:#0f172a;
+  classDef accNode fill:#dcfce7,stroke:#15803d,stroke-width:2.2px,color:#052e16;
+  classDef absNode fill:#fef3c7,stroke:#b45309,stroke-width:2.2px,color:#451a03;
+  classDef failNode fill:#ffe4e6,stroke:#be123c,stroke-width:2.2px,color:#4c0519;
+
+  class PLAN,PRE_LLM,PRE_RECHECK,GEN,DEC,POST_LLM,REV llmNode;
+  class IRET,CRET retNode;
+  class AUTH,PRE_RED,CORR_PLAN,PRE_GATE,POST_VAL,POST_GATE,VAS,POL,GUARD,EXEC detNode;
+  class MEM,Q memNode;
+  class OUT_ACC accNode;
+  class OUT_ABS absNode;
+  class OUT_FAIL failNode;
