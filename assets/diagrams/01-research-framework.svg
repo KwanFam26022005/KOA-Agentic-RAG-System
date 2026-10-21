@@ -1,1 +1,353 @@
-<svg id="my-svg" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="flowchart" style="max-width: 966px; background-color: white;" viewBox="0 0 966 2512" role="graphics-document document" aria-roledescription="flowchart-v2"><style>#my-svg{font-size:13px;fill:#0f172a;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#my-svg .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#my-svg .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#my-svg .error-icon{fill:#ffffff;}#my-svg .error-text{fill:#000000;stroke:#000000;}#my-svg .edge-thickness-normal{stroke-width:1px;}#my-svg .edge-thickness-thick{stroke-width:3.5px;}#my-svg .edge-pattern-solid{stroke-dasharray:0;}#my-svg .edge-thickness-invisible{stroke-width:0;fill:none;}#my-svg .edge-pattern-dashed{stroke-dasharray:3;}#my-svg .edge-pattern-dotted{stroke-dasharray:2;}#my-svg .marker{fill:#334155;stroke:#334155;}#my-svg .marker.cross{stroke:#334155;}#my-svg svg{font-size:13px;}#my-svg p{margin:0;}#my-svg .label{color:#0f172a;}#my-svg .cluster-label text{fill:#000000;}#my-svg .cluster-label span{color:#000000;}#my-svg .cluster-label span p{background-color:transparent;}#my-svg .label text,#my-svg span{fill:#0f172a;color:#0f172a;}#my-svg .node rect,#my-svg .node circle,#my-svg .node ellipse,#my-svg .node polygon,#my-svg .node path{fill:#f8fafc;stroke:#475569;stroke-width:1px;}#my-svg .rough-node .label text,#my-svg .node .label text,#my-svg .image-shape .label,#my-svg .icon-shape .label{text-anchor:middle;}#my-svg .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#my-svg .rough-node .label,#my-svg .node .label,#my-svg .image-shape .label,#my-svg .icon-shape .label{text-align:center;}#my-svg .node.clickable{cursor:pointer;}#my-svg .root .anchor path{fill:#334155!important;stroke-width:0;stroke:#334155;}#my-svg .arrowheadPath{fill:#000000;}#my-svg .edgePaths .path{stroke:#334155;stroke-width:1px;}#my-svg .flowchart-link{stroke:#334155;fill:none;}#my-svg .edgeLabel{background-color:#f1f5f9;text-align:center;}#my-svg .edgeLabel p{background-color:#f1f5f9;}#my-svg .edgeLabel rect{opacity:0.5;background-color:#f1f5f9;fill:#f1f5f9;}#my-svg .labelBkg{background-color:rgba(241, 245, 249, 0.5);}#my-svg .cluster rect{fill:#ffffff;stroke:hsl(0, 0%, 90%);stroke-width:1px;}#my-svg .cluster text{fill:#000000;}#my-svg .cluster span{color:#000000;}#my-svg .node .collapsed-indicator{fill:hsl(0, 0%, 90%);stroke:none;opacity:0.6;}#my-svg .node .collapsed-separator{stroke:hsl(0, 0%, 90%);stroke-width:0.75px;}#my-svg div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-size:12px;background:#ffffff;border:1px solid hsl(0, 0%, 90%);border-radius:2px;pointer-events:none;z-index:100;}#my-svg .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#0f172a;}#my-svg rect.text{fill:none;stroke-width:0;}#my-svg .icon-shape,#my-svg .image-shape{background-color:#f1f5f9;text-align:center;}#my-svg .icon-shape p,#my-svg .image-shape p{background-color:#f1f5f9;padding:2px;}#my-svg .icon-shape .label rect,#my-svg .image-shape .label rect{opacity:0.5;background-color:#f1f5f9;fill:#f1f5f9;}#my-svg .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#my-svg .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#my-svg .node .neo-node{stroke:#475569;}#my-svg [data-look="neo"].node rect,#my-svg [data-look="neo"].cluster rect,#my-svg [data-look="neo"].node polygon{stroke:url(#my-svg-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg [data-look="neo"].swimlane.cluster rect{filter:none;}#my-svg [data-look="neo"].node path{stroke:url(#my-svg-gradient);stroke-width:1px;}#my-svg [data-look="neo"].node .outer-path{filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg [data-look="neo"].node .neo-line path{stroke:#475569;filter:none;}#my-svg [data-look="neo"].node circle{stroke:url(#my-svg-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg [data-look="neo"].node circle .state-start{fill:#000000;}#my-svg [data-look="neo"].icon-shape .icon{fill:url(#my-svg-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg [data-look="neo"].icon-shape .icon-neo path{stroke:url(#my-svg-gradient);filter:drop-shadow( 1px 2px 2px rgba(185,185,185,1));}#my-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}#my-svg .sourceBox&gt;*{fill:rgb(248, 250, 252)!important;stroke:rgb(100, 116, 139)!important;stroke-width:1.5px!important;color:rgb(15, 23, 42)!important;}#my-svg .sourceBox span{fill:rgb(248, 250, 252)!important;stroke:rgb(100, 116, 139)!important;stroke-width:1.5px!important;color:rgb(15, 23, 42)!important;}#my-svg .sourceBox tspan{fill:rgb(15, 23, 42)!important;}#my-svg .benchBox&gt;*{fill:rgb(239, 246, 255)!important;stroke:rgb(37, 99, 235)!important;stroke-width:1.5px!important;color:rgb(15, 23, 42)!important;}#my-svg .benchBox span{fill:rgb(239, 246, 255)!important;stroke:rgb(37, 99, 235)!important;stroke-width:1.5px!important;color:rgb(15, 23, 42)!important;}#my-svg .benchBox tspan{fill:rgb(15, 23, 42)!important;}#my-svg .inputBox&gt;*{fill:rgb(240, 253, 244)!important;stroke:rgb(22, 163, 74)!important;stroke-width:1.5px!important;color:rgb(15, 23, 42)!important;}#my-svg .inputBox span{fill:rgb(240, 253, 244)!important;stroke:rgb(22, 163, 74)!important;stroke-width:1.5px!important;color:rgb(15, 23, 42)!important;}#my-svg .inputBox tspan{fill:rgb(15, 23, 42)!important;}#my-svg .methodBox&gt;*{fill:rgb(254, 252, 232)!important;stroke:rgb(202, 138, 4)!important;stroke-width:1.5px!important;color:rgb(15, 23, 42)!important;}#my-svg .methodBox span{fill:rgb(254, 252, 232)!important;stroke:rgb(202, 138, 4)!important;stroke-width:1.5px!important;color:rgb(15, 23, 42)!important;}#my-svg .methodBox tspan{fill:rgb(15, 23, 42)!important;}#my-svg .outBox&gt;*{fill:rgb(243, 232, 255)!important;stroke:rgb(126, 34, 206)!important;stroke-width:1.5px!important;color:rgb(15, 23, 42)!important;}#my-svg .outBox span{fill:rgb(243, 232, 255)!important;stroke:rgb(126, 34, 206)!important;stroke-width:1.5px!important;color:rgb(15, 23, 42)!important;}#my-svg .outBox tspan{fill:rgb(15, 23, 42)!important;}#my-svg .evalBox&gt;*{fill:rgb(255, 241, 242)!important;stroke:rgb(225, 29, 72)!important;stroke-width:2px!important;color:rgb(15, 23, 42)!important;}#my-svg .evalBox span{fill:rgb(255, 241, 242)!important;stroke:rgb(225, 29, 72)!important;stroke-width:2px!important;color:rgb(15, 23, 42)!important;}#my-svg .evalBox tspan{fill:rgb(15, 23, 42)!important;}</style><g><marker id="my-svg_flowchart-v2-pointEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="4.5" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointEnd-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="11.5" refY="7" markerUnits="userSpaceOnUse" markerWidth="10.5" markerHeight="14" orient="auto"><path d="M 0 0 L 11.5 7 L 0 14 z" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-pointStart-margin" class="marker flowchart-v2" viewBox="0 0 11.5 14" refX="1" refY="7" markerUnits="userSpaceOnUse" markerWidth="11.5" markerHeight="14" orient="auto"><polygon points="0,7 11.5,14 11.5,0" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleEnd" class="marker flowchart-v2" viewBox="0 0 10 10" refX="11" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleStart" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-1" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleEnd-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refY="5" refX="12.25" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-circleStart-margin" class="marker flowchart-v2" viewBox="0 0 10 10" refX="-2" refY="5" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 0; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="12" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewBox="0 0 11 11" refX="-1" refY="5.2" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"/></marker><marker id="my-svg_flowchart-v2-crossEnd-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="17.7" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5;"/></marker><marker id="my-svg_flowchart-v2-crossStart-margin" class="marker cross flowchart-v2" viewBox="0 0 15 15" refX="-3.5" refY="7.5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M 1,1 L 14,14 M 1,14 L 14,1" class="arrowMarkerPath" style="stroke-width: 2.5; stroke-dasharray: 1, 0;"/></marker><g class="root"><g class="clusters"><g class="cluster" id="my-svg-EVAL" data-look="classic"><rect style="" x="8" y="2060" width="414" height="444"/><g class="cluster-label" transform="translate(51.9609375, 2060)"><foreignObject width="326.078125" height="19.5"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5;"><span class="nodeLabel"><p>6. Independent Evaluation Boundary (Owner-Separated)</p></span></div></foreignObject></g></g><g class="cluster" id="my-svg-OUT" data-look="classic"><rect style="" x="500" y="2060" width="312" height="191"/><g class="cluster-label" transform="translate(526.7109375, 2060)"><foreignObject width="258.578125" height="19.5"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5;"><span class="nodeLabel"><p>5. Predictions, Traces &amp; Accounting Receipts</p></span></div></foreignObject></g></g><g class="cluster" id="my-svg-METHOD" data-look="classic"><rect style="" x="354" y="1367" width="566.6171875" height="647"/><g class="cluster-label" transform="translate(509.73828125, 1367)"><foreignObject width="255.140625" height="19.5"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5;"><span class="nodeLabel"><p>4. DV-OGEC-RAG — Agentic Method Runtime</p></span></div></foreignObject></g></g><g class="cluster" id="my-svg-INPUT" data-look="classic"><rect style="" x="354" y="1149.5" width="604" height="171.5"/><g class="cluster-label" transform="translate(495.8515625, 1149.5)"><foreignObject width="320.296875" height="19.5"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5;"><span class="nodeLabel"><p>3. Authorized DEV Runtime Inputs (Gold-Free Allowlist)</p></span></div></foreignObject></g></g><g class="cluster" id="my-svg-BENCH" data-look="classic"><rect style="" x="66" y="589" width="532" height="495"/><g class="cluster-label" transform="translate(114.40625, 589)"><foreignObject width="435.1875" height="19.5"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5;"><span class="nodeLabel"><p>2. KOA-GuidelineBench (rc0.2.0) — Benchmark Construction &amp; Governance</p></span></div></foreignObject></g></g></g><g class="edgePaths"><path d="M302,718L302,721.833C302,725.667,302,733.333,302,740.333C302,747.333,302,753.667,302,756.833L302,760" id="my-svg-L_B_ORG_B_TASKS_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_B_ORG_B_TASKS_0" data-points="W3sieCI6MzAyLCJ5Ijo3MTh9LHsieCI6MzAyLCJ5Ijo3NDF9LHsieCI6MzAyLCJ5Ijo3NjR9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M302,889.5L302,893.333C302,897.167,302,904.833,302,911.833C302,918.833,302,925.167,302,928.333L302,931.5" id="my-svg-L_B_TASKS_B_GOV_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_B_TASKS_B_GOV_0" data-points="W3sieCI6MzAyLCJ5Ijo4ODkuNX0seyJ4IjozMDIsInkiOjkxMi41fSx7IngiOjMwMiwieSI6OTM1LjV9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M510,1476.5L510,1480.333C510,1484.167,510,1491.833,515.952,1499.162C521.904,1506.491,533.807,1513.483,539.759,1516.979L545.711,1520.474" id="my-svg-L_M_PLAN_M_PRE_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_M_PLAN_M_PRE_0" data-points="W3sieCI6NTEwLCJ5IjoxNDc2LjV9LHsieCI6NTEwLCJ5IjoxNDk5LjV9LHsieCI6NTQ5LjE2MDM0OTg1NDIyNzQsInkiOjE1MjIuNX1d" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M656,1648L656,1651.833C656,1655.667,656,1663.333,656,1670.333C656,1677.333,656,1683.667,656,1686.833L656,1690" id="my-svg-L_M_PRE_M_POST_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_M_PRE_M_POST_0" data-points="W3sieCI6NjU2LCJ5IjoxNjQ4fSx7IngiOjY1NiwieSI6MTY3MX0seyJ4Ijo2NTYsInkiOjE2OTR9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M656,1819.5L656,1823.333C656,1827.167,656,1834.833,656,1841.833C656,1848.833,656,1855.167,656,1858.333L656,1861.5" id="my-svg-L_M_POST_M_GUARD_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_M_POST_M_GUARD_0" data-points="W3sieCI6NjU2LCJ5IjoxODE5LjV9LHsieCI6NjU2LCJ5IjoxODQyLjV9LHsieCI6NjU2LCJ5IjoxODY1LjV9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M164,2228L164,2231.833C164,2235.667,164,2243.333,164,2254.25C164,2265.167,164,2279.333,167.387,2292.909C170.775,2306.485,177.549,2319.469,180.936,2325.961L184.324,2332.454" id="my-svg-L_E_REF_E_SCORER_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_E_REF_E_SCORER_0" data-points="W3sieCI6MTY0LCJ5IjoyMjI4fSx7IngiOjE2NCwieSI6MjI1MX0seyJ4IjoxNjQsInkiOjIyOTMuNX0seyJ4IjoxODYuMTczOTEzMDQzNDc4MjUsInkiOjIzMzZ9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M430,1051.019L443.333,1056.516C456.667,1062.013,483.333,1073.006,496.667,1083.962C510,1094.917,510,1105.833,510,1116.75C510,1127.667,510,1138.583,510,1147.208C510,1155.833,510,1162.167,510,1165.333L510,1168.5" id="my-svg-L_B_GOV_R_IN_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_B_GOV_R_IN_0" data-points="W3sieCI6NDMwLCJ5IjoxMDUxLjAxOTIzMDc2OTIzMDd9LHsieCI6NTEwLCJ5IjoxMDg0fSx7IngiOjUxMCwieSI6MTExNi43NX0seyJ4Ijo1MTAsInkiOjExNDkuNX0seyJ4Ijo1MTAsInkiOjExNzIuNX1d" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M510,1298L510,1301.833C510,1305.667,510,1313.333,510,1321C510,1328.667,510,1336.333,510,1344C510,1351.667,510,1359.333,510,1366.333C510,1373.333,510,1379.667,510,1382.833L510,1386" id="my-svg-L_R_IN_M_PLAN_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_R_IN_M_PLAN_0" data-points="W3sieCI6NTEwLCJ5IjoxMjk4fSx7IngiOjUxMCwieSI6MTMyMX0seyJ4Ijo1MTAsInkiOjEzNDR9LHsieCI6NTEwLCJ5IjoxMzY3fSx7IngiOjUxMCwieSI6MTM5MH1d" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M802,1288.25L802,1293.708C802,1299.167,802,1310.083,802,1319.375C802,1328.667,802,1336.333,802,1344C802,1351.667,802,1359.333,802,1374.208C802,1389.083,802,1411.167,802,1433.25C802,1455.333,802,1477.417,796.048,1491.954C790.096,1506.491,778.193,1513.483,772.241,1516.979L766.289,1520.474" id="my-svg-L_R_IDX_M_PRE_0" class="edge-thickness-normal edge-pattern-dotted edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_R_IDX_M_PRE_0" data-points="W3sieCI6ODAyLCJ5IjoxMjg4LjI1fSx7IngiOjgwMiwieSI6MTMyMX0seyJ4Ijo4MDIsInkiOjEzNDR9LHsieCI6ODAyLCJ5IjoxMzY3fSx7IngiOjgwMiwieSI6MTQzMy4yNX0seyJ4Ijo4MDIsInkiOjE0OTkuNX0seyJ4Ijo3NjIuODM5NjUwMTQ1NzcyNiwieSI6MTUyMi41fV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M656,1991L656,1994.833C656,1998.667,656,2006.333,656,2014C656,2021.667,656,2029.333,656,2037C656,2044.667,656,2052.333,656,2059.333C656,2066.333,656,2072.667,656,2075.833L656,2079" id="my-svg-L_M_GUARD_P_OUT_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_M_GUARD_P_OUT_0" data-points="W3sieCI6NjU2LCJ5IjoxOTkxfSx7IngiOjY1NiwieSI6MjAxNH0seyJ4Ijo2NTYsInkiOjIwMzd9LHsieCI6NjU2LCJ5IjoyMDYwfSx7IngiOjY1NiwieSI6MjA4M31d" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M656,2228L656,2231.833C656,2235.667,656,2243.333,594,2254.25C532,2265.167,408,2279.333,342.613,2292.909C277.225,2306.485,270.451,2319.469,267.064,2325.961L263.676,2332.454" id="my-svg-L_P_OUT_E_SCORER_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_P_OUT_E_SCORER_0" data-points="W3sieCI6NjU2LCJ5IjoyMjI4fSx7IngiOjY1NiwieSI6MjI1MX0seyJ4IjoyODQsInkiOjIyOTMuNX0seyJ4IjoyNjEuODI2MDg2OTU2NTIxNzUsInkiOjIzMzZ9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M201.015,1061L194.845,1064.833C188.676,1068.667,176.338,1076.333,170.169,1085.625C164,1094.917,164,1105.833,164,1116.75C164,1127.667,164,1138.583,164,1158.333C164,1178.083,164,1206.667,164,1235.25C164,1263.833,164,1292.417,164,1310.542C164,1328.667,164,1336.333,164,1344C164,1351.667,164,1359.333,164,1374.208C164,1389.083,164,1411.167,164,1433.25C164,1455.333,164,1477.417,164,1502.75C164,1528.083,164,1556.667,164,1585.25C164,1613.833,164,1642.417,164,1671C164,1699.583,164,1728.167,164,1756.75C164,1785.333,164,1813.917,164,1842.5C164,1871.083,164,1899.667,164,1928.25C164,1956.833,164,1985.417,164,2003.542C164,2021.667,164,2029.333,164,2037C164,2044.667,164,2052.333,164,2059.333C164,2066.333,164,2072.667,164,2075.833L164,2079" id="my-svg-L_B_GOV_E_REF_0" class="edge-thickness-normal edge-pattern-dotted edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_B_GOV_E_REF_0" data-points="W3sieCI6MjAxLjAxNDU3NzI1OTQ3NTIzLCJ5IjoxMDYxfSx7IngiOjE2NCwieSI6MTA4NH0seyJ4IjoxNjQsInkiOjExMTYuNzV9LHsieCI6MTY0LCJ5IjoxMTQ5LjV9LHsieCI6MTY0LCJ5IjoxMjM1LjI1fSx7IngiOjE2NCwieSI6MTMyMX0seyJ4IjoxNjQsInkiOjEzNDR9LHsieCI6MTY0LCJ5IjoxMzY3fSx7IngiOjE2NCwieSI6MTQzMy4yNX0seyJ4IjoxNjQsInkiOjE0OTkuNX0seyJ4IjoxNjQsInkiOjE1ODUuMjV9LHsieCI6MTY0LCJ5IjoxNjcxfSx7IngiOjE2NCwieSI6MTc1Ni43NX0seyJ4IjoxNjQsInkiOjE4NDIuNX0seyJ4IjoxNjQsInkiOjE5MjguMjV9LHsieCI6MTY0LCJ5IjoyMDE0fSx7IngiOjE2NCwieSI6MjAzN30seyJ4IjoxNjQsInkiOjIwNjB9LHsieCI6MTY0LCJ5IjoyMDgzfV0=" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/><path d="M302,543L302,546.833C302,550.667,302,558.333,302,566C302,573.667,302,581.333,302,588.333C302,595.333,302,601.667,302,604.833L302,608" id="my-svg-L_SRC_B_ORG_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_SRC_B_ORG_0" data-points="W3sieCI6MzAyLCJ5Ijo1NDN9LHsieCI6MzAyLCJ5Ijo1NjZ9LHsieCI6MzAyLCJ5Ijo1ODl9LHsieCI6MzAyLCJ5Ijo2MTJ9XQ==" data-look="classic" marker-end="url(#my-svg_flowchart-v2-pointEnd)"/></g><g class="edgeLabels"><g class="edgeLabel"><g class="label" data-id="L_B_ORG_B_TASKS_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_B_TASKS_B_GOV_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_M_PLAN_M_PRE_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_M_PRE_M_POST_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_M_POST_M_GUARD_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_E_REF_E_SCORER_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(510, 1116.75)"><g class="label" data-id="L_B_GOV_R_IN_0" transform="translate(-82.296875, -9.75)"><foreignObject width="164.59375" height="19.5"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>RUNTIME_VISIBLE fields only</p></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_R_IN_M_PLAN_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(802, 1433.25)"><g class="label" data-id="L_R_IDX_M_PRE_0" transform="translate(-61.234375, -9.75)"><foreignObject width="122.46875" height="19.5"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"><p>Local dense retrieval</p></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_M_GUARD_P_OUT_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(457.61221, 2273.66527)"><g class="label" data-id="L_P_OUT_E_SCORER_0" transform="translate(-100, -19.5)"><foreignObject width="200" height="39"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="edgeLabel"><p>Read-only candidate predictions &amp; traces</p></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(164, 1585.25)"><g class="label" data-id="L_B_GOV_E_REF_0" transform="translate(-100, -29.25)"><foreignObject width="200" height="58.5"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;"><span class="edgeLabel"><p>EVALUATOR_ONLY &amp; REVIEWER_AUDIT_ONLY (sealed from runtime)</p></span></div></foreignObject></g></g><g class="edgeLabel"><g class="label" data-id="L_SRC_B_ORG_0" transform="translate(0, 0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" class="labelBkg" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="root" transform="translate(130.5, 0)"><g class="clusters"><g class="cluster" id="my-svg-SRC" data-look="classic"><rect style="" x="8" y="8" width="327" height="535"/><g class="cluster-label" transform="translate(19.4765625, 8)"><foreignObject width="304.046875" height="19.5"><div xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5;"><span class="nodeLabel"><p>1. Clinical Guideline Sources (5 Curated Authorities)</p></span></div></foreignObject></g></g></g><g class="edgePaths"/><g class="edgeLabels"/><g class="nodes"><g class="node default sourceBox" id="my-svg-flowchart-G1-0" data-look="classic" transform="translate(171.5, 69.5)"><rect class="basic label-container" style="fill:#f8fafc !important;stroke:#64748b !important;stroke-width:1.5px !important" x="-128" y="-33.5" width="256" height="67"/><g class="label" style="color:#0f172a !important" transform="translate(-100, -19.5)"><rect/><foreignObject width="200" height="39"><div style="color: rgb(15, 23, 42) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#0f172a !important" class="nodeLabel"><p>ACSQHC (2024) | EN | CURRENT | 32 units</p></span></div></foreignObject></g></g><g class="node default sourceBox" id="my-svg-flowchart-G2-1" data-look="classic" transform="translate(171.5, 172.5)"><rect class="basic label-container" style="fill:#f8fafc !important;stroke:#64748b !important;stroke-width:1.5px !important" x="-128" y="-33.5" width="256" height="67"/><g class="label" style="color:#0f172a !important" transform="translate(-100, -19.5)"><rect/><foreignObject width="200" height="39"><div style="color: rgb(15, 23, 42) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#0f172a !important" class="nodeLabel"><p>BYT Vietnam (2014) | VI | HISTORICAL | 39 units</p></span></div></foreignObject></g></g><g class="node default sourceBox" id="my-svg-flowchart-G3-2" data-look="classic" transform="translate(171.5, 275.5)"><rect class="basic label-container" style="fill:#f8fafc !important;stroke:#64748b !important;stroke-width:1.5px !important" x="-128" y="-33.5" width="256" height="67"/><g class="label" style="color:#0f172a !important" transform="translate(-100, -19.5)"><rect/><foreignObject width="200" height="39"><div style="color: rgb(15, 23, 42) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#0f172a !important" class="nodeLabel"><p>EULAR (2023) | EN | CURRENT | 24 units</p></span></div></foreignObject></g></g><g class="node default sourceBox" id="my-svg-flowchart-G4-3" data-look="classic" transform="translate(171.5, 378.5)"><rect class="basic label-container" style="fill:#f8fafc !important;stroke:#64748b !important;stroke-width:1.5px !important" x="-128" y="-33.5" width="256" height="67"/><g class="label" style="color:#0f172a !important" transform="translate(-100, -19.5)"><rect/><foreignObject width="200" height="39"><div style="color: rgb(15, 23, 42) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#0f172a !important" class="nodeLabel"><p>NICE NG226 (2022) | EN | CURRENT | 84 units</p></span></div></foreignObject></g></g><g class="node default sourceBox" id="my-svg-flowchart-G5-4" data-look="classic" transform="translate(171.5, 481.5)"><rect class="basic label-container" style="fill:#f8fafc !important;stroke:#64748b !important;stroke-width:1.5px !important" x="-128" y="-33.5" width="256" height="67"/><g class="label" style="color:#0f172a !important" transform="translate(-100, -19.5)"><rect/><foreignObject width="200" height="39"><div style="color: rgb(15, 23, 42) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#0f172a !important" class="nodeLabel"><p>VA/DoD (2026) | EN | CURRENT | 97 units</p></span></div></foreignObject></g></g></g></g><g class="node default benchBox" id="my-svg-flowchart-B_ORG-5" data-look="classic" transform="translate(302, 665)"><rect class="basic label-container" style="fill:#eff6ff !important;stroke:#2563eb !important;stroke-width:1.5px !important" x="-128" y="-53" width="256" height="106"/><g class="label" style="color:#0f172a !important" transform="translate(-100, -39)"><rect/><foreignObject width="200" height="78"><div style="color: rgb(15, 23, 42) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#0f172a !important" class="nodeLabel"><p>Evidence &amp; Intent Organization: 276 EvidenceUnits + 170 SemanticIntents + Document SHA-256 &amp; Page/Section Locators</p></span></div></foreignObject></g></g><g class="node default benchBox" id="my-svg-flowchart-B_TASKS-6" data-look="classic" transform="translate(302, 826.75)"><rect class="basic label-container" style="fill:#eff6ff !important;stroke:#2563eb !important;stroke-width:1.5px !important" x="-128" y="-62.75" width="256" height="125.5"/><g class="label" style="color:#0f172a !important" transform="translate(-100, -48.75)"><rect/><foreignObject width="200" height="97.5"><div style="color: rgb(15, 23, 42) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#0f172a !important" class="nodeLabel"><p>Task Contracts: Task B (Displayed-Bundle Sufficiency: 5 DEV pairs, 9 unique bundles) | Task C (Recovery &amp; Evidence Gating: 16 DEV cases)</p></span></div></foreignObject></g></g><g class="node default benchBox" id="my-svg-flowchart-B_GOV-7" data-look="classic" transform="translate(302, 998.25)"><rect class="basic label-container" style="fill:#eff6ff !important;stroke:#2563eb !important;stroke-width:1.5px !important" x="-128" y="-62.75" width="256" height="125.5"/><g class="label" style="color:#0f172a !important" transform="translate(-100, -48.75)"><rect/><foreignObject width="200" height="97.5"><div style="color: rgb(15, 23, 42) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#0f172a !important" class="nodeLabel"><p>Exposure Adjudication (BA1-D1 / BA1-D2): Partitions RUNTIME_VISIBLE vs EVALUATOR_ONLY vs REVIEWER_AUDIT_ONLY</p></span></div></foreignObject></g></g><g class="node default inputBox" id="my-svg-flowchart-R_IN-11" data-look="classic" transform="translate(510, 1235.25)"><rect class="basic label-container" style="fill:#f0fdf4 !important;stroke:#16a34a !important;stroke-width:1.5px !important" x="-128" y="-62.75" width="256" height="125.5"/><g class="label" style="color:#0f172a !important" transform="translate(-100, -48.75)"><rect/><foreignObject width="200" height="97.5"><div style="color: rgb(15, 23, 42) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#0f172a !important" class="nodeLabel"><p>runtime/ Exposure Layer Only: Fixed Question Text, Case ID, Locked Source Scope, Native EvidenceUnits, Safe Citation Locators</p></span></div></foreignObject></g></g><g class="node default inputBox" id="my-svg-flowchart-R_IDX-12" data-look="classic" transform="translate(802, 1235.25)"><rect class="basic label-container" style="fill:#f0fdf4 !important;stroke:#16a34a !important;stroke-width:1.5px !important" x="-128" y="-53" width="256" height="106"/><g class="label" style="color:#0f172a !important" transform="translate(-100, -39)"><rect/><foreignObject width="200" height="78"><div style="color: rgb(15, 23, 42) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#0f172a !important" class="nodeLabel"><p>Frozen Local Retrieval Assets: MedCPT Query/Article Encoders + FAISS IndexFlatIP (276 vectors, dim 768, top-k = 8)</p></span></div></foreignObject></g></g><g class="node default methodBox" id="my-svg-flowchart-M_PLAN-13" data-look="classic" transform="translate(510, 1433.25)"><rect class="basic label-container" style="fill:#fefce8 !important;stroke:#ca8a04 !important;stroke-width:1.5px !important" x="-128" y="-43.25" width="256" height="86.5"/><g class="label" style="color:#0f172a !important" transform="translate(-100, -29.25)"><rect/><foreignObject width="200" height="58.5"><div style="color: rgb(15, 23, 42) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#0f172a !important" class="nodeLabel"><p>Obligation Planner (LLM) -&gt; Predicted MaterialObligation Set &amp; Source Constraints</p></span></div></foreignObject></g></g><g class="node default methodBox" id="my-svg-flowchart-M_PRE-14" data-look="classic" transform="translate(656, 1585.25)"><rect class="basic label-container" style="fill:#fefce8 !important;stroke:#ca8a04 !important;stroke-width:1.5px !important" x="-128" y="-62.75" width="256" height="125.5"/><g class="label" style="color:#0f172a !important" transform="translate(-100, -48.75)"><rect/><foreignObject width="200" height="97.5"><div style="color: rgb(15, 23, 42) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#0f172a !important" class="nodeLabel"><p>Initial MedCPT Retrieval (E0) -&gt; PRE Sufficiency Verification -&gt; Conditional Corrective Retrieval (&lt;= 1, E0 + E1) -&gt; PRE Recheck &amp; Gate</p></span></div></foreignObject></g></g><g class="node default methodBox" id="my-svg-flowchart-M_POST-15" data-look="classic" transform="translate(656, 1756.75)"><rect class="basic label-container" style="fill:#fefce8 !important;stroke:#ca8a04 !important;stroke-width:1.5px !important" x="-128" y="-62.75" width="256" height="125.5"/><g class="label" style="color:#0f172a !important" transform="translate(-100, -48.75)"><rect/><foreignObject width="200" height="97.5"><div style="color: rgb(15, 23, 42) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#0f172a !important" class="nodeLabel"><p>Candidate Generation (LLM) -&gt; Atomic Claim Decomposition -&gt; Member-Bound Staged POST v4 -&gt; Grounded Revision (&lt;= 1) &amp; POST Gate</p></span></div></foreignObject></g></g><g class="node default methodBox" id="my-svg-flowchart-M_GUARD-16" data-look="classic" transform="translate(656, 1928.25)"><rect class="basic label-container" style="fill:#fefce8 !important;stroke:#ca8a04 !important;stroke-width:1.5px !important" x="-128" y="-62.75" width="256" height="125.5"/><g class="label" style="color:#0f172a !important" transform="translate(-100, -48.75)"><rect/><foreignObject width="200" height="97.5"><div style="color: rgb(15, 23, 42) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#0f172a !important" class="nodeLabel"><p>Deterministic Control Plane: ValidActionSet -&gt; DeterministicRulesPolicy -&gt; PolicyGuard -&gt; WorkflowActionExecutor</p></span></div></foreignObject></g></g><g class="node default outBox" id="my-svg-flowchart-P_OUT-21" data-look="classic" transform="translate(656, 2155.5)"><rect class="basic label-container" style="fill:#f3e8ff !important;stroke:#7e22ce !important;stroke-width:1.5px !important" x="-128" y="-72.5" width="256" height="145"/><g class="label" style="color:#0f172a !important" transform="translate(-100, -58.5)"><rect/><foreignObject width="200" height="117"><div style="color: rgb(15, 23, 42) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#0f172a !important" class="nodeLabel"><p>Immutable RunStore Artifacts: Terminal Status (COMPLETED_ANSWER | COMPLETED_ABSTAIN | FAILED_*), Citations, Trajectory Hash, Budget Ledger</p></span></div></foreignObject></g></g><g class="node default evalBox" id="my-svg-flowchart-E_REF-22" data-look="classic" transform="translate(164, 2155.5)"><rect class="basic label-container" style="fill:#fff1f2 !important;stroke:#e11d48 !important;stroke-width:2px !important" x="-128" y="-72.5" width="256" height="145"/><g class="label" style="color:#0f172a !important" transform="translate(-100, -58.5)"><rect/><foreignObject width="200" height="117"><div style="color: rgb(15, 23, 42) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#0f172a !important" class="nodeLabel"><p>Owner-Held References (evaluator/ &amp; audit_provenance/): Canonical MOs, Accepted EvidencePaths, Gold Dispositions, Expected Answers</p></span></div></foreignObject></g></g><g class="node default evalBox" id="my-svg-flowchart-E_SCORER-23" data-look="classic" transform="translate(224, 2408.5)"><rect class="basic label-container" style="fill:#fff1f2 !important;stroke:#e11d48 !important;stroke-width:2px !important" x="-128" y="-72.5" width="256" height="145"/><g class="label" style="color:#0f172a !important" transform="translate(-100, -58.5)"><rect/><foreignObject width="200" height="117"><div style="color: rgb(15, 23, 42) !important; display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;" xmlns="http://www.w3.org/1999/xhtml"><span style="color:#0f172a !important" class="nodeLabel"><p>Qualified Reconciliation &amp; Scorer: Verifies Release/Split/Plan Hashes &amp; Denominators -&gt; Official Scientific Metrics (Current E1-v2 Status: NOT_EVALUABLE)</p></span></div></foreignObject></g></g></g></g></g><defs><filter id="my-svg-drop-shadow" height="130%" width="130%"><feDropShadow dx="4" dy="4" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"/></filter></defs><defs><filter id="my-svg-drop-shadow-small" height="150%" width="150%"><feDropShadow dx="2" dy="2" stdDeviation="0" flood-opacity="0.06" flood-color="#000000"/></filter></defs><linearGradient id="my-svg-gradient" gradientUnits="objectBoundingBox" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#475569" stop-opacity="1"/><stop offset="100%" stop-color="hsl(210, 0%, 86.0784313725%)" stop-opacity="1"/></linearGradient></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 830" width="100%" height="100%" style="background:#ffffff; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Card Shadow Filters -->
+    <filter id="card-shadow" x="-4%" y="-4%" width="108%" height="112%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.05" />
+    </filter>
+    <filter id="active-shadow" x="-6%" y="-6%" width="112%" height="116%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#2563eb" flood-opacity="0.10" />
+    </filter>
+    <filter id="firewall-shadow" x="-4%" y="-4%" width="108%" height="114%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#e11d48" flood-opacity="0.10" />
+    </filter>
+
+    <!-- Arrow Markers -->
+    <marker id="arrow-default" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569" />
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#2563eb" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#059669" />
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#7c3aed" />
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#ea580c" />
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626" />
+    </marker>
+  </defs>
+
+  <!-- Canvas Header -->
+  <text x="35" y="30" font-size="16" font-weight="700" fill="#0f172a" letter-spacing="-0.3">KOA-GuidelineBench × DV-OGEC-RAG: Research Framework &amp; System Architecture</text>
+  <text x="740" y="30" font-size="13" font-weight="500" fill="#64748b">Guideline Evidence Provenance · Benchmark Governance · Agentic Dual-Verification Runtime · Sealed Evaluation</text>
+
+  <!-- ========================================================================= -->
+  <!-- LEVEL 1 LEFT: 1. Curated Guideline Sources (5 Authorities)                 -->
+  <!-- ========================================================================= -->
+  <rect x="25" y="48" width="560" height="215" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
+  <rect x="35" y="58" width="310" height="20" rx="4" fill="#e2e8f0" />
+  <text x="42" y="72" font-size="11" font-weight="700" fill="#334155" letter-spacing="0.5">1. CURATED GUIDELINE SOURCES (5 AUTHORITIES)</text>
+
+  <!-- 5 Guideline Cards Grid -->
+  <!-- ACSQHC -->
+  <g transform="translate(40, 88)">
+    <rect width="160" height="60" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" filter="url(#card-shadow)" />
+    <rect x="6" y="6" width="56" height="14" rx="2" fill="#f1f5f9" />
+    <text x="10" y="17" font-size="8" font-weight="700" fill="#475569">AUSTRALIA</text>
+    <text x="6" y="34" font-size="11" font-weight="700" fill="#0f172a">ACSQHC (2024)</text>
+    <text x="6" y="48" font-size="9" font-weight="500" fill="#64748b">EN · CURRENT · 32 units</text>
+  </g>
+
+  <!-- BYT Vietnam -->
+  <g transform="translate(210, 88)">
+    <rect width="160" height="60" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" filter="url(#card-shadow)" />
+    <rect x="6" y="6" width="54" height="14" rx="2" fill="#fef2f2" />
+    <text x="10" y="17" font-size="8" font-weight="700" fill="#b91c1c">VIETNAM</text>
+    <text x="6" y="34" font-size="11" font-weight="700" fill="#0f172a">BYT (2014)</text>
+    <text x="6" y="48" font-size="9" font-weight="500" fill="#64748b">VI · HISTORICAL · 39 units</text>
+  </g>
+
+  <!-- EULAR -->
+  <g transform="translate(380, 88)">
+    <rect width="190" height="60" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" filter="url(#card-shadow)" />
+    <rect x="6" y="6" width="52" height="14" rx="2" fill="#eff6ff" />
+    <text x="10" y="17" font-size="8" font-weight="700" fill="#1d4ed8">EUROPE</text>
+    <text x="6" y="34" font-size="11" font-weight="700" fill="#0f172a">EULAR (2023)</text>
+    <text x="6" y="48" font-size="9" font-weight="500" fill="#64748b">EN · CURRENT · 24 units</text>
+  </g>
+
+  <!-- NICE NG226 -->
+  <g transform="translate(40, 156)">
+    <rect width="245" height="60" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" filter="url(#card-shadow)" />
+    <rect x="6" y="6" width="78" height="14" rx="2" fill="#f0fdf4" />
+    <text x="10" y="17" font-size="8" font-weight="700" fill="#15803d">UNITED KINGDOM</text>
+    <text x="6" y="34" font-size="11" font-weight="700" fill="#0f172a">NICE NG226 (2022)</text>
+    <text x="6" y="48" font-size="9" font-weight="500" fill="#64748b">EN · CURRENT · 84 units</text>
+  </g>
+
+  <!-- VA/DoD -->
+  <g transform="translate(295, 156)">
+    <rect width="275" height="60" rx="6" fill="#ffffff" stroke="#94a3b8" stroke-width="1.2" filter="url(#card-shadow)" />
+    <rect x="6" y="6" width="82" height="14" rx="2" fill="#faf5ff" />
+    <text x="10" y="17" font-size="8" font-weight="700" fill="#7e22ce">UNITED STATES</text>
+    <text x="6" y="34" font-size="11" font-weight="700" fill="#0f172a">VA/DoD (2026)</text>
+    <text x="6" y="48" font-size="9" font-weight="500" fill="#64748b">EN · CURRENT · 97 units</text>
+  </g>
+
+  <rect x="40" y="226" width="530" height="24" rx="4" fill="#f1f5f9" />
+  <text x="50" y="242" font-size="10" font-weight="600" fill="#475569">Corpus Total: 276 Pinned EvidenceUnits · Canonical PDF SHA-256 · Native Page/Section Locators</text>
+
+  <!-- Connector: Sources -> Benchmark -->
+  <path d="M 585 155 L 618 155" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)" />
+
+  <!-- ========================================================================= -->
+  <!-- LEVEL 1 RIGHT: 2. KOA-GuidelineBench Construction & Governance             -->
+  <!-- ========================================================================= -->
+  <rect x="620" y="48" width="795" height="215" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.2" />
+  <rect x="630" y="58" width="375" height="20" rx="4" fill="#dbeafe" />
+  <text x="638" y="72" font-size="11" font-weight="700" fill="#1e40af" letter-spacing="0.5">2. KOA-GUIDELINEBENCH (rc0.2.0) — CONSTRUCTION &amp; GOVERNANCE</text>
+
+  <!-- Box 2.1: Structuring -->
+  <g transform="translate(635, 88)">
+    <rect width="240" height="128" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="95" height="16" rx="3" fill="#eff6ff" />
+    <text x="14" y="20" font-size="8.5" font-weight="700" fill="#1d4ed8">ORGANIZATION</text>
+    <text x="8" y="42" font-size="11.5" font-weight="700" fill="#0f172a">Evidence &amp; Intent Structuring</text>
+    <text x="8" y="60" font-size="9.5" font-weight="500" fill="#475569">• 276 Native EvidenceUnits</text>
+    <text x="8" y="76" font-size="9.5" font-weight="500" fill="#475569">• 170 SemanticIntents</text>
+    <text x="8" y="92" font-size="9.5" font-weight="500" fill="#475569">• Bilingual queries (EN / VI)</text>
+    <text x="8" y="108" font-size="9" font-weight="600" fill="#2563eb">Document SHA-256 Provenance</text>
+  </g>
+
+  <!-- Box 2.2: Dual Tasks -->
+  <g transform="translate(890, 88)">
+    <rect width="250" height="128" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.2" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="90" height="16" rx="3" fill="#eff6ff" />
+    <text x="14" y="20" font-size="8.5" font-weight="700" fill="#1d4ed8">TASK CONTRACTS</text>
+    <text x="8" y="42" font-size="11.5" font-weight="700" fill="#0f172a">Dual Benchmark Tasks</text>
+    <text x="8" y="60" font-size="9.5" font-weight="600" fill="#1e3a8a">Task B: Displayed Sufficiency</text>
+    <text x="8" y="74" font-size="9" font-weight="500" fill="#64748b">5 DEV pairs · 9 unique bundles</text>
+    <text x="8" y="94" font-size="9.5" font-weight="600" fill="#1e3a8a">Task C: Dynamic Recovery &amp; Gating</text>
+    <text x="8" y="108" font-size="9" font-weight="500" fill="#64748b">16 English DEV questions (E1-v2)</text>
+  </g>
+
+  <!-- Box 2.3: Adjudication -->
+  <g transform="translate(1155, 88)">
+    <rect width="245" height="128" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.4" filter="url(#active-shadow)" />
+    <rect x="8" y="8" width="105" height="16" rx="3" fill="#dbeafe" />
+    <text x="14" y="20" font-size="8.5" font-weight="700" fill="#1e40af">BA1-D1 / BA1-D2</text>
+    <text x="8" y="42" font-size="11.5" font-weight="700" fill="#0f172a">Exposure Adjudication</text>
+    <text x="8" y="60" font-size="9.5" font-weight="600" fill="#059669">RUNTIME_EXPOSURE_CONTRACT</text>
+    <text x="8" y="76" font-size="9" font-weight="500" fill="#475569">Strict 3-layer schema enforcement:</text>
+    <text x="8" y="92" font-size="9" font-weight="700" fill="#059669">• RUNTIME_VISIBLE (Allowlist)</text>
+    <text x="8" y="108" font-size="9" font-weight="700" fill="#dc2626">• EVALUATOR_ONLY (Sealed)</text>
+  </g>
+
+  <rect x="635" y="226" width="765" height="24" rx="4" fill="#dbeafe" />
+  <text x="645" y="242" font-size="10" font-weight="700" fill="#1e40af">Evaluation Invariant: Task B displayed bundle labels NEVER transfer as gold for Task C dynamic retrieval</text>
+
+  <!-- Connector: Benchmark Governance -> Runtime Inputs -->
+  <path d="M 1277 216 L 1277 290 L 115 290 L 115 320" fill="none" stroke="#059669" stroke-width="2" marker-end="url(#arrow-green)" />
+  <rect x="480" y="282" width="230" height="16" rx="3" fill="#d1fae5" />
+  <text x="486" y="294" font-size="9.5" font-weight="700" fill="#065f46">Authorized RUNTIME_VISIBLE Fields Only (No Gold Leakage)</text>
+
+  <!-- ========================================================================= -->
+  <!-- LEVEL 2: 3. DV-OGEC-RAG Method Runtime Architecture                        -->
+  <!-- ========================================================================= -->
+  <rect x="25" y="320" width="1390" height="280" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2" />
+  <rect x="35" y="330" width="375" height="20" rx="4" fill="#e2e8f0" />
+  <text x="42" y="344" font-size="11" font-weight="700" fill="#334155" letter-spacing="0.5">3. DV-OGEC-RAG — AGENTIC METHOD RUNTIME ARCHITECTURE</text>
+
+  <!-- 3A: Runtime Input Allowlist Card -->
+  <g transform="translate(45, 360)">
+    <rect width="180" height="150" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="1.5" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="90" height="16" rx="3" fill="#dcfce7" />
+    <text x="14" y="20" font-size="8.5" font-weight="700" fill="#15803d">INPUT ALLOWLIST</text>
+    <text x="8" y="42" font-size="12" font-weight="700" fill="#0f172a">RecoveryInput</text>
+    <text x="8" y="60" font-size="9" font-weight="500" fill="#475569">• Question ID &amp; fixed text</text>
+    <text x="8" y="74" font-size="9" font-weight="500" fill="#475569">• Locked source guideline scope</text>
+    <text x="8" y="88" font-size="9" font-weight="500" fill="#475569">• 276 Native EvidenceUnits</text>
+    <text x="8" y="102" font-size="9" font-weight="500" fill="#475569">• Safe citation locators</text>
+    <text x="8" y="118" font-size="9" font-weight="600" fill="#0284c7">MedCPT IndexFlatIP (dim 768)</text>
+    <text x="8" y="132" font-size="8.5" font-weight="700" fill="#15803d">Zero Gold Labels Included</text>
+  </g>
+
+  <!-- Connector: Input -> Planner -->
+  <path d="M 225 435 L 260 435" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)" />
+
+  <!-- 3B: DV-OGEC-RAG Processing Pipeline -->
+  <!-- Planner -->
+  <g transform="translate(260, 375)">
+    <rect width="125" height="120" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.4" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="55" height="16" rx="3" fill="#dbeafe" />
+    <text x="12" y="20" font-size="8.5" font-weight="700" fill="#1d4ed8">PLANNER</text>
+    <text x="8" y="42" font-size="11.5" font-weight="700" fill="#0f172a">Obligation</text>
+    <text x="8" y="56" font-size="11.5" font-weight="700" fill="#0f172a">Planner</text>
+    <text x="8" y="74" font-size="9" font-weight="500" fill="#64748b">LLM role call</text>
+    <text x="8" y="90" font-size="9" font-weight="600" fill="#2563eb">Material Obligations</text>
+    <text x="8" y="106" font-size="8.5" font-weight="500" fill="#475569">Frozen hash-pinned</text>
+  </g>
+
+  <!-- Connector: Planner -> Initial Retrieval -->
+  <path d="M 385 435 L 415 435" fill="none" stroke="#2563eb" stroke-width="1.6" marker-end="url(#arrow-blue)" />
+
+  <!-- Initial Retrieval -->
+  <g transform="translate(415, 375)">
+    <rect width="130" height="120" rx="8" fill="#ffffff" stroke="#059669" stroke-width="1.4" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="92" height="16" rx="3" fill="#d1fae5" />
+    <text x="12" y="20" font-size="8.5" font-weight="700" fill="#047857">LOCAL RETRIEVAL</text>
+    <text x="8" y="42" font-size="11.5" font-weight="700" fill="#0f172a">Initial</text>
+    <text x="8" y="56" font-size="11.5" font-weight="700" fill="#0f172a">Retrieval (E0)</text>
+    <text x="8" y="74" font-size="9" font-weight="500" fill="#64748b">MedCPT top-8</text>
+    <text x="8" y="90" font-size="9" font-weight="600" fill="#059669">EvidenceStore E0</text>
+    <text x="8" y="106" font-size="8.5" font-weight="500" fill="#475569">Filtered before score</text>
+  </g>
+
+  <!-- Connector: Retrieval -> PRE -->
+  <path d="M 545 435 L 575 435" fill="none" stroke="#059669" stroke-width="1.6" marker-end="url(#arrow-green)" />
+
+  <!-- PRE Verifier & Corrective Loop Container -->
+  <rect x="575" y="360" width="180" height="150" rx="8" fill="#faf5ff" stroke="#8b5cf6" stroke-width="1.4" />
+  <rect x="583" y="368" width="85" height="16" rx="3" fill="#ede9fe" />
+  <text x="589" y="380" font-size="8.5" font-weight="700" fill="#6d28d9">PRE VERIFICATION</text>
+  <text x="583" y="402" font-size="11.5" font-weight="700" fill="#0f172a">PRE Verifier</text>
+  <text x="583" y="418" font-size="9" font-weight="500" fill="#64748b">A0/A1 or Matched Generic</text>
+  <path d="M 665 425 L 665 440" fill="none" stroke="#ea580c" stroke-width="1.4" marker-end="url(#arrow-orange)" />
+  <rect x="583" y="445" width="164" height="42" rx="4" fill="#fff7ed" stroke="#ea580c" stroke-width="1" />
+  <text x="589" y="459" font-size="8.5" font-weight="700" fill="#c2410c">Corrective Retrieval (≤1)</text>
+  <text x="589" y="473" font-size="8" font-weight="500" fill="#9a3412">Targeted query · E0+E1 recheck</text>
+  <text x="583" y="502" font-size="8.5" font-weight="700" fill="#7c3aed">Deterministic Sufficiency Gate</text>
+
+  <!-- Connector: PRE -> Generator -->
+  <path d="M 755 435 L 785 435" fill="none" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arrow-blue)" />
+
+  <!-- Answer Generator -->
+  <g transform="translate(785, 375)">
+    <rect width="125" height="120" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.4" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="55" height="16" rx="3" fill="#dbeafe" />
+    <text x="12" y="20" font-size="8.5" font-weight="700" fill="#1d4ed8">LLM ROLE</text>
+    <text x="8" y="42" font-size="11.5" font-weight="700" fill="#0f172a">Answer</text>
+    <text x="8" y="56" font-size="11.5" font-weight="700" fill="#0f172a">Generator</text>
+    <text x="8" y="74" font-size="9" font-weight="500" fill="#64748b">Grounded draft</text>
+    <text x="8" y="90" font-size="9" font-weight="600" fill="#2563eb">Evidence Citing</text>
+    <text x="8" y="106" font-size="8.5" font-weight="500" fill="#475569">Memory-bound</text>
+  </g>
+
+  <!-- Connector: Generator -> Decomposer -->
+  <path d="M 910 435 L 940 435" fill="none" stroke="#3b82f6" stroke-width="1.6" marker-end="url(#arrow-blue)" />
+
+  <!-- Atomic POST & Revision Loop Container -->
+  <rect x="940" y="360" width="195" height="150" rx="8" fill="#faf5ff" stroke="#8b5cf6" stroke-width="1.4" />
+  <rect x="948" y="368" width="95" height="16" rx="3" fill="#ede9fe" />
+  <text x="954" y="380" font-size="8.5" font-weight="700" fill="#6d28d9">STAGED POST v4</text>
+  <text x="948" y="402" font-size="11.5" font-weight="700" fill="#0f172a">Decomposer + POST</text>
+  <text x="948" y="418" font-size="9" font-weight="500" fill="#64748b">AtomicClaim[] · pair-diagnosis-remedies</text>
+  <path d="M 1037 425 L 1037 440" fill="none" stroke="#ea580c" stroke-width="1.4" marker-end="url(#arrow-orange)" />
+  <rect x="948" y="445" width="179" height="42" rx="4" fill="#fff7ed" stroke="#ea580c" stroke-width="1" />
+  <text x="954" y="459" font-size="8.5" font-weight="700" fill="#c2410c">Grounded Revision (≤1)</text>
+  <text x="954" y="473" font-size="8" font-weight="500" fill="#9a3412">Existing memory only · clears old claims</text>
+  <text x="948" y="502" font-size="8.5" font-weight="700" fill="#7c3aed">Canonical Validator Verification</text>
+
+  <!-- Connector: POST -> PolicyGuard -->
+  <path d="M 1135 435 L 1165 435" fill="none" stroke="#0284c7" stroke-width="1.8" marker-end="url(#arrow-blue)" />
+
+  <!-- Deterministic PolicyGuard -->
+  <g transform="translate(1165, 360)">
+    <rect width="115" height="150" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="1.6" filter="url(#active-shadow)" />
+    <rect x="6" y="8" width="103" height="16" rx="3" fill="#e0f2fe" />
+    <text x="10" y="20" font-size="8" font-weight="700" fill="#0369a1">DETERMINISTIC</text>
+    <text x="6" y="42" font-size="11.5" font-weight="700" fill="#0f172a">PolicyGuard</text>
+    <text x="6" y="60" font-size="8.5" font-weight="500" fill="#475569">• Phase legality</text>
+    <text x="6" y="74" font-size="8.5" font-weight="500" fill="#475569">• Token budget</text>
+    <text x="6" y="88" font-size="8.5" font-weight="500" fill="#475569">• Hard guards</text>
+    <text x="6" y="104" font-size="8" font-weight="700" fill="#0284c7">ValidActionSet</text>
+    <text x="6" y="120" font-size="8" font-weight="600" fill="#64748b">RulesPolicy</text>
+    <text x="6" y="138" font-size="8.5" font-weight="700" fill="#059669">Hard Pre-Check</text>
+  </g>
+
+  <!-- Connector: PolicyGuard -> Outputs -->
+  <path d="M 1280 435 L 1305 435" fill="none" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow-default)" />
+
+  <!-- 3C: RunStore Outputs -->
+  <g transform="translate(1305, 360)">
+    <rect width="100" height="150" rx="8" fill="#ffffff" stroke="#7e22ce" stroke-width="1.4" filter="url(#card-shadow)" />
+    <rect x="6" y="8" width="88" height="16" rx="3" fill="#f3e8ff" />
+    <text x="10" y="20" font-size="8" font-weight="700" fill="#7e22ce">RUNSTORE</text>
+    <text x="6" y="42" font-size="11" font-weight="700" fill="#0f172a">Artifacts</text>
+    <text x="6" y="62" font-size="8.5" font-weight="700" fill="#059669">ACCEPT</text>
+    <text x="6" y="78" font-size="8.5" font-weight="700" fill="#d97706">ABSTAIN</text>
+    <text x="6" y="94" font-size="8.5" font-weight="700" fill="#dc2626">FAILED_*</text>
+    <text x="6" y="112" font-size="8" font-weight="500" fill="#475569">Traces &amp; hashes</text>
+    <text x="6" y="126" font-size="8" font-weight="500" fill="#475569">Budget ledger</text>
+    <text x="6" y="140" font-size="8" font-weight="600" fill="#7e22ce">Immutable</text>
+  </g>
+
+  <!-- Execution Invariants Banner -->
+  <rect x="45" y="525" width="1360" height="28" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" />
+  <text x="60" y="543" font-size="10.5" font-weight="700" fill="#1e293b">RUNTIME INVARIANTS:</text>
+  <text x="205" y="543" font-size="10" font-weight="500" fill="#334155">Initial Retrieval ≤ 1 · Corrective Retrieval ≤ 1 · Grounded Revision ≤ 1 · LLM Calls ≤ 34/arm · Rejection → FAILED_CONTRACT (never converted to ABSTAIN)</text>
+
+  <!-- Connector: RunStore -> Independent Evaluation Boundary -->
+  <path d="M 1355 510 L 1355 640 L 970 640" fill="none" stroke="#7e22ce" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#arrow-purple)" />
+  <rect x="1100" y="628" width="220" height="18" rx="3" fill="#f3e8ff" />
+  <text x="1106" y="641" font-size="9" font-weight="700" fill="#7e22ce">Read-Only Candidate Predictions &amp; Trajectory Hashes</text>
+
+  <!-- ========================================================================= -->
+  <!-- LEVEL 3: 4. Independent Evaluation Boundary (Owner-Separated)              -->
+  <!-- ========================================================================= -->
+  <!-- Red Firewall Alert Ribbon -->
+  <g transform="translate(25, 570)">
+    <rect width="1390" height="20" rx="3" fill="#fff1f2" stroke="#fecdd3" stroke-width="1" />
+    <text x="35" y="584" font-size="9.5" font-weight="800" fill="#be123c">HARD SCIENTIFIC FIREWALL — EVALUATOR &amp; AUDIT BOUNDARY SEPARATED FROM RUNTIME INFERENCE</text>
+  </g>
+
+  <rect x="25" y="605" width="1390" height="200" rx="12" fill="#fff1f2" stroke="#f43f5e" stroke-width="1.5" filter="url(#firewall-shadow)" />
+  <rect x="35" y="615" width="410" height="20" rx="4" fill="#ffe4e6" />
+  <text x="42" y="629" font-size="11" font-weight="700" fill="#9f1239" letter-spacing="0.5">4. INDEPENDENT EVALUATION BOUNDARY (OWNER-SEPARATED)</text>
+
+  <!-- Box 4.1: Owner-Held References -->
+  <g transform="translate(45, 645)">
+    <rect width="390" height="145" rx="8" fill="#ffffff" stroke="#fb7185" stroke-width="1.4" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="165" height="18" rx="3" fill="#ffe4e6" />
+    <text x="14" y="21" font-size="9" font-weight="700" fill="#9f1239">SEALED REFERENCES</text>
+    <text x="8" y="44" font-size="12" font-weight="700" fill="#0f172a">Owner-Held Assets (evaluator/)</text>
+    <text x="8" y="64" font-size="9.5" font-weight="500" fill="#475569">• Canonical Material Obligations &amp; Propositions</text>
+    <text x="8" y="80" font-size="9.5" font-weight="500" fill="#475569">• Accepted EvidencePaths &amp; supporting_evidence_ref_ids</text>
+    <text x="8" y="96" font-size="9.5" font-weight="500" fill="#475569">• Gold Dispositions, Expected Answers &amp; TEST Split</text>
+    <text x="8" y="112" font-size="9.5" font-weight="500" fill="#475569">• Clinical audit rationale &amp; consensus annotations</text>
+    <text x="8" y="132" font-size="9" font-weight="700" fill="#dc2626">Strictly Sealed: Zero Leakage into Inference Runtime</text>
+  </g>
+
+  <!-- Forbidden Leakage Warning Arrow -->
+  <path d="M 240 645 L 240 560" fill="none" stroke="#dc2626" stroke-width="1.8" stroke-dasharray="4,4" marker-end="url(#arrow-red)" />
+  <rect x="150" y="590" width="180" height="16" rx="2" fill="#fef2f2" stroke="#ef4444" stroke-width="0.8" />
+  <text x="155" y="602" font-size="8.5" font-weight="700" fill="#b91c1c">FORBIDDEN: Zero Gold Leakage</text>
+
+  <!-- Box 4.2: Reconciliation Harness -->
+  <g transform="translate(460, 645)">
+    <rect width="420" height="145" rx="8" fill="#ffffff" stroke="#fb7185" stroke-width="1.4" filter="url(#card-shadow)" />
+    <rect x="8" y="8" width="165" height="18" rx="3" fill="#ffe4e6" />
+    <text x="14" y="21" font-size="9" font-weight="700" fill="#9f1239">RECONCILIATION HARNESS</text>
+    <text x="8" y="44" font-size="12" font-weight="700" fill="#0f172a">Reconciliation &amp; Scorer Validator</text>
+    <text x="8" y="64" font-size="9.5" font-weight="500" fill="#475569">• Verifies release SHA-256, split, &amp; plan hash pins</text>
+    <text x="8" y="80" font-size="9.5" font-weight="500" fill="#475569">• Validates eligible denominator projection</text>
+    <text x="8" y="96" font-size="9.5" font-weight="500" fill="#475569">• Enforces EvaluationContext integrity</text>
+    <text x="8" y="112" font-size="9.5" font-weight="500" fill="#475569">• Rejects self-supplied scores or fabricated runs</text>
+    <text x="8" y="132" font-size="9" font-weight="700" fill="#be123c">Deterministic Verification Before Reporting</text>
+  </g>
+
+  <!-- Connector: Sealed References -> Scorer -->
+  <path d="M 435 715 L 460 715" fill="none" stroke="#be123c" stroke-width="1.8" marker-end="url(#arrow-red)" />
+
+  <!-- Box 4.3: Official Scientific Endpoints -->
+  <g transform="translate(905, 645)">
+    <rect width="495" height="145" rx="8" fill="#ffffff" stroke="#e11d48" stroke-width="1.8" filter="url(#active-shadow)" />
+    <rect x="8" y="8" width="170" height="18" rx="3" fill="#ffe4e6" />
+    <text x="14" y="21" font-size="9" font-weight="700" fill="#9f1239">OFFICIAL METRICS STATUS</text>
+    <text x="8" y="44" font-size="12" font-weight="700" fill="#0f172a">Registered Evaluation Endpoints</text>
+    <text x="8" y="64" font-size="9.5" font-weight="500" fill="#475569">• Answer Correctness, Grounded Support, Obligation Completeness</text>
+    <text x="8" y="80" font-size="9.5" font-weight="500" fill="#475569">• Citation Recall, Precision, &amp; False Abstention Rate (FAR)</text>
+    <rect x="8" y="95" width="478" height="40" rx="4" fill="#fff1f2" stroke="#f43f5e" stroke-width="1" />
+    <text x="14" y="110" font-size="10" font-weight="800" fill="#9f1239">CURRENT E1-v2 QUALITY STATUS: NOT_EVALUABLE</text>
+    <text x="14" y="126" font-size="9" font-weight="600" fill="#be123c">0/16 Cases Evaluated in Public Scope · Scoring Blocked by Owner Reference</text>
+  </g>
+
+  <!-- Connector: Scorer -> Endpoints -->
+  <path d="M 880 715 L 905 715" fill="none" stroke="#be123c" stroke-width="1.8" marker-end="url(#arrow-red)" />
+
+</svg>
